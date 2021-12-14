@@ -1,0 +1,1105 @@
+/* Defult CSS */
+@import "default.css";
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header part start */
+header {
+    height: 100px;
+    background: var(--cc);
+    transition: .4s;
+}
+
+.logo img {
+    max-width: 270px;
+}
+
+.logo i {
+    font-size: 22px;
+    padding: 8px;
+    padding-right: 0;
+    transition: .2s;
+}
+
+.logo i:hover {
+    color: var(--bc);
+    cursor: pointer;
+}
+
+.menubar ul {
+    text-align: right;
+}
+
+.menubar ul li {
+    display: inline-block;
+}
+
+.menubar ul li a {
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+    height: 35px;
+    padding: 7px 20px;
+    color: var(--pc);
+}
+.menubar ul li a {
+    color: #673091;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.menubar ul li sup {
+    background: rgb(103, 48, 145);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 3px;
+    margin-left: -8px;
+}
+/*HEADER*/
+
+/*MOBILE MENU*/
+/*ACCORDION CUSTOM*/
+.mobile-logo img {
+    width: 200px;
+    padding: 1px 0px;
+    margin-left: 10px;
+}
+
+.mobile-logo i {
+    font-size: 20px;
+    float: right;
+    margin: 5px 20px;
+    color: var(--pc);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-logo i:hover {
+    color: var(--bc);
+}
+
+.custom.accordion-button {
+    text-transform: capitalize;
+    font-size: 15px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    color: var(--pc);
+    font-weight: 400;
+}
+
+.custom.accordion-button:hover {
+    color: var(--bc);
+}
+
+.custom.accordion-button:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid #ccc;
+
+}
+
+.custom.accordion-button:not(.collapsed) {
+    color: var(--sc);
+    background: var(--rc);
+    -webkit-transform: none;
+    transform: none;
+    font-weight: 400;
+}
+
+.custom.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    content: "\f068";
+    font-family: 'FontAwesome';
+    -webkit-transform: rotate(0deg) !important;
+    transform: rotate(0deg) !important;
+}
+
+.none.accordion-button:not(.collapsed)::after {
+    content: none;
+    -webkit-transform: rotate(0deg) !important;
+    transform: rotate(0deg) !important;
+}
+
+
+.custom.accordion-button::after {
+    background-image: none;
+    content: "\f067";
+    font-family: 'FontAwesome';
+}
+
+.none.accordion-button::after {
+    content: none;
+}
+
+.custom.accordion-body {
+    padding: 0 0px;
+}
+
+.custom.accordion-body ul {
+    padding: 0;
+    margin: 0;
+}
+
+.custom.accordion-body ul li {
+    list-style: none;
+    padding: 8px 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.custom.accordion-body ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: var(--pc);
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.custom.accordion-body ul li a i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.custom.accordion-body ul li:hover {
+    color: var(--wc);
+    background: var(--bc);
+}
+
+.custom.accordion-body ul li:hover a {
+    color: var(--bc);
+}
+
+.custom.accordion-item a {
+    text-decoration: none;
+
+}
+.accordion-button.custom i {
+    padding: 0 10px;
+}
+
+/*ACCORDION CUSTOM END*/
+.mobile-menu {
+    width: 350px;
+    position: fixed;
+    left: -380px;
+    top: 0;
+    z-index: 2;
+    background: var(--wc);
+    height: 100%;
+    overflow: auto;
+    transition: .4s;
+    padding: 10px 0;
+}
+
+#mobileOverlay {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: rgba(101, 41, 145, 0.71);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.mobileAdd {
+    left: 0 !important;
+}
+
+.mobile-overlay {
+    position: inherit !important;
+}
+.mobile-menu .accordion-item .accordion-header sup {
+    font-size: 12px;
+    padding: 10px 4px;
+    border: 1px solid #673091;
+    border-radius: 50px;
+    margin-left: -15px;
+    margin-bottom: 13px;
+    color: #673091;
+    z-index: 999;
+}
+/*MOBILE MENU END*/
+
+
+
+/* Banner part start */
+.banner-part {
+    background: var(--cc);
+    /* clip-path: polygon(0 0, 96% 0, 75% 100%, 0% 100%); */
+}
+.banner-content{
+    margin-top: 70px;
+    margin-bottom: 90px;
+    position: relative;
+}
+.banner-img img{
+    height: 490px;
+}
+
+/* Banner part End */
+
+/* SERVICE TOOLS START */
+.service-tools h4{
+    color: var(--bc);
+}
+.service-tools .phone-img{
+    padding: 35px 43px;
+    border: 1px solid #CCCCCC;
+    border-radius: 250px;
+}
+.service-tools .car-img{
+    padding: 36px 32px;
+    border: 1px solid #CCCCCC;
+    border-radius: 250px;
+}
+.service-tools .barger-img{
+    padding: 36px 34px;
+    border: 1px solid #CCCCCC;
+    border-radius: 250px;
+}
+/* SERVICE TOOLS END */
+
+/* SPECIAL CATERING START */
+.special-catering h4{
+    text-transform: uppercase;
+}
+.special-catering ul li a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--bc);
+    padding: 20px 30px;
+}
+.special-catering .active{
+    color: red;
+}
+.special-catering .catering-item h4{
+    text-transform: capitalize;
+    color: var(--bc);
+}
+.special-catering .catering-item .price{
+    color: var(--xrc);
+}
+.special-catering .catering-item .offer{
+    position: relative;
+}
+.special-catering .catering-item .discount {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border: 2px solid var(--wc);
+    background: #FFC672;
+    border-radius: 50px;
+    top: 15px;
+    right: 25px;
+    padding: 10px;
+}
+.special-catering .catering-item .discount h4{
+    line-height: 29px;
+    text-transform: uppercase;
+}
+/* SPECIAL CATERING END */
+
+/* DISCOUNT BANNER START */
+.discount-banner{
+    background-image: url(../img/photos/discount-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.discount-banner .custom-btn {
+    padding: 22px 56px;
+    background: var(--xrc);
+    color: var(--wc);
+    font-size: 20px;
+    font-weight: 600;
+}
+/* DISCOUNT BANNER END */
+
+/* PRICE PLAN START */
+.price-plan h4{
+    text-transform: capitalize;
+}
+/* Price plane card css */
+.package .card{
+    background: var(--ac);
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 4px 4px 10px 0px #00000026;
+}
+.price-plan-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.package-pricing {
+    background: #ff000038;
+    padding: 65px 63px;
+}
+.package .package-pricing h4{
+    color: var(--wc);
+    font-size: 30px;
+    line-height: 40px;
+}
+.package .package-pricing .section-header{
+    color: var(--wc);
+    font-size: 50px;
+    line-height: 60px;
+}
+.package .package-pricing span{
+    color: var(--wc);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.package .card-footer{
+    border-top: none;
+    background: var(--xrc);
+    color: var(--wc);
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* PRICE PLAN END */
+
+/* PLANNING EVENT START */
+.planing-events .heading h4{
+    text-transform: uppercase;
+}
+.planing-events .heading h2{
+    text-transform: uppercase;
+}
+.planing-events .heading h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 59px;
+    color: var(--bc);
+}
+.planing-events .events h2 {
+    color: var(--ec);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 59px;
+}
+.planing-events .events h4 {
+    color: var(--xgc);
+    font-weight: 600;
+    position: relative;
+}
+.planing-events .events h4::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--xgc);
+    top: 40px;
+    left: 0px;
+    content: '';
+}
+.planing-events .events p {
+    color: var(--sc);
+}
+.planing-events .active h2{
+    color: var(--xrc);
+}
+.planing-events .active h4{
+    color: var(--xrc);
+}
+/* PLANNING EVENT END */
+
+/* ABOUT US START */
+.about-us i{
+    font-size: 12px;
+    color: var(--xrc);
+}
+.about-us h4{
+    text-transform: uppercase;
+}
+.about-us h3 {
+    color: var(--bc);
+    text-transform: capitalize;
+}
+.about-us p{
+    color: var(--xgc);
+}
+.about-us .readmore-btn{
+    border-radius: 0px;
+    padding: 17px 52px;
+}
+.about-us a{
+    font-weight: 600;
+    font-size: 20px;
+}
+/* ABOUT US END */
+
+/* NEWSLATTER PART START */
+.newslatter-part{
+    background: var(--cc);
+}
+.newslatter-part .left{
+    border-right: 2px solid #FFD390;
+    margin-right: 10%;
+}
+.newslatter-part h6{
+    color: var(--bc);
+}
+.newslatter-part input{
+    height: 65px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    color: var(--bc);
+}
+.newslatter-part button{
+    border: none;
+    background: var(--xrc);
+    color: var(--wc);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    z-index: 0!important;
+}
+.newslatter-part button:hover{
+    background: var(--xrc);
+}
+/* NEWSLATTER PART END */
+
+/* TESTIMONIAL PART START */
+.testimonial-part{
+    padding-top: 50px;
+}
+.testimonial-part h4{
+    color: var(--xgc);
+}
+.testimonial-part p{
+    padding: 0 22%;
+}
+.review-img .left{
+    height: 110px;
+}
+.review-img .middle{
+    height: 150px;
+}
+.review-img .right{
+    height: 110px;
+}
+/* TESTIMONIAL PART END */
+
+/* LATEST BLOG START */
+.latest-blog h2{
+    text-transform: capitalize;
+}
+.latest-blog img{
+    border-radius: 10px;
+    width: 100%;
+}
+.latest-blog .blog img{
+    width: 180px;
+}
+.latest-blog h4{
+    color: var(--bc);
+}
+.latest-blog p{
+    color: var(--blackc);
+}
+.latest-blog .blog-info span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--sc);
+}
+.latest-blog .blog-info .right i{
+    color: var(--cc);
+}
+.latest-blog .blog-info .right {
+    padding-left: 30%;
+}
+.latest-blog .blog-info .right span{
+    color: var(--bc);
+}
+.latest-blog .blog{
+    background: var(--blogbg);
+    padding: 10px;
+    border-radius: 10px;
+}
+.latest-blog .blog h4{
+    font-size: 20px;
+}
+
+/* LATEST BLOG END */
+
+/* FOOTER PART START */
+.footer-part{
+    background: var(--fbg);
+}
+.footer-part p{
+    color: var(--wc);
+}
+.footer-part h4{
+    color: var(--wc);
+}
+.footer-part .social-media ul li{
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--wc);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.footer-part .social-media ul li i{
+    line-height: 27px;
+    font-size: 17px;
+}
+.footer-part .social-media ul li:hover{
+    background: var(--pc);
+}
+.footer-part .footer-menu ul li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-part .footer-menu ul li a{
+    color: var(--wc);
+}
+.footer-part .footer-menu ul li i{
+    color: var(--wc);
+    font-size: 18px;
+}
+hr.footer-menu{
+    background: #602290;
+    height: 2px;
+}
+/* FOOTER PART END */
+
+/* =========================================================
+                Price Plan Page CSS
+========================================================= */
+.banner-two{
+    background-image: url(../img/photos/price-plan-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    background: #33333394;
+}
+.banner-two h4{
+    color: var(--cc);
+    text-transform: uppercase;
+}
+.banner-two h2{
+    color: var(--wc);
+}
+/* ABOUT US END */
+
+/* =========================================================
+                About Us Page CSS
+========================================================= */
+/* ABOUT US START */
+.about-us-banner{
+    background-image: url(../img/photos/about-us-banner.png);
+}
+.know-about h2{
+    text-transform: capitalize;
+}
+
+
+/* =========================================================
+                Search result Page CSS
+========================================================= */
+/* BANNER PART START */
+.banner-three{
+    background-image: url(../img/photos/search-result-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.banner-three .overlay{
+    background: #333333a8;
+}
+.banner-three input {
+    height: 70px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    background: #FFFFFF33;
+    border: 2px solid var(--cc);
+}
+.banner-three .custom-search {
+    background: #FFFFFF33;
+    border: 2px solid var(--cc);
+    color: var(--gc);
+}
+.banner-three input::placeholder{
+    color: var(--gc);
+}
+.banner-three button {
+    border: 2px solid var(--cc);
+    background: var(--cc);
+    color: var(--bc);
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+    transition: 0.3s;
+}
+.banner-three button:hover{
+    border: 2px solid var(--cc);
+    background: var(--cc);
+    color: var(--bc);
+}
+/* BANNER PART END */
+
+/* SEARCH RESULT PART START */
+.location{
+    height: 304px;
+    border: 2px solid var(--sc);
+}
+.search-result .image{
+    position: relative;
+}
+.search-result .image p{
+    position: absolute;
+    font-weight: 600;
+    padding: 7px 10px;
+    background: var(--xrc);
+    color: var(--wc);
+    top: 0px;
+    left: 0px;
+}
+.search-result .review p{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--xrc);
+}
+.search-result .review i{
+    font-size: 16px;
+    color: var(--cc);
+}
+.search-result .review span{
+    color: var(--pc);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.search-result .review .away{
+    color: var(--sc);
+    font-size: 14px;
+}
+.search-result i{
+    font-size: 16px;
+    color: var(--sc);
+}
+/* SEARCH RESULT PART END */
+
+/* OUR BEST ITEMS */
+.best-items h4{
+    color: var(--bc);
+    text-transform: capitalize;
+}
+hr.best-item{
+    background: var(--gc);
+    height: 2px;
+}
+/* OUR BEST ITEMS */
+
+/* =========================================================
+                Planing & Events Page CSS
+========================================================= */
+.planing-event-banner{
+    background-image: url(../img/photos/planing-events-banner.png);
+}
+
+.planing-events h5{
+    font-weight: 500;
+    line-height: 45px;
+}
+.planing-events p{
+    line-height: 28px;
+}
+.planing-events .readmore-btn {
+    border-radius: 0px;
+    font-size: 20px;
+    padding: 14px 42px;
+    line-height: 28px;
+}
+
+/* =========================================================
+                Contact us Page CSS
+========================================================= */
+.contact-us-banner{
+    background-image: url(../img/photos/contact-us-banner.png);
+}
+.about-contact{
+    background: #FAFAFA;
+}
+.map{
+    background: #FAFAFA;
+}
+.address .section-content h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: var(--bc);
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
+}
+.address .section-content p {
+    color: var(--bc);
+}
+.address .contact h4{
+    color: var(--bc);
+}
+.address .contact {
+    background: #f2fbff7a;
+    box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.address .contact button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--wc);
+    background: var(--rc);
+    border-radius: 7px;
+    border: none;
+    padding: 13px 35px;
+    margin-top: 30px;
+}
+.form-control {
+    border: 1px solid var(--wc);
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 52px;
+    box-shadow: 5px 5px 10px 0px #00000026;
+}
+.map h4{
+    color: var(--pc);
+}
+
+/* =========================================================
+                Blog Details Page CSS
+========================================================= */
+.blog-details-banner{
+    background-image: url(../img/blog/blog-details-banner.png);
+}
+.blog{
+    position: relative;
+}
+.breadcrump {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 15px;
+    background: #4a1d8cc7;
+    color: var(--wc);
+}
+.blog h5{
+    color: var(--xgc);
+}
+.blog span{
+    color: var(--xgc);
+    font-size: 15px;
+}
+.blog span i {
+    font-size: 18px;
+    margin-left: 18px;
+    color: var(--xgc);
+}
+.blog p{
+    line-height: 28px;
+}
+.related-blog h6{
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--xgc);
+}
+.related-blog .title{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+hr.blog-details{
+    background: #CCCCCC;
+    height: 2px;
+}
+
+.latest-post h6{
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--xgc);
+}
+.latest-blog-part{
+    position: relative;
+}
+.text{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+.text h6{
+    text-transform: capitalize;
+    font-size: 22px;
+    color: var(--wc);
+}
+.text span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 25px;
+    color: var(--wc);
+}
+.categories h6{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--xgc);
+}
+.categories ul li{
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--xgc);
+}
+.categories ul li p{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+.more-blog .title{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 24px;
+}
+.more-blog .paragraph{
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--xgc);
+    line-height: 21px;
+}
+/* blog details css end */
+
+/* LOGIN CSS START */
+.login{
+    background: #fdfdfd;
+    border-radius: 7px;
+    box-shadow: 4px 4px 10px 0px #00000033;
+}
+.login-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 22px;
+}
+.login-section h4{
+    font-weight: 600;
+    color: var(--bc);
+}
+.login-section p{
+    font-weight: 400;
+    color: var(--bc);
+}
+.login-section .form-control {
+    border: 1px solid #CCCCCC;
+    background: #f4f4f4;
+    height: 50px;
+    box-shadow: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    padding-left: 12%;
+}
+.login-section input::placeholder{
+    font-weight: 500;
+    font-size: 16px;
+    color: #B0B0B0;
+    line-height: 19px;
+    padding-left: 0%;
+}
+.login-section .login{
+    position: relative;
+}
+.login-section .login img {
+    position: absolute;
+    top: 13px;
+    left: 7px;
+}
+.login-section label{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 19px;
+}
+.login-section .text-form{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 19px;
+}
+
+.login-section button{
+    background: var(--cc);
+    border: none;
+    height: 50px;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--blackc);
+}
+.login-section a{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--xgc);
+}
+
+/* register section */
+.register-section{
+    background-image: url(../img/photos/sign-up.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.register-section h4{
+    font-weight: 600;
+    color: var(--wc);
+    padding-top: 82%;
+}
+.sign-up-btn{
+    width: 85%;
+    background: var(--cc);
+    margin-left: 8%;
+}
+.sign-up-btn li{
+    margin: 15px 4px;
+}
+.sign-up-btn li a i {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid var(--bc);
+    color: var(--bc);
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.sign-up-btn li a i:hover{
+    background: var(--bc);
+    border: 1px solid var(--bc);
+    color: var(--wc);
+}
+.sign-up-page .register-section h4 {
+    padding-top: 123%;
+}
+/* LOGIN CSS END */
+
+/* CART PAGE CSS START */
+.cart-breadcrump a{
+    color: var(--xgc);
+}
+.billing-info button{
+    background: var(--pc);
+    border: none;
+    width: 100%;
+    height: 60px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--wc);
+}
+.cart-section td p {
+    padding: 5px 25px;
+    border: 1px solid var(--gc);
+    border-radius: 20px;
+}
+.cart-section .coupon .form-control{
+    border: 1px solid var(--xgc);
+    box-sizing: border-box;
+    border-radius: 0px;
+    height: 50px;
+    box-shadow: none;
+}
+.cart-section .coupon button{
+    background: var(--pc);
+    border: 1px solid var(--pc);
+    color: var(--wc);
+}
+.cart-section .custom-btn {
+    padding: 12px 40px;
+    background: var(--pc);
+    color: var(--wc);
+    font-weight: 500;
+}
+.cart-section .total-price-card{
+    border: 1px solid var(--gc);
+    border-radius: 2px;
+}
+.total-price-card .card-body h6{
+    font-weight: 400;
+    color: var(--xgc);
+}
+.total-price-card .card-body span{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--xgc);
+}
+.total-price-card .card-body h4{
+    font-weight: 500;
+    color: var(--xgc);
+}
+hr.cart{
+    background: var(--gc);
+    height: 2px;
+}
+.cart-section .process-btn .readmore-btn {
+    padding: 13px 40px;
+    font-weight: 500;
+    border-radius: 0px;
+    font-size: 16px;
+    background: var(--pc);
+}
+
+/* CART PAGE CSS END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

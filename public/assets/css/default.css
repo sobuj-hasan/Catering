@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Pathway+Gothic+One&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --cc: #FFC672;
+    --bc: #333333;
+    --sc: #787878;
+    --blackc: #000000;
+    --src: #CC1716;
+    --rc: #CA1413;
+    --xrc: #CB2321;
+    --wc: #ffffff;
+    --gc: #CCCCCC;
+    --ac: #EEFEFF;
+    --ec: #E7E7E7;
+    --xgc: #555555;
+    --pc: #673091;
+    --blogbg: #F6F6F6;
+    --fbg: #260044;
+    --border: 1px solid var(--gc);
+    --firasans: 'Fira Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--firasans);
+    font-weight: 400;
+    line-height: 24px;
+}
+/* hr {
+    background: #CCCCCC;;
+    height: 2px;
+} */
+a{
+    text-decoration: none;
+    color: var(--wc);
+    display: inline-block;
+}
+a:hover{
+    color: var(--wc);
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+/* Typograpgy */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--firasans);
+    /* font-weight: 600; */
+}
+
+h3{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--wc);
+    text-transform: uppercase;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--src);
+}
+
+h5{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: var(--bc);
+}
+
+h6{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+    color: var(--xrc);
+    text-transform: capitalize;
+}
+
+p {
+    color: var(--tc);
+    line-height: 24px;
+    font-size: 16px;
+}
+
+/* after-before design here */
+.after-design i{
+    font-size: 12px;
+    color: var(--xrc);
+}
+.after-before{
+    position: relative;
+}
+.after-before::after {
+    position: absolute;
+    width: 15%;
+    height: 1px;
+    background: var(--gc);
+    bottom: -32%;
+    left: 32%;
+    content: '';
+}
+.after-before::before {
+    position: absolute;
+    width: 15%;
+    height: 1px;
+    background: var(--gc);
+    bottom: -32%;
+    right: 32%;
+    content: '';
+}
+/* after-before design End */
+
+.badge{
+    padding: 3px 22px;
+    background: var(--cc);
+    color: var(--wc);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+    border-radius: 50px;
+}
+
+.banner-title{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    color: var(--bc);
+    text-transform: uppercase;
+}
+
+.section-header{
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: var(--blackc);
+}
+
+.paragraph{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--bc);
+}
+
+.readmore-btn{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    background: var(--rc);
+    padding: 20px 55px;
+    border-radius: 50px;
+    color: var(--wc);
+}
+
+.custom-btn{
+    padding: 15px 54px;
+    background: none;
+    border: 1px solid var(--xrc);
+    color: var(--bc);
+    transition: 0.5s;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+.custom-btn:hover{
+    background: var(--xrc);
+    color: var(--wc);
+}
+
+.scrolled {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: .4s;
+    box-shadow: 3px 3px 10px 0px #33333396;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

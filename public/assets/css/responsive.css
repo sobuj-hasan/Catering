@@ -1,0 +1,858 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+    /* default css responsive */
+    h4 {
+        font-size: 20px;
+    }
+    .banner-title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 66px;
+    }
+    /* default css end */
+    .service-tools .phone-img {
+        padding: 24px 31px;
+    }
+    .service-tools .car-img {
+        padding: 26px 22px;
+    }
+    .service-tools .barger-img {
+        padding: 26px 24px;
+    }
+    .package .package-pricing h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .package .package-pricing .section-header {
+        font-size: 35px;
+        line-height: 42px;
+    }
+    .latest-blog .blog img {
+        width: 110px;
+        height: 110px;
+    }
+
+
+
+
+
+}
+
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* default css responsive */
+    h4 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    h6 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .paragraph {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .banner-title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 72px;
+    }
+    .section-header {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .readmore-btn {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        padding: 16px 38px;
+    }
+    .custom-btn {
+        padding: 16px 42px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 16px;
+    }
+    /* after before */
+    .after-before::before {
+        width: 15%;
+        bottom: -47%;
+        right: 30%;
+    }
+    .after-before::after {
+        width: 15%;
+        bottom: -47%;
+        left: 30%;
+    }
+    .after-design i {
+        font-size: 10px;
+    }
+    /* default css end */
+    
+    .logo img {
+        margin-left: -50px;
+    }
+    .banner-content {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .banner-part .banner-img{
+        display: none;
+    }
+    .service-item {
+        margin-bottom: 10px;
+    }
+    .service-tools .phone-img {
+        padding: 22px 30px;
+    }
+    .service-tools .car-img {
+        padding: 24px 19px;
+    }
+    .service-tools .barger-img {
+        padding: 25px 22px;
+    }
+    .special-catering ul li a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 14px 22px;
+        margin-bottom: 15px;
+    }
+    .special-catering ul li img{
+        display: none;
+    }
+    .discount-banner .custom-btn {
+        padding: 20px 28px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .package .package-pricing h4 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .package .package-pricing .section-header {
+        font-size: 37px;
+        line-height: 42px;
+    }
+    .package .card-footer {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .planing-events .events h2 {
+        font-size: 48px;
+    }
+    .planing-events .heading h3 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .planing-events .events h4 {
+        font-weight: 500;
+    }
+    .planing-events p {
+        line-height: 24px;
+    }
+    .about-us .readmore-btn {
+        padding: 16px 38px;
+    }
+    .about-us a {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .about-us img{
+        display: none;
+    }
+    .newslatter-part .left {
+        border-right: 0px solid #FFD390;
+        margin-right: 10%;
+    }
+    .newslatter-part input {
+        height: 52px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .newslatter-part button {
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .testimonial-part p {
+        padding: 0 2%;
+    }
+    .review-img .left {
+        height: 50px;
+    }
+    .review-img .middle {
+        height: 80px;
+    }
+    .review-img .right {
+        height: 50px;
+    }
+    .latest-blog .blog-info span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .latest-blog .blog-info .right {
+        padding-left: 10%;
+    }
+    .latest-blog .blog {
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .latest-blog .blog img {
+        width: 90px;
+        height: 90px;
+    }
+    .badge {
+        padding: 2px 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .blog span {
+        font-size: 14px;
+    }
+    .latest-blog .blog h4 {
+        font-size: 16px;
+    }
+    /* Index page responsive end */
+
+
+
+}
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    /* default css responsive */
+    h4 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    h6 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .paragraph {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .banner-title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 62px;
+    }
+    .section-header {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .readmore-btn {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        padding: 16px 38px;
+    }
+    .custom-btn {
+        padding: 16px 42px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 16px;
+    }
+    /* after before */
+    .after-before::before {
+        width: 15%;
+        bottom: -47%;
+        right: 30%;
+    }
+    .after-before::after {
+        width: 15%;
+        bottom: -47%;
+        left: 30%;
+    }
+    .after-design i {
+        font-size: 10px;
+    }
+    /* default css end */
+    
+    .logo img {
+        margin-left: -50px;
+    }
+    .banner-content {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .banner-part .banner-img{
+        display: none;
+    }
+    .service-item {
+        margin-bottom: 10px;
+    }
+    .service-tools .phone-img {
+        padding: 22px 30px;
+    }
+    .service-tools .car-img {
+        padding: 24px 19px;
+    }
+    .service-tools .barger-img {
+        padding: 25px 22px;
+    }
+    .special-catering ul li a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 14px 22px;
+        margin-bottom: 15px;
+    }
+    .special-catering ul li img{
+        display: none;
+    }
+    .discount-banner .custom-btn {
+        padding: 20px 28px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .package .package-pricing h4 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .package .package-pricing .section-header {
+        font-size: 37px;
+        line-height: 42px;
+    }
+    .package .card-footer {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .planing-events .events h2 {
+        font-size: 48px;
+    }
+    .planing-events .heading h3 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .planing-events .events h4 {
+        font-weight: 500;
+    }
+    .planing-events p {
+        line-height: 24px;
+    }
+    .about-us .readmore-btn {
+        padding: 16px 38px;
+    }
+    .about-us a {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .about-us img{
+        display: none;
+    }
+    .newslatter-part .left {
+        border-right: 0px solid #FFD390;
+        margin-right: 10%;
+    }
+    .newslatter-part input {
+        height: 52px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .newslatter-part button {
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .testimonial-part p {
+        padding: 0 2%;
+    }
+    .review-img .left {
+        height: 50px;
+    }
+    .review-img .middle {
+        height: 80px;
+    }
+    .review-img .right {
+        height: 50px;
+    }
+    .latest-blog .blog-info span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .latest-blog .blog-info .right {
+        padding-left: 10%;
+    }
+    .latest-blog .blog {
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .latest-blog .blog img {
+        width: 90px;
+        height: 90px;
+    }
+    .badge {
+        padding: 2px 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .blog span {
+        font-size: 14px;
+    }
+    .latest-blog .blog h4 {
+        font-size: 16px;
+    }
+    /* Index page responsive end */
+
+
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+
+
+}
+
+
+@media only screen and (max-width: 576px) {
+    /* default css responsive */
+    h4 {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 22px;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    h6 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .paragraph {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .banner-title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .section-header {
+        font-size: 29px;
+        line-height: 40px;
+    }
+    .readmore-btn {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 12px 32px;
+    }
+    .custom-btn {
+        padding: 14px 38px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    /* after before */
+    .after-before::before {
+        width: 15%;
+        bottom: -57%;
+        right: 28%;
+    }
+    .after-before::after {
+        width: 15%;
+        bottom: -57%;
+        left: 28%;
+    }
+    .after-design i {
+        font-size: 10px;
+    }
+    /* default css end */
+    
+    .logo img {
+        margin-left: -50px;
+    }
+    .banner-content {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .banner-part .banner-img{
+        display: none;
+    }
+    .service-item {
+        margin-bottom: 10px;
+    }
+    .service-tools .phone-img {
+        padding: 18px 24px;
+    }
+    .service-tools .car-img {
+        padding: 20px 15px;
+    }
+    .service-tools .barger-img {
+        padding: 21px 18px;
+    }
+    .special-catering ul li a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+    }
+    .special-catering ul li img{
+        display: none;
+    }
+    .discount-banner .custom-btn {
+        padding: 18px 26px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .package .package-pricing h4 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .package .package-pricing .section-header {
+        font-size: 37px;
+        line-height: 42px;
+    }
+    .package .card-footer {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .planing-events .events h2 {
+        font-size: 42px;
+    }
+    .planing-events .heading h3 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .planing-events .events h4 {
+        font-weight: 500;
+    }
+    .planing-events p {
+        line-height: 24px;
+    }
+    .about-us .readmore-btn {
+        padding: 16px 32px;
+    }
+    .about-us a {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .about-us img{
+        display: none;
+    }
+    .newslatter-part .left {
+        border-right: 0px solid #FFD390;
+        margin-right: 10%;
+    }
+    .newslatter-part input {
+        height: 52px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .newslatter-part button {
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .testimonial-part p {
+        padding: 0 2%;
+    }
+    .review-img .left {
+        height: 50px;
+    }
+    .review-img .middle {
+        height: 80px;
+    }
+    .review-img .right {
+        height: 50px;
+    }
+    .latest-blog .blog-info span {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .latest-blog .blog-info .right {
+        padding-left: 10%;
+    }
+    .latest-blog .blog {
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .latest-blog .blog img {
+        width: 50px;
+        height: 50px;
+    }
+    .badge {
+        padding: 2px 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .blog span {
+        font-size: 10px;
+    }
+    .latest-blog .blog h4 {
+        font-size: 14px;
+    }
+    /* Index page responsive end */
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 400px) {
+    /* default css responsive */
+    h4 {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 22px;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    h6 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .paragraph {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .banner-title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .section-header {
+        font-size: 29px;
+        line-height: 40px;
+    }
+    .readmore-btn {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 12px 32px;
+    }
+    .custom-btn {
+        padding: 14px 38px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    /* after before */
+    .after-before::before {
+        width: 15%;
+        bottom: -57%;
+        right: 28%;
+    }
+    .after-before::after {
+        width: 15%;
+        bottom: -57%;
+        left: 28%;
+    }
+    .after-design i {
+        font-size: 10px;
+    }
+    /* default css end */
+
+    .logo img {
+        margin-left: -50px;
+    }
+    .banner-content {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .banner-part .banner-img{
+        display: none;
+    }
+    .service-item {
+        margin-bottom: 10px;
+    }
+    .service-tools .phone-img {
+        padding: 18px 24px;
+    }
+    .service-tools .car-img {
+        padding: 20px 15px;
+    }
+    .service-tools .barger-img {
+        padding: 21px 18px;
+    }
+    .special-catering ul li a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+    }
+    .special-catering ul li img{
+        display: none;
+    }
+    .discount-banner .custom-btn {
+        padding: 18px 26px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .package .package-pricing h4 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .package .package-pricing .section-header {
+        font-size: 37px;
+        line-height: 42px;
+    }
+    .package .card-footer {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .planing-events .events h2 {
+        font-size: 42px;
+    }
+    .planing-events .heading h3 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .planing-events .events h4 {
+        font-weight: 500;
+    }
+    .planing-events p {
+        line-height: 24px;
+    }
+    .about-us .readmore-btn {
+        padding: 16px 32px;
+    }
+    .about-us a {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .about-us img{
+        display: none;
+    }
+    .newslatter-part .left {
+        border-right: 0px solid #FFD390;
+        margin-right: 10%;
+    }
+    .newslatter-part input {
+        height: 52px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .newslatter-part button {
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .testimonial-part p {
+        padding: 0 2%;
+    }
+    .review-img .left {
+        height: 50px;
+    }
+    .review-img .middle {
+        height: 80px;
+    }
+    .review-img .right {
+        height: 50px;
+    }
+    .latest-blog .blog-info span {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .latest-blog .blog-info .right {
+        padding-left: 10%;
+    }
+    .latest-blog .blog {
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .latest-blog .blog img {
+        width: 50px;
+        height: 50px;
+    }
+    .badge {
+        padding: 2px 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .blog span {
+        font-size: 10px;
+    }
+    .latest-blog .blog h4 {
+        font-size: 14px;
+    }
+    /* Index page responsive end */
+
+    
+
+
+}
