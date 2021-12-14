@@ -18,14 +18,10 @@
             </div>
         </div>
         <!-- end row -->
-
-
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10 m-auto">
                 <div class="card-box">
                     <h4 class="m-t-0 m-b-30 header-title">Edit Profile <a class="btn btn-primary btn-xs float-right" href="{{ route('admin.user.profile') }}" title=""> Back Profile </a></h4>
-
-
                      <form role="form" method="post" action="{{ route('admin.user.profile.update') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
@@ -42,7 +38,6 @@
                                 {{ $errors->first('email') }}
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="">Mobile</label>
                             <input type="text" class="form-control" name="phone" id="mobile" placeholder="Enter Mobile" value="{{ Auth::user()->phone }}">
@@ -50,29 +45,18 @@
                                 {{ $errors->first('phone') }}
                             </div>
                         </div>
-
-
                         <div class="form-group">
-                            <img width="120" src="{{ asset('safety_assets/img/users') }}/{{ Auth::user()->profile_photo }}" alt="" class="image-responsive image-circle">
+                            <img width="120" src="{{ asset('assets/img/users') }}/{{ Auth::user()->profile_photo }}" alt="" class="image-responsive image-circle">
                             <br>
                             <label for="">Image</label>
                             <input type="file" class="form-control" name="profile_photo" id="image" placeholder="" value="">
                         </div>
-                       
                         <button type="submit" class="btn btn-purple waves-effect waves-light">Submit</button>
                     </form>
-                     
                 </div>
             </div>
             <!-- end col -->
-
-            
         </div>
         <!-- end row -->
-
-
     </div>
-
-
-
 @endsection

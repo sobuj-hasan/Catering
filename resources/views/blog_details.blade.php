@@ -9,13 +9,13 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 pe-lg-5">
                     <div class="blog">
-                        <img class="w-100" src="assets/img/blog/blog-details.png" alt="blog-img">
+                        <img class="w-100" src="{{ asset('assets/img/blog/blog-details.png') }}" alt="blog-img">
                         <div class="breadcrump">
                             <a href="#">Home </a> > <a href="#">Blog Category </a> > <a href="">This is Blog
                                 Title...</a>
                         </div>
                         <h5 class="my-4">Contrary to popular belief, Lorem Ipsum is not simply random text.</h5>
-                        <img width="50px" height="50px" class="rounded-circle" src="assets/img/users/1.png" alt="img">
+                        <img width="50px" height="50px" class="rounded-circle" src="{{ asset('assets/img/users/1.png') }}" alt="img">
                         <span>Posted By Abu Taleb \\ 08 August 2021 \\ share Post:
                             <a href="facebook">
                                 <i class="fab fa-facebook-f"></i>
@@ -47,13 +47,13 @@
                         </p>
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                <img width="100%" src="assets/img/blog/blog-details1.png" alt="blog-img">
+                                <img width="100%" src="{{ asset('assets/img/blog/blog-details1.png') }}" alt="blog-img">
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                <img class="p-1" src="assets/img/blog/blog-details4.png" alt="blog-img">
-                                <img class="p-1" src="assets/img/blog/blog-details5.png" alt="blog-img">
-                                <img class="p-1" src="assets/img/blog/blog-details6.png" alt="blog-img">
-                                <img class="p-1" src="assets/img/blog/blog-details7.png" alt="blog-img">
+                                <img class="p-1" src="{{ asset('assets/img/blog/blog-details4.png') }}" alt="blog-img">
+                                <img class="p-1" src="{{ asset('assets/img/blog/blog-details5.png') }}" alt="blog-img">
+                                <img class="p-1" src="{{ asset('assets/img/blog/blog-details6.png') }}" alt="blog-img">
+                                <img class="p-1" src="{{ asset('assets/img/blog/blog-details7.png') }}" alt="blog-img">
                             </div>
                         </div>
                         <p class="paragraph my-5">
@@ -76,10 +76,10 @@
                         </p>
                         <div class="row">
                             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
-                                <img width="100%" src="assets/img/blog/blog-details9.png" alt="blog-img">
+                                <img width="100%" src="{{ asset('assets/img/blog/blog-details9.png') }}" alt="blog-img">
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                                <img class="p-1" src="assets/img/blog/blog-details8.png" alt="blog-img">
+                                <img class="p-1" src="{{ asset('assets/img/blog/blog-details8.png') }}" alt="blog-img">
                             </div>
                         </div>
                         <p class="paragraph my-5">
@@ -153,19 +153,19 @@
                         <hr class="blog-details">
                         <div class="row blog-slider m-auto">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 slider-item mt-3">
-                                <img class="w-100" src="assets/img/blog/related-post3.png" alt="img">
+                                <img class="w-100" src="{{ asset('assets/img/blog/related-post3.png') }}" alt="img">
                                 <a href="#">
                                     <h6 class="title my-2">Best Steck traning and Toturial..</h6>
                                 </a>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 slider-item mt-3">
-                                <img class="w-100" src="assets/img/blog/related-post2.png" alt="img">
+                                <img class="w-100" src="{{ asset('assets/img/blog/related-post2.png') }}" alt="img">
                                 <a href="#">
                                     <h6 class="title my-2">Delicious food review and price..</h6>
                                 </a>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 slider-item mt-3">
-                                <img class="w-100" src="assets/img/blog/related-post1.png" alt="img">
+                                <img class="w-100" src="{{ asset('assets/img/blog/related-post1.png') }}" alt="img">
                                 <a href="#">
                                     <h6 class="title my-2">Luxuary steak recepe and food review..</h6>
                                 </a>
@@ -178,7 +178,7 @@
                         <h6>Latest Post</h6>
                         <hr class="blog-details">
                         <div class="latest-blog-part mb-5">
-                            <img class="w-100" src="assets/img/blog/latest-post1.png" alt="img">
+                            <img class="w-100" src="{{ asset('assets/img/blog/latest-post1.png') }}" alt="img">
                             <div class="text">
                                 <a href="#">
                                     <h6>Restaurent steak recepe for private events</h6>
@@ -188,7 +188,7 @@
                             </div>
                         </div>
                         <div class="latest-blog-part mb-5">
-                            <img class="w-100" src="assets/img/blog/latest-post2.png" alt="img">
+                            <img class="w-100" src="{{ asset('assets/img/blog/latest-post2.png') }}" alt="img">
                             <div class="text">
                                 <a href="#">
                                     <h6>Corporate events catering items and services</h6>
@@ -227,14 +227,14 @@
                     </div>
 
                     <div class="add my-5">
-                        <img class="w-100" src="assets/img/blog/add-img.png" alt="add-img">
+                        <img class="w-100" src="{{ asset('assets/img/blog/add-img.png') }}" alt="add-img">
                     </div>
 
                     <div class="latest-post">
                         <h6>Featured Post</h6>
                         <hr class="blog-details">
                         <div class="latest-blog-part mb-5">
-                            <img class="w-100" src="assets/img/blog/feature-post.png" alt="img">
+                            <img class="w-100" src="{{ asset('assets/img/blog/feature-post.png') }}" alt="img">
                             <div class="text">
                                 <a href="#">
                                     <h6>Restaurent steak recepe for private events</h6>
@@ -247,7 +247,7 @@
 
                     <div class="d-flex more-blog my-3">
                         <div class="flex-shrink-0">
-                            <img src="assets/img/blog/more-blog1.png" alt="img">
+                            <img src="{{ asset('assets/img/blog/more-blog1.png') }}" alt="img">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <a href="#">
@@ -258,7 +258,7 @@
                     </div>
                     <div class="d-flex more-blog my-3">
                         <div class="flex-shrink-0">
-                            <img src="assets/img/blog/more-blog2.png" alt="img">
+                            <img src="{{ asset('assets/img/blog/more-blog2.png') }}" alt="img">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <a href="#">
@@ -269,7 +269,7 @@
                     </div>
                     <div class="d-flex more-blog my-3">
                         <div class="flex-shrink-0">
-                            <img src="assets/img/blog/more-blog3.png" alt="img">
+                            <img src="{{ asset('assets/img/blog/more-blog3.png') }}" alt="img">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <a href="#">
@@ -280,7 +280,7 @@
                     </div>
                     <div class="d-flex more-blog my-3">
                         <div class="flex-shrink-0">
-                            <img src="assets/img/blog/more-blog4.png" alt="img">
+                            <img src="{{ asset('assets/img/blog/more-blog4.png') }}" alt="img">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <a href="#">
@@ -291,7 +291,7 @@
                     </div>
                     <div class="d-flex more-blog my-3">
                         <div class="flex-shrink-0">
-                            <img src="assets/img/blog/more-blog5.png" alt="img">
+                            <img src="{{ asset('assets/img/blog/more-blog5.png') }}" alt="img">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <a href="#">

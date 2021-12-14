@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/wedding-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/wedding-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Our Wedding Event catering and Management </h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/picnic-tour-and-event-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/picnic-tour-and-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Picnic Tour & Event catering with Management</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/corporate-program-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/corporate-program-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Corporate programs catering and Media Management </h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/festival-event-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/festival-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Festival Event catering and Program Management</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/private-program-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/private-program-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Private programs catering and Media Management</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
-                    <img width="90%" src="assets/img/food/social-event-catering.png" alt="event-img">
+                    <img width="90%" src="{{ asset('assets/img/food/social-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">Social Event catering and Program Management</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -152,7 +152,7 @@
             </div>
             <div class="row pb-5">
                 <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-                    <img class="img-fluid" src="assets/img/blog/Our-latest-blogs.png" alt="blog">
+                    <img class="img-fluid" src="{{ asset('assets/img/blog/Our-latest-blogs.png') }}" alt="blog">
                     <a href="blog_details.html">
                         <h4 class="py-4">There are many variations of passages of Lorem Ipsum available....</h4>
                     </a>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
                     <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog1.png" alt="blog-img">
+                        <img style="width: 180px;" src="{{ asset('assets/img/blog/blog1.png') }}" alt="blog-img">
                         <div class="flex-grow-1 ms-3 align-self-center content">
                             <span class="badge">Catering</span>
                             <span class="badge">Big Burger</span>
@@ -189,7 +189,7 @@
                     </div>
     
                     <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog2.png" alt="blog-img">
+                        <img style="width: 180px;" src="{{ asset('assets/img/blog/blog2.png') }}" alt="blog-img">
                         <div class="flex-grow-1 ms-3 align-self-center content">
                             <span class="badge">Delivery</span>
                             <a href="blog_details.html">
@@ -206,7 +206,7 @@
                     </div>
     
                     <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog3.png" alt="blog-img">
+                        <img style="width: 180px;" src="{{ asset('assets/img/blog/blog3.png') }}" alt="blog-img">
                         <div class="flex-grow-1 ms-3 align-self-center content">
                             <span class="badge">Fried Chiken</span>
                             <span class="badge">Big Chiken Fry</span>

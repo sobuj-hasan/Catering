@@ -1,4 +1,4 @@
-@extends('layouts.catering_app');
+@extends('layouts.catering_app')
 @section('title')
     Your Cart
 @endsection
