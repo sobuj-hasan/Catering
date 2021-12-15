@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class SpecialCateringGoodsController extends Controller
@@ -24,7 +25,8 @@ class SpecialCateringGoodsController extends Controller
      */
     public function create()
     {
-        return view('admin.special_catering.add');
+        $data['categories'] = Category::all();
+        return view('admin.special_catering.add', $data);
     }
 
     /**
@@ -35,7 +37,35 @@ class SpecialCateringGoodsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'category' => 'required|numeric',
+            'title' => 'required|min:3|max:30',
+            'short_description' => 'required|max:100',
+            'price' => 'required',
+            'image' => 'required|image',
+        ]);
+
+        // $slug = Str::slug($request->name) . '-' . Str::random(5);
+        // $product->update($request->except('image', 'image_name') + [
+        //     'slug' => $slug,
+        // ]);
+
+        // if ($request->hasFile('image')) {
+        //     if ($product->image) {
+        //         unlink(public_path('safety_assets/img/products/' . $product->image));
+        //     }
+
+        //     $uploaded_photo = $request->file('image');
+        //     $photo_name = time() . "." . $uploaded_photo->getClientOriginalExtension($uploaded_photo);
+        //     $new_photo_location = 'safety_assets/img/products/' . $photo_name;
+
+        //     Image::make($uploaded_photo)->save(public_path($new_photo_location));
+        //     $product->update([
+        //         'image' => $photo_name
+        //     ]);
+        // }
+
+
     }
 
     /**

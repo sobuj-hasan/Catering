@@ -48,7 +48,7 @@
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
                                {{ Auth::user()->name }}
-                                <img src="{{ asset('assets/img/users') }}/{{ Auth::user()->profile_photo }}" alt="user" class="rounded-circle">
+                                <img src="{{ asset('assets/img/users') }}/{{ Auth::user()->profile_photo }}" alt="user" class="rounded-circle" style="border: 1px solid #ffffff;">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
@@ -104,17 +104,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"> <i class="fas fa-utensils"></i> <span>Special Catering</span> <span class="menu-arrow"></span></a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('catering.create') }}">Add special catering</a></li>
-                                    <li><a href="{{ route('catering.index') }}">View special catering</a></li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="javascript: void(0);"> <i class="icon-basket-loaded"></i> <span>Food Category</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('categories.create') }}">Add New</a></li>
                                     <li><a href="{{ route('categories.index') }}">View List</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);"> <i class="fas fa-utensils"></i> <span>Catering Foods</span> <span class="menu-arrow"></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{ route('catering.index') }}">View All foods</a></li>
+                                    <li><a href="{{ route('catering.create') }}">Add New Foods</a></li>
                                 </ul>
                             </li>
                             <li>

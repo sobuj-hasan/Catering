@@ -75,11 +75,11 @@
                                 <li>
                                     @if (Auth::user()->role == 1)
                                         <a href="{{ route('admin.dashboard') }}">
-                                            <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile">
+                                            <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
                                         </a>
                                     @else
                                         <a href="{{ route('dashboard') }}">
-                                            <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile">
+                                            <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
                                         </a>
                                     @endif
                                 </li>

@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-1.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-1.png') }}" alt="restorent-img">
                         <p>40% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -52,7 +52,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-2.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-2.png') }}" alt="restorent-img">
                         <p>45% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -64,7 +64,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-3.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-3.png') }}" alt="restorent-img">
                         <p>50% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -76,7 +76,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-4.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-4.png') }}" alt="restorent-img">
                         <!-- <p>40% OFF</p> -->
                     </div>
                     <div class="review d-flex pt-4">
@@ -88,7 +88,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-5.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-5.png') }}" alt="restorent-img">
                         <p>40% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -100,7 +100,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-6.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-6.png') }}" alt="restorent-img">
                         <p>45% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -112,7 +112,7 @@
                 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-7.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-7.png') }}" alt="restorent-img">
                         <p>50% OFF</p>
                     </div>
                     <div class="review d-flex pt-4">
@@ -124,7 +124,7 @@
 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                     <div class="image">
-                        <img width="100%" src="assets/img/food/restaurant-image-8.png" alt="restorent-img">
+                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-8.png') }}" alt="restorent-img">
                         <!-- <p>40% OFF</p> -->
                     </div>
                     <div class="review d-flex pt-4">
