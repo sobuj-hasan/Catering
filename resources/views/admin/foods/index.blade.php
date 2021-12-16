@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title','product list')
+@section('title','Special Foods')
 @section('content')
 
  <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title float-left">All Products</h4>
+                    <h4 class="page-title float-left">Special Foods</h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">products List</a></li>
+                        <li class="breadcrumb-item"><a href="#">Special Catering Foods List</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card-box">
-                    <h4 class="m-t-0 header-title pb-3"><b>All Product List</b></h4>
+                    <h4 class="m-t-0 header-title pb-3"><b>Special Catering Foods List</b></h4>
 
                     <div class="table-responsive">
                         <table class="table table-hover m-0 table-actions-bar">
@@ -29,47 +29,38 @@
                                 <th>SI NO.</th>
                                 <th>Image </th>
                                 <th>Name </th>
-                                <th>Category</th>
-                                <th>Brand</th>
-                                <th>Price </th>
-                                <th>Sell Price </th>
-                                <th>Stock Amount </th>
+                                <th>Category </th>
+                                <th>Price</th>
+                                <th>Discount</th>
                                 <th>Action </th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach ($products as $product)
+                                @foreach ($foods as $food)
                                     <tr>
                                         <td>
                                             <h5>{{ $loop->index + 1 }}</h5>
                                         </td>
                                         <td>
-                                            <img width="60px" src="{{ asset('nsseb_assets/media/images/product-img') }}/{{ $product->image }}" alt="img" title="contact-img"/>
+                                            <img width="60px" src="{{ asset('assets/img/food') }}/{{ $food->image }}" alt="img" title="food-img"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
+                                            <a href="{{ route('catering.show', $food->id) }}">{{ $food->title }}</a>
                                         </td>
                                         <td>
-                                            {{ $product->category->name }}
+                                            {{ $food->category->name }}
                                         </td>
                                         <td>
-                                            {{ $product->brand->name }}
+                                            {{ $food->price }}
                                         </td>
                                         <td>
-                                            {{ $product->price }}
+                                            {{ $food->discount }} (%)
                                         </td>
-                                        <td>
-                                            {{ $product->sell_price }}
-                                        </td>
-                                        <td>
-                                            {{ $product->stock }}
-                                        </td>
-
-                                        <form method="POST" action="{{ route('products.destroy', $product->id) }}">
+                                        <form method="POST" action="{{ route('catering.destroy', $food->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('products.edit', $product->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('catering.edit', $food->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
                                                 <button onclick="productDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>
@@ -89,7 +80,7 @@
 @section('footer_script')
     <script>
         function productDelete(){
-            alert('Are you shure ? You want to delete this Category')
+            alert('Are you shure ? You want to delete this Food')
         }
     </script>
 @endsection

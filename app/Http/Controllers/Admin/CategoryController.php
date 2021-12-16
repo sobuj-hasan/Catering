@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('admin.products.category.index', compact('categories'));
+        return view('admin.foods.category.index', compact('categories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.products.category.create');
+        return view('admin.foods.category.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('admin.products.category.edit', compact('category'));
+        return view('admin.foods.category.edit', compact('category'));
     }
 
     /**
@@ -88,7 +88,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->ar_name = $request->ar_name;
         $category->save();
-        Notify::success('' . $category->name . ' Category updated', 'Updated');
+        Notify::info('' . $category->name . ' Category updated', 'Updated');
         return redirect()->route('categories.index');
     }
 

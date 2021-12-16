@@ -1,10 +1,13 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
-use App\Http\Controllers\Controller;
+use App\Models\Food;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Idemonbd\Notify\Facades\Notify;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class SpecialCateringGoodsController extends Controller
 {
@@ -15,7 +18,8 @@ class SpecialCateringGoodsController extends Controller
      */
     public function index()
     {
-        return view('admin.special_catering.index');
+        $data['foods'] = Food::all();
+        return view('admin.foods.index', $data);
     }
 
     /**
@@ -26,7 +30,7 @@ class SpecialCateringGoodsController extends Controller
     public function create()
     {
         $data['categories'] = Category::all();
-        return view('admin.special_catering.add', $data);
+        return view('admin.foods.add', $data);
     }
 
     /**
@@ -38,34 +42,30 @@ class SpecialCateringGoodsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category' => 'required|numeric',
+            'category_id' => 'required|numeric',
             'title' => 'required|min:3|max:30',
-            'short_description' => 'required|max:100',
+            'short_description' => 'required|min:10|max:100',
             'price' => 'required',
-            'image' => 'required|image',
+            'discount' => '',
+            'image' => 'required',
         ]);
+        $slug = Str::slug($request->title) . '-' . Str::random(5);
+        $food = Food::create($request->all() + [
+            'user_id' => Auth::id() ?? '',
+            'slug' => $slug,
+        ]);
+        if ($request->hasFile('image')) {
+            $photo = $request->file('image');
+            $photo_name = time() . "." . $photo->getClientOriginalExtension($photo);
+            $location = 'assets/img/food/' . $photo_name;
 
-        // $slug = Str::slug($request->name) . '-' . Str::random(5);
-        // $product->update($request->except('image', 'image_name') + [
-        //     'slug' => $slug,
-        // ]);
-
-        // if ($request->hasFile('image')) {
-        //     if ($product->image) {
-        //         unlink(public_path('safety_assets/img/products/' . $product->image));
-        //     }
-
-        //     $uploaded_photo = $request->file('image');
-        //     $photo_name = time() . "." . $uploaded_photo->getClientOriginalExtension($uploaded_photo);
-        //     $new_photo_location = 'safety_assets/img/products/' . $photo_name;
-
-        //     Image::make($uploaded_photo)->save(public_path($new_photo_location));
-        //     $product->update([
-        //         'image' => $photo_name
-        //     ]);
-        // }
-
-
+            Image::make($photo)->save(public_path($location));
+            Food::find($food->id)->update([
+                'image' => $photo_name,
+            ]);
+        }
+        Notify::success('Foods has been added!', 'Success');
+        return redirect()->route('catering.index');
     }
 
     /**
@@ -76,7 +76,8 @@ class SpecialCateringGoodsController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['single_food'] = Food::where('id', $id)->firstOrFail();
+        return view('admin.foods.show', $data);
     }
 
     /**

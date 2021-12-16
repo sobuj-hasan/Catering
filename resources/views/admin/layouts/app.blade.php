@@ -118,13 +118,6 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"><i class="fas fa-hamburger"></i> <span> Our Foods </span> <span class="menu-arrow"></span></a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('products.create') }}">Add New</a></li>
-                                    <li><a href="{{ route('products.index') }}">View All</a></li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="javascript: void(0);"> <i class="fas fa-box-open"></i> <span>Our Food Package</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('package.store') }}">Add New Package</a></li>

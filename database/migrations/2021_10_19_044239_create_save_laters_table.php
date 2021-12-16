@@ -16,7 +16,7 @@ class CreateSaveLatersTable extends Migration
         Schema::create('save_laters', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('product_id');
+            $table->integer('food_id');
             $table->timestamps();
         });
     }

@@ -5,23 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Food extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'category_id',
+        'user_id',
         'title',
         'short_description',
         'price',
-        'stock',
-        'short_description',
-        'long_description',
-        'user_id',
-        'status',
+        'discount',
+        'image',
     ];
 
-    protected $with = ['category', 'brand', 'multipleimage'];
+    protected $with = ['category', 'user'];
 
     public function category()
     {
@@ -32,17 +29,5 @@ class Product extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    public function brand()
-    {
-        return $this->belongsTo(Brand::class);
-    }
-
-    public function multipleimage()
-    {
-        return $this->belongsTo(MultipleImage::class);
-    }
-
-
 
 }

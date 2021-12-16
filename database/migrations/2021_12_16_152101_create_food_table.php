@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfilePhotosTable extends Migration
+class CreateFoodTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateProfilePhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile_photos', function (Blueprint $table) {
+        Schema::create('food', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->integer('category_id');
+            $table->integer('user_id');
+            $table->string('title');
+            $table->string('short_description');
+            $table->string('price');
+            $table->string('discount');
             $table->string('image')->nullable();
             $table->timestamps();
         });
@@ -28,6 +33,6 @@ class CreateProfilePhotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile_photos');
+        Schema::dropIfExists('food');
     }
 }

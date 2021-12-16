@@ -11,14 +11,14 @@ class SaveLater extends Model
 
     protected $fillable = [
         'user_id',
-        'product_id'
+        'food_id'
     ];
 
-    protected $with = ['product'];
+    protected $with = ['food'];
 
-    public function product()
+    public function food()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Food::class);
     }
     
 }

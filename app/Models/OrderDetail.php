@@ -9,10 +9,10 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
-    protected $with = 'product';
+    protected $with = 'food';
 
-    public function product()
+    public function food()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Food::class);
     }
 }
