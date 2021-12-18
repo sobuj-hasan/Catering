@@ -277,12 +277,20 @@ header {
 .special-catering h4{
     text-transform: uppercase;
 }
-.special-catering ul li a {
+.special-catering ul li button {
+    background: none;
+    border: none;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     color: var(--bc);
     padding: 20px 30px;
+}
+.special-catering ul li:last-child img{
+    display: none;
+}
+.special-catering .foods ul{
+    border: none;
 }
 .special-catering .active{
     color: red;

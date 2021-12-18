@@ -74,96 +74,134 @@
     <section class="special-catering">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center mb-sm-3 mb-lg-5">
+                <div class="col-lg-12 text-center mb-sm-3 mb-lg-5 foods">
                     <h4>Choose Your</h4>
                     <h2 class="section-header">Special catering Goods</h2>
-                    <ul class="d-flex justify-content-center">
-                        <li>
-                            <a class="active" href="#">Brackfast</a>
+                    <ul class="d-flex justify-content-center nav nav-tabs" id="myTab" role="tablist">
+                        <li role="presentation">
+                            <button class="active" id="allfoods-tab" data-bs-toggle="tab" data-bs-target="#allfoods" type="button" role="tab" aria-controls="allfoods" aria-selected="true">All Foods</button>
                             <img src="assets/img/photos/arrow.png" alt="arrow">
                         </li>
-                        <li>
-                            <a href="#">Lunch</a>
-                            <img src="assets/img/photos/arrow.png" alt="arrow">
-                        </li>
-                        <li>
-                            <a href="#">Dinner</a>
-                            <img src="assets/img/photos/arrow.png" alt="arrow">
-                        </li>
-                        <li>
-                            <a href="#">Drinks</a>
-                        </li>
+                        @foreach ($categories as $category)
+                            <li role="presentation">
+                                <button id="food{{ $category->id }}-tab" data-bs-toggle="tab" data-bs-target="#food{{ $category->id }}" type="button" role="tab" aria-controls="food{{ $category->id }}" aria-selected="true">{{ $category->name }}</button>
+                                <img src="assets/img/photos/arrow.png" alt="arrow">
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/cheese-Burger.png" alt="catering-img">
-                            <div class="discount">
-                                <h4>25% Off</h4>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="allfoods" role="tabpanel" aria-labelledby="allfoods-tab">
+                    <div class="row foodplay">
+                        @foreach ($foods as $food)
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="{{ asset('assets/img/food/') }}/{{ $food->image }}" alt="catering-img">
+                                        @if ($food->discount)
+                                            <div class="discount">
+                                                <h4>{{ $food->discount }}% Off</h4>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <h4>{{ $food->title }}</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
+                                    <h4 class="price">SAR {{ $food->price }}</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                @foreach ($categories as $category)
+                    <div class="tab-pane fade" id="food{{ $category->id }}" role="tabpanel" aria-labelledby="food{{ $category->id }}-tab">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="assets/img/photos/cheese-Burger.png" alt="catering-img">
+                                        <div class="discount">
+                                            <h4>25% Off</h4>
+                                        </div>
+                                    </div>
+                                    <h4>Royel Cheeseburger</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
+                                    <h4 class="price">$09.99</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="assets/img/photos/luxurious-meal.png" alt="catering-img">
+                                        <!-- <div class="discount">
+                                            <h4>25% Off</h4>
+                                        </div> -->
+                                    </div>
+                                    <h4>Luxarius Meal</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
+                                    <h4 class="price">$09.99</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="assets/img/photos/chicken-fry-&-salad.png" alt="catering-img">
+                                        <!-- <div class="discount">
+                                            <h4>25% Off</h4>
+                                        </div> -->
+                                    </div>
+                                    <h4>Chiken Fry & Salad</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
+                                    <h4 class="price">$09.99</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
+                                        <!-- <div class="discount">
+                                            <h4>25% Off</h4>
+                                        </div> -->
+                                    </div>
+                                    <h4>Vegitable with chiken</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
+                                    <h4 class="price">$09.99</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                <div class="catering-item">
+                                    <div class="offer">
+                                        <img class="mx-auto d-block" src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
+                                        <!-- <div class="discount">
+                                            <h4>25% Off</h4>
+                                        </div> -->
+                                    </div>
+                                    <h4>Vegitable with chiken</h4>
+                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
+                                    <h4 class="price">$09.99</h4>
+                                    <div class="add-cart mt-3 mb-5">
+                                        <button class="custom-btn" href="">Add to Cart</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <h4>Royel Cheeseburger</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/luxurious-meal.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                <h4>25% Off</h4>
-                            </div> -->
-                        </div>
-                        <h4>Luxarius Meal</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/chicken-fry-&-salad.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                <h4>25% Off</h4>
-                            </div> -->
-                        </div>
-                        <h4>Chiken Fry & Salad</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                <h4>25% Off</h4>
-                            </div> -->
-                        </div>
-                        <h4>Vegitable with chiken</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -468,10 +506,10 @@
     <!-- TESTIMONIAL PART END -->
 
     <!-- LATEST BLOG START -->
-
     @include('catering_components.latest_blog')
-
     <!-- LATEST BLOG END -->
+@endsection
+@section('footer_script')
 @endsection
 
 

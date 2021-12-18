@@ -37,11 +37,11 @@
                             </tr>
                             <tr>
                                 <th>Price</th>
-                                <td>{{ $single_food->price }}</td>
+                                <td>{{ $single_food->price }} SAR </td>
                             </tr>
                             <tr>
-                                <th>Salling Price</th>
-                                <td>{{ $single_food->discount }}</td>
+                                <th>Discount </th>
+                                <td>{{ $single_food->discount }} (%) </td>
                             </tr>
                             <tr>
                                 <th>Short Description</th>

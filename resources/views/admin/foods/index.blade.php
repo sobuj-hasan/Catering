@@ -51,7 +51,7 @@
                                             {{ $food->category->name }}
                                         </td>
                                         <td>
-                                            {{ $food->price }}
+                                            {{ $food->price }} SAR
                                         </td>
                                         <td>
                                             {{ $food->discount }} (%)

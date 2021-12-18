@@ -12,6 +12,7 @@ class Food extends Model
         'category_id',
         'user_id',
         'title',
+        'slug',
         'short_description',
         'price',
         'discount',

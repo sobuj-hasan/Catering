@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <!-- Toaster css -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css" />
+    <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
     <!-- slick slider  -->
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
     <!-- slick theme -->
@@ -269,6 +273,8 @@
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <!-- Custom js -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <!-- mixitup js -->
+    <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <!-- Toastr Scripts render -->
     {!! Notify::message() !!}
 

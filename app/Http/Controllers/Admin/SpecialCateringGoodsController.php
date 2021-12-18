@@ -51,7 +51,7 @@ class SpecialCateringGoodsController extends Controller
         ]);
         $slug = Str::slug($request->title) . '-' . Str::random(5);
         $food = Food::create($request->all() + [
-            'user_id' => Auth::id() ?? '',
+            'user_id' => Auth::user()->id,
             'slug' => $slug,
         ]);
         if ($request->hasFile('image')) {
@@ -59,12 +59,12 @@ class SpecialCateringGoodsController extends Controller
             $photo_name = time() . "." . $photo->getClientOriginalExtension($photo);
             $location = 'assets/img/food/' . $photo_name;
 
-            Image::make($photo)->save(public_path($location));
+            Image::make($photo)->save($location);
             Food::find($food->id)->update([
                 'image' => $photo_name,
             ]);
         }
-        Notify::success('Foods has been added!', 'Success');
+        Notify::success('Created a new food !', 'Success');
         return redirect()->route('catering.index');
     }
 
@@ -88,7 +88,9 @@ class SpecialCateringGoodsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['food'] = Food::where('id', $id)->firstOrFail();
+        $data['categories'] = Category::all();
+        return view('admin.foods.edit', $data);
     }
 
     /**
@@ -98,9 +100,35 @@ class SpecialCateringGoodsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Food $food)
     {
-        //
+        $request->validate([
+            'category_id' => 'required|numeric',
+            'title' => 'required|min:3|max:30',
+            'short_description' => 'required|min:10|max:100',
+            'price' => 'required',
+            'discount' => '',
+            'image' => '',
+        ]);
+
+        $slug = Str::slug($request->title) . '-' . Str::random(5);
+        $food->update($request->except('_token','image') + [
+            'user_id' => Auth::user()->id,
+            'slug' => $slug,
+        ]);
+
+        if ($request->hasFile('image')) {
+            if ($food->image) {
+                unlink('assets/img/food/' . $food->image);
+            }
+            $photo = $request->file('image');
+            $photo_name = time() . "." . $photo->getClientOriginalExtension($photo);
+            $location = 'assets/img/food/' . $photo_name;
+            Image::make($photo)->save($location);
+            $food->image = $photo_name;
+        }
+        Notify::success('Food have been updated!', 'Success');
+        return redirect()->route('catering.index');
     }
 
     /**
@@ -111,6 +139,8 @@ class SpecialCateringGoodsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Food::where('id', $id)->first()->delete();
+        Notify::info('This Food Successfully Deleted', 'Deleted');
+        return back();
     }
 }

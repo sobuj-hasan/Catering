@@ -19,13 +19,14 @@
             <div class="col-md-12 m-auto">
                 <div class="card-box">
                     <h4 class="m-t-0 m-b-30 header-title">Edit Food</h4>
-                    <form method="POST" action="{{ route('catering.store') }}" class="form-horizontal" role="form" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('catering.update', $food->id) }}" class="form-horizontal" role="form" enctype="multipart/form-data">
                         @csrf
+                        @method('PATCH')
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-3 col-form-label">Select Food Category : </label>
                             <div class="col-9">
                                 <select class="form-control" name="category_id">
-                                    <option value="{{ $single_food->category->id }}">{{ $single_food->category->name }}</option>
+                                    <option value="{{ $food->category->id }}">{{ $food->category->name }}</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -38,7 +39,7 @@
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-3 col-form-label">Catering Food Name : </label>
                             <div class="col-9">
-                                <input type="text" class="form-control" id="inputEmail3" placeholder="title" value="{{ $single_food->title }}" name="title">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="title" value="{{ $food->title }}" name="title">
                                 @error('title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -47,7 +48,7 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-3 col-form-label">Short Description : </label>
                             <div class="col-9">
-                                <textarea class="form-control" rows="1" id="field-1" placeholder="Here short description" name="short_description">{{ $single_food->short_description }}</textarea>
+                                <textarea class="form-control" rows="1" id="field-1" placeholder="Here short description" name="short_description">{{ $food->short_description }}</textarea>
                                 @error('short_description')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -56,7 +57,7 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-3 col-form-label">Food Price : </label>
                             <div class="col-9">
-                                <input type="text" class="form-control" id="inputPassword3" placeholder="price" value="{{ $single_food->price }}" name="price">
+                                <input type="text" class="form-control" id="inputPassword3" placeholder="price" value="{{ $food->price }}" name="price">
                                 @error('price')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -65,7 +66,7 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-3 col-form-label">Food Discount % : <span class="text-light">(if any)</span></label>
                             <div class="col-9">
-                                <input type="text" class="form-control" id="inputPassword3" placeholder="discount %" value="{{ $single_food->discount }}" name="discount">
+                                <input type="text" class="form-control" id="inputPassword3" placeholder="discount %" value="{{ $food->discount }}" name="discount">
                                 @error('discount')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
