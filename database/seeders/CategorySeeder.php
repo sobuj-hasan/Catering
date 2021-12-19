@@ -18,5 +18,17 @@ class CategorySeeder extends Seeder
             'name' => 'Breackfast',
             'ar_name' => 'وجبة افطار',
         ]);
+        Category::create([
+            'name' => 'Lunch',
+            'ar_name' => 'غداء',
+        ]);
+        Category::create([
+            'name' => 'Dinner',
+            'ar_name' => 'وجبة عشاء',
+        ]);
+        Category::create([
+            'name' => 'Drinks',
+            'ar_name' => 'مشروبات',
+        ]);
     }
 }

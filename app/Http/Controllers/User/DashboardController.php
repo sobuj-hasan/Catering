@@ -14,4 +14,5 @@ class DashboardController extends Controller
     public function restrictuser(){
         return view('dashboard.restrict_user');
     }
+
 }

@@ -27,9 +27,24 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
+            'name' => 'Vendor Account',
+            'res_name' => 'Foods Incubator Limited',
+            'email' => 'vendor@mail.com',
+            'role' => 2,
+            'phone' => Str::random(10),
+            'trade_license' => Str::random(8),
+            'country' => 'Saudi Arabia',
+            'city' => 'Riyadh',
+            'location' => 'Road:00, Tower:00, Building',
+            'email_verified_at' => now(),
+            'password' => Hash::make('vendor'),
+            'remember_token' => Str::random(10),
+        ]);
+
+        User::create([
             'name' => 'Mr John',
             'email' => 'user@mail.com',
-            'role' => 2,
+            'role' => 3,
             'phone' => Str::random(10),
             'email_verified_at' => now(),
             'password' => Hash::make('user'),

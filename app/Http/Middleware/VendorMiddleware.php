@@ -4,10 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Idemonbd\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 
-class UserMiddleware
+class VendorMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,11 +19,11 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == 3) {
-            return redirect(RouteServiceProvider::INDEX);
+        if (auth()->check() && auth()->user()->role == 2) {
+            return $next($request);
         } else {
-            return "login";
+            Notify::error("You dont have permission to access this page. Please login to as a Vendor", 'Error');
+            return redirect('/login');
         }
-        return $next($request);
     }
 }

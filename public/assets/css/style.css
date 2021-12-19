@@ -922,6 +922,12 @@ hr.blog-details{
     padding-left: 40px;
     padding-right: 22px;
 }
+.vendor-signup .login-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .login-section h4{
     font-weight: 600;
     color: var(--bc);
@@ -946,6 +952,16 @@ hr.blog-details{
     color: #B0B0B0;
     line-height: 19px;
     padding-left: 0%;
+}
+.vendor-signup .form-control {
+    border: 1px solid #CCCCCC;
+    background: #f4f4f4;
+    height: 50px;
+    box-shadow: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    padding-left: 4%;
 }
 .login-section .login{
     position: relative;

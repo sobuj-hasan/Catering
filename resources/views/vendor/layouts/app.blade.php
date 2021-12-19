@@ -35,7 +35,7 @@
                 <div class="topbar-left">
                     <a href="{{ route('admin.dashboard') }}" class="logo">
                         <span>
-                            <h4 class="text-white pt-2"><strong>Catering Admin</strong></h4>
+                            <h4 class="text-white pt-2"><strong>Vendor Account</strong></h4>
                         </span>
                         <i>
                             <img src="{{ asset('Backend') }}/assets/images/logo_sm.png" alt="" height="28">

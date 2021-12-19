@@ -14,7 +14,7 @@
                         <p class="paragraph pe-lg-5 my-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
                         layout. The point of using Lorem Ipsum</p>
                         <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                            <a class="readmore-btn" href="planing_event.html">Read More</a>
+                            <a class="readmore-btn" href="{{ route('planing.event') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -114,91 +114,37 @@
                                 </div>
                             </div>
                         @endforeach
+                        @empty($food)
+                            <p class="text-danger">Nothing to show foods...</p>
+                        @endempty
                     </div>
                 </div>
                 @foreach ($categories as $category)
                     <div class="tab-pane fade" id="food{{ $category->id }}" role="tabpanel" aria-labelledby="food{{ $category->id }}-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
-                                <div class="catering-item">
-                                    <div class="offer">
-                                        <img class="mx-auto d-block" src="assets/img/photos/cheese-Burger.png" alt="catering-img">
-                                        <div class="discount">
-                                            <h4>25% Off</h4>
+                        <div class="row justify-content-center">
+                            @foreach (App\Models\Food::where('category_id', $category->id)->inRandomOrder()->limit(4)->get() as $food)
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
+                                    <div class="catering-item">
+                                        <div class="offer">
+                                            <img class="mx-auto d-block" src="{{ asset('assets/img/food/') }}/{{ $food->image }}" alt="catering-img">
+                                            @if ($food->discount)
+                                                <div class="discount">
+                                                    <h4>{{ $food->discount }}% Off</h4>
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <h4>{{ $food->title }}</h4>
+                                        <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
+                                        <h4 class="price">SAR {{ $food->price }}</h4>
+                                        <div class="add-cart mt-3 mb-5">
+                                            <button class="custom-btn" href="">Add to Cart</button>
                                         </div>
                                     </div>
-                                    <h4>Royel Cheeseburger</h4>
-                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                                    <h4 class="price">$09.99</h4>
-                                    <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn" href="">Add to Cart</button>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
-                                <div class="catering-item">
-                                    <div class="offer">
-                                        <img class="mx-auto d-block" src="assets/img/photos/luxurious-meal.png" alt="catering-img">
-                                        <!-- <div class="discount">
-                                            <h4>25% Off</h4>
-                                        </div> -->
-                                    </div>
-                                    <h4>Luxarius Meal</h4>
-                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                                    <h4 class="price">$09.99</h4>
-                                    <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn" href="">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
-                                <div class="catering-item">
-                                    <div class="offer">
-                                        <img class="mx-auto d-block" src="assets/img/photos/chicken-fry-&-salad.png" alt="catering-img">
-                                        <!-- <div class="discount">
-                                            <h4>25% Off</h4>
-                                        </div> -->
-                                    </div>
-                                    <h4>Chiken Fry & Salad</h4>
-                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                                    <h4 class="price">$09.99</h4>
-                                    <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn" href="">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
-                                <div class="catering-item">
-                                    <div class="offer">
-                                        <img class="mx-auto d-block" src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
-                                        <!-- <div class="discount">
-                                            <h4>25% Off</h4>
-                                        </div> -->
-                                    </div>
-                                    <h4>Vegitable with chiken</h4>
-                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                                    <h4 class="price">$09.99</h4>
-                                    <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn" href="">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 food-item">
-                                <div class="catering-item">
-                                    <div class="offer">
-                                        <img class="mx-auto d-block" src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
-                                        <!-- <div class="discount">
-                                            <h4>25% Off</h4>
-                                        </div> -->
-                                    </div>
-                                    <h4>Vegitable with chiken</h4>
-                                    <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted by the readable content.</p>
-                                    <h4 class="price">$09.99</h4>
-                                    <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn" href="">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @empty($food)
+                                <p class="text-danger">Nothing to show foods...</p>
+                            @endempty
                         </div>
                     </div>
                 @endforeach
