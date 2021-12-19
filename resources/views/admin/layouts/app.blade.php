@@ -104,6 +104,13 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="javascript: void(0);"> <i class="far fa-hospital"></i> <span>Our Restaurants</span> <span class="menu-arrow"></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{ route('restaurant.index') }}">View all restaurant</a></li>
+                                    <li><a href="{{ route('restaurant.create') }}">Add New restaurant</a></li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="javascript: void(0);"> <i class="icon-basket-loaded"></i> <span>Food Category</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('categories.index') }}">View List</a></li>
@@ -120,8 +127,8 @@
                             <li>
                                 <a href="javascript: void(0);"> <i class="fas fa-box-open"></i> <span>Our Food Package</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('package.store') }}">Add New Package</a></li>
                                     <li><a href="{{ route('package.index') }}">View Packages</a></li>
+                                    <li><a href="{{ route('package.create') }}">Add New Package</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -132,14 +139,14 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"><i class="icon-basket-loaded"></i> <span>Flood Blog Category </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"><i class="icon-basket-loaded"></i> <span>Blog Category </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('blogcategories.create') }}">Add New</a></li>
                                     <li><a href="{{ route('blogcategories.index') }}">View All</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"> <i class="fab fa-blogger-b"></i> <span> Blogs </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"> <i class="fab fa-blogger-b"></i> <span>Our Blogs </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('blogs.create') }}">Add New</a></li>
                                     <li><a href="{{ route('blogs.index') }}">View All</a></li>

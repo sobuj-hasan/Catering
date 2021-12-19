@@ -22,7 +22,7 @@
     <!-- BANNER TWO PART END -->
 
     <!-- SEARCH LOCATION START -->
-    <section class="search-location my-5">
+    {{-- <section class="search-location my-5">
         <div class="container">
             <div class="location">
                 <iframe
@@ -31,108 +31,30 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- SEARCH LOCATION END -->
 
     <!-- SEARCH RESULT PART START -->
     <section class="search-result my-5">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-1.png') }}" alt="restorent-img">
-                        <p>40% OFF</p>
+                @foreach ($restaurants as $restaurant)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
+                        <div class="image">
+                            <img width="100%" src="{{ asset('assets/img/restaurant/') }}/{{ $restaurant->res_image }}" alt="restorent-img">
+                            @if ($restaurant->res_discount)
+                                <p>{{ $restaurant->res_discount }}% OFF</p>
+                            @endif
+                        </div>
+                        <div class="review d-flex pt-4">
+                            <a href="#">
+                                <p>{{ $restaurant->res_name }}</p>
+                            </a>
+                            <span class="ps-4"><i class="fas fa-star"></i> 0.0/5 (00) </span>
+                        </div>
+                        <i class="fas fa-map-marker-alt"></i><span class="away ps-2">{{ $restaurant->country }}, {{ $restaurant->city }}, {{ Str::limit($restaurant->address, 8, $end='..') }}</span>
                     </div>
-                    <div class="review d-flex pt-4">
-                        <p>AL-Here Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-2.png') }}" alt="restorent-img">
-                        <p>45% OFF</p>
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Mossarf Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-3.png') }}" alt="restorent-img">
-                        <p>50% OFF</p>
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Al-Kafi Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-4.png') }}" alt="restorent-img">
-                        <!-- <p>40% OFF</p> -->
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Lokma Steak House</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-5.png') }}" alt="restorent-img">
-                        <p>40% OFF</p>
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>AL-Here Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-6.png') }}" alt="restorent-img">
-                        <p>45% OFF</p>
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Mossarf Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-7.png') }}" alt="restorent-img">
-                        <p>50% OFF</p>
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Al-Kafi Restaurant</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
-                    <div class="image">
-                        <img width="100%" src="{{ asset('assets/img/food/restaurant-image-8.png') }}" alt="restorent-img">
-                        <!-- <p>40% OFF</p> -->
-                    </div>
-                    <div class="review d-flex pt-4">
-                        <p>Lokma Steak House</p>
-                        <span class="ps-4"><i class="fas fa-star"></i> 4.8/5 (220) </span>
-                    </div>
-                    <i class="fas fa-map-marker-alt"></i><span class="away ps-2"> Riadah, Saudi Arab/ 2km away</span>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -147,77 +69,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/cheese-Burger.png" alt="catering-img">
-                            <div class="discount">
-                                <h4>25% Off</h4>
+                @foreach ($bestfoods as $bestfood)
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
+                        <div class="catering-item">
+                            <div class="offer">
+                                <img src="{{ asset('assets/img/photos/cheese-Burger.png" alt="catering-img') }}">
+                                <div class="discount">
+                                    <h4>25% Off</h4>
+                                </div>
+                            </div>
+                            <h4>Royel Cheeseburger</h4>
+                            <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
+                                by the readable content.</p>
+                            <h4 class="price">$09.99</h4>
+                            <div class="add-cart mt-3 mb-5">
+                                <button class="custom-btn" href="">Add to Cart</button>
                             </div>
                         </div>
-                        <h4>Royel Cheeseburger</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
-                            by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
-    
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/luxurious-meal.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                    <h4>25% Off</h4>
-                                </div> -->
-                        </div>
-                        <h4>Luxarius Meal</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
-                            by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/chicken-fry-&-salad.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                    <h4>25% Off</h4>
-                                </div> -->
-                        </div>
-                        <h4>Chiken Fry & Salad</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
-                            by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
-                    <div class="catering-item">
-                        <div class="offer">
-                            <img src="assets/img/photos/vegetable-with-chicken.png" alt="catering-img">
-                            <!-- <div class="discount">
-                                    <h4>25% Off</h4>
-                                </div> -->
-                        </div>
-                        <h4>Vegitable with chiken</h4>
-                        <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
-                            by the readable content.</p>
-                        <h4 class="price">$09.99</h4>
-                        <div class="add-cart mt-3 mb-5">
-                            <button class="custom-btn" href="">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @empty($bestfood)
+                    <span class="text-danger">Nothin to show Foods...</span>
+                @endempty
             </div>
         </div>
     </section>
@@ -228,7 +101,7 @@
         <div class="container-fluid">
             <div class="banner-img">
                 <div class="container">
-                    <div class="row text-center">
+                    <div class="row text-center m-auto">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-sm-3 mt-lg-5">
                             <h4 class="mb-3 mt-5">Take a Chance</h4>
                             <h3>40% Discount for First Order</h3>
@@ -246,92 +119,6 @@
     <!-- DESCOUNT BANNER END -->
 
     <!-- LATEST BLOG START -->
-    <section class="latest-blog my-5">
-        <div class="container">
-            <div class="row text-center pt-lg-5">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-5">
-                    <h2 class="section-header after-before">Our Latest Blog</h2>
-                    <div class="after-design">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-5">
-                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-                    <img class="img-fluid" src="assets/img/blog/Our-latest-blogs.png" alt="blog">
-                    <a href="blog_details.html">
-                        <h4 class="py-4">There are many variations of passages of Lorem Ipsum available....</h4>
-                    </a>
-                    <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the
-                        industry's standard
-                        dummy text ever since
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div class="blog-info mt-5 d-flex">
-                        <span>Posted By Admin / 02 hr 20 ago</span>
-                        <div class="right">
-                            <i class="far fa-comment"></i> <span class="ms-1"> 123</span>
-                            <i class="fas fa-share-alt ms-2"></i> <span class="ms-1"> 08</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-                    <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog1.png" alt="blog-img">
-                        <div class="flex-grow-1 ms-3 align-self-center content">
-                            <span class="badge">Catering</span>
-                            <span class="badge">Big Burger</span>
-                            <a href="blog_details.html">
-                                <h4 class="py-2">There are many variations of passages of Lorem Ipsum available...</h4>
-                            </a>
-                            <div class="blog-info d-flex">
-                                <span>Posted By Admin / 02 hr 20 ago</span>
-                                <div class="right">
-                                    <i class="far fa-comment"></i> <span class="ms-1"> 123</span>
-                                    <i class="fas fa-share-alt ms-2"></i> <span class="ms-1"> 08</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog2.png" alt="blog-img">
-                        <div class="flex-grow-1 ms-3 align-self-center content">
-                            <span class="badge">Delivery</span>
-                            <a href="blog_details.html">
-                                <h4 class="py-2">It is a long established fact that a reader will be distracted...</h4>
-                            </a>
-                            <div class="blog-info d-flex">
-                                <span>Posted By Admin / 02 hr 20 ago</span>
-                                <div class="right">
-                                    <i class="far fa-comment"></i> <span class="ms-1"> 123</span>
-                                    <i class="fas fa-share-alt ms-2"></i> <span class="ms-1"> 08</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="d-flex blog align-items-center mb-4">
-                        <img style="width: 180px;" src="assets/img/blog/blog3.png" alt="blog-img">
-                        <div class="flex-grow-1 ms-3 align-self-center content">
-                            <span class="badge">Fried Chiken</span>
-                            <span class="badge">Big Chiken Fry</span>
-                            <span class="badge">Discount</span>
-                            <a href="blog_details.html">
-                                <h4 class="py-2">Contrary to popular belief, Lorem Ipsum is not simply random text...</h4>
-                            </a>
-                            <div class="blog-info d-flex">
-                                <span>Posted By Admin / 02 hr 20 ago</span>
-                                <div class="right">
-                                    <i class="far fa-comment"></i> <span class="ms-1"> 123</span>
-                                    <i class="fas fa-share-alt ms-2"></i> <span class="ms-1"> 08</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('catering_components.latest_blog')
     <!-- LATEST BLOG END -->
 @endsection

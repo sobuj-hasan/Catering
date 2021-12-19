@@ -9,6 +9,7 @@ class Food extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'restaurant_id',
         'category_id',
         'user_id',
         'title',
@@ -19,7 +20,7 @@ class Food extends Model
         'image',
     ];
 
-    protected $with = ['category', 'user'];
+    protected $with = ['category', 'user', 'restaurant'];
 
     public function category()
     {
@@ -29,6 +30,11 @@ class Food extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function restaurant()
+    {
+        return $this->belongsTo(Restaurant::class);
     }
 
 }

@@ -51,7 +51,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('categories.edit', $categorie->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('categories.edit', $categorie->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="categoryDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

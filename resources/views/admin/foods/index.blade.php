@@ -60,7 +60,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('catering.edit', $food->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('catering.edit', $food->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="productDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

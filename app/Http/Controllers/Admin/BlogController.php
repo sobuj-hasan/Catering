@@ -48,7 +48,7 @@ class BlogController extends Controller
             'category_id' => 'required',
             'title' => 'required|min:8|max:255',
             'description' => 'required|min:100',
-            'image' => 'required|image',
+            'image' => 'required|mimes:jpg,jpeg,png,gif,svg,webp|max:2000',
         ]);
 
         $blog = Blog::create($request->all() + [

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Food;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -35,7 +36,9 @@ class FrontendController extends Controller
     }
 
     public function searchresult(){
-        return view('search_result');
+        $data['restaurants'] = Restaurant::where('status', 1)->inRandomOrder()->limit(20)->get();
+        $data['bestfoods'] = Food::inRandomOrder()->limit(4)->get();
+        return view('search_result', $data);
     }
 
     public function cart()

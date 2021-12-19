@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title','Food Package')
+@section('title','Restaurants')
 @section('content')
 
  <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title float-left">Food Package List</h4>
+                    <h4 class="page-title float-left">Restaurant List</h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="">Food Package List</a></li>
+                        <li class="breadcrumb-item"><a href="">Restaurant List</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card-box">
-                    <h4 class="m-t-0 header-title pb-3"><b>Food package List</b></h4>
+                    <h4 class="m-t-0 header-title pb-3"><b>Restaurant List</b></h4>
 
                     <div class="table-responsive">
                         <table class="table table-hover m-0 table-actions-bar">
@@ -37,7 +37,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($restaurants as $restaurant)
+                                @foreach ($restaurants as $restaurant)
                                     <tr>
                                         <td>
                                             <h5>{{ $loop->index + 1 }}</h5>
@@ -69,7 +69,7 @@
                                             </td>
                                         </form>
                                     </tr>
-                                @endforeach --}}
+                                @endforeach
                                 {{-- @empty($restaurant)
                                     <span class="text-danger">Nothing to show Restaurant...</span>
                                 @endempty --}}

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FoodPackageController extends Controller
 {
@@ -14,7 +16,7 @@ class FoodPackageController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.food_package.index');
     }
 
     /**
@@ -24,7 +26,8 @@ class FoodPackageController extends Controller
      */
     public function create()
     {
-        //
+        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
+        return view('admin.food_package.add', $data);
     }
 
     /**
@@ -35,7 +38,7 @@ class FoodPackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request;
     }
 
     /**
@@ -46,7 +49,7 @@ class FoodPackageController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.food_package.show');
     }
 
     /**
@@ -57,7 +60,8 @@ class FoodPackageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
+        return view('admin.food_package.edit', $data);
     }
 
     /**
@@ -69,7 +73,7 @@ class FoodPackageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request;
     }
 
     /**

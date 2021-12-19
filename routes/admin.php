@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Route;
         Route::get('admin/dashboard', 'AdminDashboardController@index')->name('admin.dashboard');
         Route::resources([
         'users' => 'UserController',
+        'restaurant' => 'RestaurantController',
         'special/foods/catering' => 'SpecialCateringGoodsController',
         'food/package' => 'FoodPackageController',
         'categories' => 'CategoryController',
         'blogcategories' => 'BlogCategoryController',
-        // 'brands' => 'BrandController',
         'blogs' => 'BlogController',
         'admin/orders' => 'OrdershowController',
         'admin/subscriber' => 'SubscribeController',

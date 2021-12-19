@@ -23,6 +23,20 @@
                         @csrf
                         @method('PATCH')
                         <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label">Select One Restaurant : </label>
+                            <div class="col-9">
+                                <select class="form-control" name="restaurant_id">
+                                    <option value="{{ $food->restaurant->id }}">{{ $food->restaurant->res_name }}</option>
+                                    @foreach ($restaurants as $restaurant)
+                                        <option value="{{ $restaurant->id }}">{{ $restaurant->res_name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('restaurant_id')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="inputEmail3" class="col-3 col-form-label">Select Food Category : </label>
                             <div class="col-9">
                                 <select class="form-control" name="category_id">
@@ -76,10 +90,13 @@
                             <label class="col-3 col-form-label">Image Upload</label>
                             <div class="col-9">
                                 <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                        <img src="{{ asset('assets/img/food/') }}/{{ $food->image }}" alt="image" />
+                                    </div>
                                     <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px; border: 1px solid #dadada;"></div>
                                     <div>
                                         <button type="button" class="btn btn-secondary btn-file mt-2">
-                                            <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
+                                            <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Change image</span>
                                             <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
                                             <input type="file" class="btn-secondary" value="{{ old('image') }}" name="image"/>
                                             @error('image')

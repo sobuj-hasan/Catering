@@ -32,6 +32,10 @@
                                 <td>{{ $single_food->user->name }}</td>
                             </tr>
                             <tr>
+                                <th>Restaurant </th>
+                                <td>{{ $single_food->restaurant->res_name }}</td>
+                            </tr>
+                            <tr>
                                 <th>Category</th>
                                 <td>{{ $single_food->category->name }}</td>
                             </tr>

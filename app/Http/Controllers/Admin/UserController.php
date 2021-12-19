@@ -90,7 +90,7 @@ class UserController extends Controller
     public function destroy(user $user)
     {
         $user->delete();
-        Notify::warning('This Account successfully Deleted', 'Success');
+        Notify::info('This Account successfully Deleted', 'Success');
         return back();
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Idemonbd\Notify\Facades\Notify;
 use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
@@ -30,6 +31,7 @@ class SpecialCateringGoodsController extends Controller
     public function create()
     {
         $data['categories'] = Category::all();
+        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
         return view('admin.foods.add', $data);
     }
 
@@ -42,6 +44,7 @@ class SpecialCateringGoodsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'restaurant_id' => 'required|numeric',
             'category_id' => 'required|numeric',
             'title' => 'required|min:3|max:30',
             'short_description' => 'required|min:10|max:100',
@@ -90,6 +93,7 @@ class SpecialCateringGoodsController extends Controller
     {
         $data['food'] = Food::where('id', $id)->firstOrFail();
         $data['categories'] = Category::all();
+        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
         return view('admin.foods.edit', $data);
     }
 
@@ -103,6 +107,7 @@ class SpecialCateringGoodsController extends Controller
     public function update(Request $request, Food $food)
     {
         $request->validate([
+            'restaurant_id' => 'required|numeric',
             'category_id' => 'required|numeric',
             'title' => 'required|min:3|max:30',
             'short_description' => 'required|min:10|max:100',
