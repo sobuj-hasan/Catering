@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Food;
+use App\Models\Category;
+use App\Models\Subscribe;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use App\Models\ContactFormSubmit;
+use Idemonbd\Notify\Facades\Notify;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
@@ -44,6 +48,44 @@ class FrontendController extends Controller
     public function cart()
     {
         return view('cart');
+    }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        $subscribe = Subscribe::where('email', $request->email)->count();
+        if ($subscribe != 0) {
+            Notify::error('This email address already exists', 'Error');
+            return back();
+        }
+        if (Auth::user()) {
+            $user_id = Auth::user()->id;
+            Subscribe::create($request->except('_token') + [
+                'user_id' => $user_id,
+            ]);
+        } else {
+            Subscribe::create($request->except('_token'));
+        }
+        Notify::success('Successfully Subscribed our newslatter', 'Congrats, Dear');
+        return back();
+    }
+
+    public function contactmessage(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|min:2',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'subject' => 'required',
+            'profession' => 'required',
+            'city' => 'required',
+            'message' => 'required',
+        ]);
+        ContactFormSubmit::create($request->all());
+        Notify::success('Message successfully Submited', 'Success');
+        return back();
     }
 
 

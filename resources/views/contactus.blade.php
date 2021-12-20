@@ -42,57 +42,81 @@
             </div>
         </div>
         <div class="container contact mt-5">
-            <div class="row p-3 p-md-5 mt-2 mt-sm-0">
-                <div class="col-12 text-center mb-5">
-                    <h4>I hope your honorable person will fill out this form to <br class="d-none d-sm-block">
-                        serve you to the fullest</h4>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">I’m honored by Name</label>
-                        <input type="text" class="form-control">
+            <form method="GET" action="{{ route('contact.message') }}">
+            @csrf
+                <div class="row p-3 p-md-5 mt-2 mt-sm-0">
+                    <div class="col-12 text-center mb-5">
+                        <h4>I hope your honorable person will fill out this form to <br class="d-none d-sm-block">
+                            serve you to the fullest</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">I’m honored by Name</label>
+                            <input type="text" class="form-control" value="{{ old('name') }}" name="name">
+                            @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" value="{{ old('email') }}" name="email">
+                            @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Landline/Phone </label>
+                            <input type="text" class="form-control" value="{{ old('phone') }}" name="phone">
+                            @error('phone')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">What do you want to inquire about?</label>
+                            <input type="text" class="form-control" value="{{ old('subject') }}" name="subject">
+                            @error('subject')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">What programs & services are you interested?</label>
+                            <input type="text" class="form-control" value="{{ old('profession') }}" name="profession">
+                            @error('profession')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Your Address?</label>
+                            <input type="text" class="form-control" value="{{ old('city') }}" name="city">
+                            @error('city')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-2">
+                            <textarea style="height: 175px;" rows="5" class="form-control" placeholder="What do you need?" name="message">{{ old('message') }}</textarea>
+                            @error('message')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <button type="submit">Send Massage</button>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">Email Address</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">Enterprise </label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">What do you want to inquire about?</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">What programs & services are you interested?</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">Would you like us to contact directly?</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="mb-2">
-                        <textarea style="height: 175px;" name="description" rows="5" class="form-control" placeholder="What do you need?"></textarea>
-                    </div>
-                </div>
-    
-                <div class="col">
-                    <button type="submit">Send Massage</button>
-                </div>
-            </div>
+            </form>
         </div>
         <br>
     </section>

@@ -30,7 +30,6 @@
                                     <th>Name </th>
                                     <th>Phone</th>
                                     <th>Email</th>
-                                    <th>Message</th>
                                     <th>Sending Time</th>
                                     <th>Action</th>
                                 </tr>
@@ -43,28 +42,27 @@
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->name }}</p>
+                                            <h5>
+                                                <a href="{{ route('querstion.show', $query->id) }}">{{ $query->name }}</a>
+                                            </h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->phone }}</p>
+                                            <h5>{{ $query->phone }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->email }}</p>
+                                            <h5>{{ $query->email }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->message }}</p>
-                                        </td>
-
-                                        <td>
-                                            <p class="m-b-0 m-t-0 font-600">{{ $query->created_at->diffForHumans() }}</p>
+                                            <h5 class="m-b-0 m-t-0 font-600">{{ $query->created_at->diffForHumans() }}</h5>
                                         </td>
                                             <form method="POST" action="{{ route('querstion.destroy', $query->id) }}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <td>
+                                                    <a href="mailto:{{ $query->email }}"> <i class="far fa-paper-plane"></i> </a>
                                                     <button onclick="deleteQuries()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                                 </td>
                                             </form>

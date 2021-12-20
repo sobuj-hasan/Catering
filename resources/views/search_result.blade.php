@@ -73,7 +73,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5">
                         <div class="catering-item">
                             <div class="offer">
-                                <img src="{{ asset('assets/img/photos/cheese-Burger.png" alt="catering-img') }}">
+                                <img src="{{ asset("assets/img/food") }}/{{ $bestfood->image }}" alt="food-img">
                                 <div class="discount">
                                     <h4>25% Off</h4>
                                 </div>

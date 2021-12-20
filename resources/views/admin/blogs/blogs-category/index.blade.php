@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card-box">
-                    <h4 class="m-t-0 header-title"><b>All Categories List</b></h4>
+                    <h4 class="m-t-0 header-title"><b>All Blog Categories</b></h4>
 
                     <div class="table-responsive">
                         <table class="table table-hover m-0 table-actions-bar">
@@ -63,7 +63,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('blogcategories.edit', $blogcategorie->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('blogcategories.edit', $blogcategorie->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="blogcategoryDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Create New</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Create Blog</a></li>
+                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Create Blog</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -62,15 +62,25 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="field-1" class="control-label">Image <span class="text-light"> &nbsp;(Preferable width : 500px Height: 400px)</span></label><br>
-                                    <button type="button" class="btn btn-secondary btn-file">
-                                        <input type="file" class="btn-secondary" name="image" />
-                                    </button><br>
-                                    @error('image')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="field-1" class="control-label">Blog Image (Preferable width : 500px Height: 400px)</label><br>
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px; border: 1px solid #dadada;"></div>
+                                            <div>
+                                                <button type="button" class="btn btn-secondary btn-file mt-2">
+                                                    <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select blog image</span>
+                                                    <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                    <input type="file" class="btn-secondary" value="{{ old('image') }}" name="image"/>
+                                                    @error('image')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="modal-footer">

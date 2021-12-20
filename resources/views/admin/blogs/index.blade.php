@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Blog </h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Blog List</a></li>
+                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Blog List</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -47,7 +47,7 @@
                                         </td>
 
                                         <td>
-                                            <img width="80px" src="{{ asset('nsseb_assets/media/images/blog-img') }}/{{ $blog->image }}" alt="img" title="contact-img"/>
+                                            <img width="80px" src="{{ asset('assets/img/blog') }}/{{ $blog->image }}" alt="img" title="contact-img"/>
                                         </td>
 
                                         <td>
@@ -58,7 +58,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('blogs.edit', $blog->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('blogs.edit', $blog->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="blogDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

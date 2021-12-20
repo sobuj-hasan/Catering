@@ -141,21 +141,21 @@
                             <li>
                                 <a href="javascript: void(0);"><i class="icon-basket-loaded"></i> <span>Blog Category </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('blogcategories.create') }}">Add New</a></li>
-                                    <li><a href="{{ route('blogcategories.index') }}">View All</a></li>
+                                    <li><a href="{{ route('blogcategories.index') }}">View Categories </a></li>
+                                    <li><a href="{{ route('blogcategories.create') }}">Add New One </a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="javascript: void(0);"> <i class="fab fa-blogger-b"></i> <span>Our Blogs </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{ route('blogs.index') }}">View All Blogs</a></li>
                                     <li><a href="{{ route('blogs.create') }}">Add New</a></li>
-                                    <li><a href="{{ route('blogs.index') }}">View All</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="fi-head"></i> <span> Manage Users</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('users.index') }}">View All</a></li>
+                                    <li><a href="{{ route('users.index') }}">View All Users</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -227,19 +227,19 @@
         <script type="text/javascript" src="{{ asset('Backend') }}/plugins/d3/d3.min.js"></script>
         <script type="text/javascript" src="{{ asset('Backend') }}/plugins/c3/c3.min.js"></script>
         <script type="text/javascript" src="{{ asset('Backend') }}/plugins/summernote/summernote.min.js"></script>
-
+        <!-- Todo list or onclick add checkbox -->
+        <script src="{{ asset('Backend') }}/plugins/sweet-alert2/sweetalert2.min.js"></script>
+        <script src="{{ asset('Backend') }}/plugins/moment/moment.js"></script>
+        <script src="{{ asset('Backend') }}/assets/pages/jquery.todo.js"></script>
         <!--Echart Chart-->
         <script src="{{ 'Backend' }}/plugins/echart/echarts-all.js"></script>
-
         <!-- Dashboard init -->
         <script src="{{ asset('Backend') }}/assets/pages/jquery.dashboard.js"></script>
-
         <!-- App js -->
         <script src="{{ asset('Backend') }}/assets/js/jquery.core.js"></script>
         <script src="{{ asset('Backend') }}/assets/js/jquery.app.js"></script>
         <!-- Bootstrap fileupload js -->
         <script src="{{ asset('Backend') }}/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-
         <!-- Toastr script CDN -->
         <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
         <!-- Toastr Scripts render -->

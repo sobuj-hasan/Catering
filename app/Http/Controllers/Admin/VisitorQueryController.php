@@ -49,7 +49,8 @@ class VisitorQueryController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['single_query'] = ContactFormSubmit::where('id', $id)->firstOrFail();
+        return view('admin.visitorquery.show', $data);
     }
 
     /**

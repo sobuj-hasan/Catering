@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">User Profile</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">User profile</a></li>
+                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">User profile</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -27,7 +27,7 @@
                         <div class="modal-body">
                             <div class="p-10 task-detail">
                                 <div class="media m-t-0 m-b-20">
-                                    <img class="d-flex mr-3 rounded-circle" src="{{ asset('nsseb_assets/media/images/profile-img') }}/{{ $userdata->profile_photo }}" alt="Generic placeholder image" height="48">
+                                    <img class="d-flex mr-3 rounded-circle" src="{{ asset('assets/img/users') }}/{{ $userdata->profile_photo }}" alt="Generic placeholder image" height="48">
                                     <div class="media-body">
                                         <h5 class="media-heading m-b-5 mt-0">{{ $userdata->name }}</h5>
                                         <span class="label label-danger">{{ $userdata->created_at->format('d-M-Y') }}</span>
@@ -55,10 +55,18 @@
                                         <h5 class="font-600 m-b-5">Phone No :</h5>
                                         <p> {{ $userdata->phone }}</p>
                                     </li>
+                                    <li>
+                                        <h5 class="font-600 m-b-5">County :</h5>
+                                        <p> {{ $userdata->city }}, {{ $userdata->country ?? "N\A" }}</p>
+                                    </li>
+                                    <li>
+                                        <h5 class="font-600 m-b-5">Address :</h5>
+                                        <p> {{ $userdata->location ?? "N\A" }}</p>
+                                    </li>
 
                                     <li>
                                         <h5 class="font-600 m-b-5">Profile Photo :</h5>
-                                        <img height="120" width="120" class="d-flex mr-3" src="{{ asset('nsseb_assets/media/images/profile-img') }}/{{ $userdata->profile_photo }}" alt="Generic placeholder image">
+                                        <img height="120" width="120" class="d-flex mr-3" src="{{ asset('assets/img/users') }}/{{ $userdata->profile_photo }}" alt="Generic placeholder image">
                                     </li>
 
                                     <li>
@@ -69,8 +77,9 @@
                                     <li>
                                         <h5 class="font-600 m-b-5">Role Management :</h5>
                                         <select class="form-control" name="role" required>
-                                            <option value="{{ $userdata->role }}" class="selected"> @php if ($userdata->role == 2) { echo "user"; }else{echo "admin";} @endphp </option>
-                                            <option value="2">Make user</option></option>
+                                            <option value="{{ $userdata->role }}" class="selected"> @php if ($userdata->role == 1) { echo "Admin"; }elseif($userdata->role == 2){ echo "Vendor"; }else{echo "User";} @endphp </option>
+                                            <option value="2">Make vendor</option></option>
+                                            <option value="3">Make user</option></option>
                                             <option value="1">Make admin</option></option>
                                         </select>
                                     </li>

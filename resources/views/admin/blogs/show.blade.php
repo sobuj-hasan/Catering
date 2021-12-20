@@ -30,7 +30,7 @@
                             </tr>
                             <tr>
                                 <th>Blog Image</th>
-                                <td><img width="100" src="{{ asset('nsseb_assets/media/images/blog-img/') }}/{{ $blog->image }}" alt=""></td>
+                                <td><img width="100" src="{{ asset('assets/img/blog') }}/{{ $blog->image }}" alt=""></td>
                             </tr>
                             <tr>
                                 <th>Blog Description</th>

@@ -19,16 +19,16 @@ class Blog extends Model
         'status',
     ];
 
-    protected $with = ['user', 'blogcategories'];
+    protected $with = ['blogcategory', 'user'];
+
+    public function blogcategory()
+    {
+        return $this->belongsTo(BlogCategory::class);
+    }
 
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function blogcategories()
-    {
-        return $this->belongsTo(BlogCategory::class);
     }
 
 }

@@ -31,6 +31,8 @@ Route::get('/', function () {
     Route::get('planing/event', [FrontendController::class, 'planingevent'])->name('planing.event');
     Route::get('price/plan', [FrontendController::class, 'priceplan'])->name('price.plan');
     Route::get('search/result', [FrontendController::class, 'searchresult'])->name('search.result');
+    Route::get('subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
+    Route::get('contact/message', [FrontendController::class, 'contactmessage'])->name('contact.message');
 
 
     // Vendor register route

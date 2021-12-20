@@ -54,16 +54,14 @@ class BlogController extends Controller
         $blog = Blog::create($request->all() + [
             'user_id' => Auth::id()
         ]);
-
         $blog->slug = Str::slug($request->title) . '-' . Str::random(5);
-
         if ($request->hasFile('image')) {
             $photo_name = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('safety_assets/img/blog/'), $photo_name);
+            $request->image->move('assets/img/blog/', $photo_name);
             $blog->image = $photo_name;
         }    
         $blog->save();
-        Notify::success('Blog Post successfull', 'success');
+        Notify::success('Blog Post successfull', 'Success');
         return redirect('blogs');
     }
 
@@ -112,13 +110,13 @@ class BlogController extends Controller
 
         if ($request->hasFile('image')) {
             if ($blog->image) {
-                unlink(public_path('safety_assets/img/blog/' . $blog->image));
+                unlink('assets/img/blog/' . $blog->image);
             }
             $uploaded_photo = $request->file('image');
             $photo_name = time() . "." . $uploaded_photo->getClientOriginalExtension($uploaded_photo);
-            $new_photo_location = 'safety_assets/img/blog/' . $photo_name;
+            $new_photo_location = 'assets/img/blog/' . $photo_name;
 
-            Image::make($uploaded_photo)->save(public_path($new_photo_location));
+            Image::make($uploaded_photo)->save($new_photo_location);
             $blog->update([
                 'image' => $photo_name,
             ]);
@@ -136,7 +134,7 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        Notify::warning('This Blog Deleted', 'Deleted');
+        Notify::info('This Blog Deleted', 'Deleted');
         return back();
     }
 }

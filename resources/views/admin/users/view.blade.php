@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Users</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">User List</a></li>
+                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">User List</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -48,7 +48,7 @@
                                         </td>
 
                                         <td>
-                                            <img src="{{ asset('nsseb_assets/media/images/profile-img') }}/{{ $data->profile_photo }}" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                            <img src="{{ asset('assets/img/users') }}/{{ $data->profile_photo }}" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
                                         </td>
 
                                         <td>
@@ -71,7 +71,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <td>
-                                                    <a href="{{ route('users.edit', $data->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                    <a href="{{ route('users.edit', $data->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                     <button onclick="deleteConfirm()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                                 </td>
                                             </form>

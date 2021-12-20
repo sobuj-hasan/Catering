@@ -55,6 +55,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <td>
+                                                    <a href="mailto:{{ $subscriber->email }}"> <i class="far fa-paper-plane"></i> </a>
                                                     <button onclick="deleteSubscriber()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                                 </td>
                                             </form>

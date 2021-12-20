@@ -85,7 +85,7 @@ class SubscribeController extends Controller
     public function destroy($id)
     {
         Subscribe::where('id', $id)->first()->delete();
-        Notify::warning('This Subcriber Deleted', 'Deletd');
+        Notify::info('This Subcriber Deleted', 'Deletd');
         return back();
     }
 }

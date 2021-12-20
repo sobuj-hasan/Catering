@@ -43,7 +43,7 @@ class BlogCategoryController extends Controller
             'ar_name' => ['nullable', 'string', 'min:3', 'max:255', 'unique:blog_categories'],
         ]);
         BlogCategory::create($request->except('_token'));
-        Notify::success('' . $request->name . 'Category created', 'Success');
+        Notify::success('' . $request->name . ' Category created', 'Success');
         return redirect('blogcategories');
     }
 
@@ -87,7 +87,7 @@ class BlogCategoryController extends Controller
         $blogcategory->name = $request->name;
         $blogcategory->ar_name = $request->ar_name;
         $blogcategory->save();
-        Notify::success('' . $blogcategory->name . 'Category updated', 'Updated');
+        Notify::success('' . $blogcategory->name . ' Category updated', 'Updated');
         return redirect('blogcategories');
     }
 
@@ -100,7 +100,7 @@ class BlogCategoryController extends Controller
     public function destroy(BlogCategory $blogcategory)
     {
         $blogcategory->delete();
-        Notify::warning('Successfully Deleted', 'Deleted');
+        Notify::info('Successfully Deleted', 'Deleted');
         return back();
     }
 }
