@@ -222,7 +222,7 @@
                                 <a href="{{ route('contactus') }}">Contact info</a>
                             </li>
                             <li>
-                                <a href="{{ route('blog.details') }}">Our Blog</a>
+                                <a href="{{ route('index') }}#latest-blog">Our Blog</a>
                             </li>
                             <li>
                                 <a href="{{ route('planing.event') }}">Business Management</a>

@@ -204,7 +204,7 @@
                                     @endforeach
                                 </div>
                                 <div class="card-footer py-3">
-                                    <a href="{{ route('price.plan') }}">Add to Cart</a>
+                                    <a href="">Add to Cart</a>
                                 </div>
                             </div>
                         </div>

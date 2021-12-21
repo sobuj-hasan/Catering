@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Food;
+use App\Models\Package;
 use App\Models\Category;
 use App\Models\Subscribe;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use App\Models\ContactFormSubmit;
-use App\Models\Package;
 use Idemonbd\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,6 +19,8 @@ class FrontendController extends Controller
         $data['categories'] = Category::all();
         $data['foods'] = Food::all();
         $data['packages'] = Package::limit(3)->get();
+        $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
+        $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
         return view('index', $data);
     }
 
@@ -25,8 +28,10 @@ class FrontendController extends Controller
         return view('aboutus');
     }
 
-    public function blogdetails(){
-        return view('blog_details');
+    public function blogdetails($slug){
+        $data['blog_details'] = Blog::where('slug', $slug)->firstOrFail();
+        $data['latest_blog'] = Blog::latest()->limit(2)->get();
+        return view('blog_details', $data);
     }
 
     public function contactus(){
@@ -34,17 +39,23 @@ class FrontendController extends Controller
     }
 
     public function planingevent(){
-        return view('planing_event');
+        $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
+        $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
+        return view('planing_event', $data);
     }
 
     public function priceplan(){
         $data['all_packages'] = Package::latest()->get();
+        $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
+        $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
         return view('price_plan', $data);
     }
 
     public function searchresult(){
         $data['restaurants'] = Restaurant::where('status', 1)->inRandomOrder()->limit(20)->get();
         $data['bestfoods'] = Food::inRandomOrder()->limit(4)->get();
+        $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
+        $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
         return view('search_result', $data);
     }
 

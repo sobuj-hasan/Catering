@@ -9,14 +9,13 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 pe-lg-5">
                     <div class="blog">
-                        <img class="w-100" src="{{ asset('assets/img/blog/blog-details.png') }}" alt="blog-img">
+                        <img class="w-100" src="{{ asset('assets/img/blog/') }}/{{ $blog_details->image }}" alt="blog-img">
                         <div class="breadcrump">
-                            <a href="#">Home </a> > <a href="#">Blog Category </a> > <a href="">This is Blog
-                                Title...</a>
+                            <a href="{{ route('index') }}">Home </a> > <a href="">Category </a> > <a href="">{{ $blog_details->title }}</a>
                         </div>
-                        <h5 class="my-4">Contrary to popular belief, Lorem Ipsum is not simply random text.</h5>
-                        <img width="50px" height="50px" class="rounded-circle" src="{{ asset('assets/img/users/1.png') }}" alt="img">
-                        <span>Posted By Abu Taleb \\ 08 August 2021 \\ share Post:
+                        <h5 class="my-4">{{ $blog_details->title }}</h5>
+                        <img width="50px" height="50px" class="rounded-circle" src="{{ asset('assets/img/users/') }}/{{ $blog_details->user->profile_photo }}" alt="img">
+                        <span>Posted By {{ $blog_details->user->name }} \\ {{ $blog_details->created_at->diffForHumans() }} \\ share Post:
                             <a href="facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
@@ -177,26 +176,18 @@
                     <div class="latest-post">
                         <h6>Latest Post</h6>
                         <hr class="blog-details">
-                        <div class="latest-blog-part mb-5">
-                            <img class="w-100" src="{{ asset('assets/img/blog/latest-post1.png') }}" alt="img">
-                            <div class="text">
-                                <a href="#">
-                                    <h6>Restaurent steak recepe for private events</h6>
-                                </a><br>
-                                <span> <i class="far fa-user me-2"></i> Posted by Admin </span>
-                                <span class="ms-3"> <i class="far fa-clock me-2"></i> 02 Hrs Ago </span>
+                        @foreach ($latest_blog as $blog)
+                            <div class="latest-blog-part mb-5">
+                                <img class="w-100" src="{{ asset('assets/img/blog/') }}/{{ $blog->image }}" alt="img">
+                                <div class="text">
+                                    <a href="{{ route('blog.details', $blog->slug) }}">
+                                        <h6>{{ Str::limit($blog->title, 45, $end='..') }}</h6>
+                                    </a><br>
+                                    <span> <i class="far fa-user me-2"></i> Posted by {{ $blog->user->name }} </span>
+                                    <span class="ms-3"> <i class="far fa-clock me-2"></i> {{ $blog->created_at->diffForHumans() }} </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="latest-blog-part mb-5">
-                            <img class="w-100" src="{{ asset('assets/img/blog/latest-post2.png') }}" alt="img">
-                            <div class="text">
-                                <a href="#">
-                                    <h6>Corporate events catering items and services</h6>
-                                </a><br>
-                                <span> <i class="far fa-user me-2"></i> Posted by Admin </span>
-                                <span class="ms-3"> <i class="far fa-clock me-2"></i> 02 Hrs Ago </span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
                     <div class="categories">

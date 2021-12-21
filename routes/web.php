@@ -25,7 +25,7 @@ Route::get('/', function () {
     // Fontend Controller Routes
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     Route::get('aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
-    Route::get('blog/details', [FrontendController::class, 'blogdetails'])->name('blog.details');
+    Route::get('blog/details/{slug}', [FrontendController::class, 'blogdetails'])->name('blog.details');
     Route::get('cart', [FrontendController::class, 'cart'])->name('cart');
     Route::get('contactus', [FrontendController::class, 'contactus'])->name('contactus');
     Route::get('planing/event', [FrontendController::class, 'planingevent'])->name('planing.event');
