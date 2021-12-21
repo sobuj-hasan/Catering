@@ -188,76 +188,30 @@
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url(assets/img/food/package1.jpg);">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 01</h4>
-                                    <h3 class="section-header">$ 49.99/<span>Day</span> </h3>
+                @foreach ($packages as $package)
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="package">
+                            <div class="card text-center my-4">
+                                <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/package/') }}/{{ $package->image }});">
+                                    <div class="package-pricing">
+                                        <h4 class="">{{ $package->name }}</h4>
+                                        <h3 class="section-header">$ {{ $package->price }}/<span>{{ $package->time }}</span> </h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> 02 Meals </p>
-                                <p class="paragraph"> 01 Soup </p>
-                                <p class="paragraph"> 01 Sneak </p>
-                                <p class="paragraph"> 02 Cold Drick </p>
-                                <p class="paragraph"> Free Delivery </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="price_plan.html">Select Plan</a>
+                                <div class="card-body">
+                                    @foreach (App\Models\PackageItems::where('package_id', $package->id)->get() as $package_items)
+                                        <p class="paragraph mt-3"> {{ $package_items->items }} </p>
+                                    @endforeach
+                                </div>
+                                <div class="card-footer py-3">
+                                    <a href="{{ route('price.plan') }}">Add to Cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url(assets/img/food/package2.jpg);">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 02</h4>
-                                    <h3 class="section-header">$ 200/<span>Week</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> 03 Meals </p>
-                                <p class="paragraph"> 02 Soup </p>
-                                <p class="paragraph"> 02 Sneak </p>
-                                <p class="paragraph"> 03 Cold Drick </p>
-                                <p class="paragraph"> 01 Fruits Juice </p>
-                                <p class="paragraph"> 01 Hot Meal </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="price_plan.html">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url(assets/img/food/package3.jpg);">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 03</h4>
-                                    <h3 class="section-header">$ 700/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="price_plan.html">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+                <div class="add-cart mt-4">
+                    <a class="custom-btn" href="{{ route('price.plan') }}">Show More Plans</a>
                 </div>
             </div>
         </div>
@@ -265,7 +219,7 @@
     <!-- PRICE PLAN END -->
 
     <!-- PLANING AND EVENT START -->
-    <section class="planing-events my-5">
+    <section class="planing-events my-4">
         <div class="container py-lg-5">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center heading">

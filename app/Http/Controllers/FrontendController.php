@@ -8,6 +8,7 @@ use App\Models\Subscribe;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use App\Models\ContactFormSubmit;
+use App\Models\Package;
 use Idemonbd\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +17,7 @@ class FrontendController extends Controller
     public function index(){
         $data['categories'] = Category::all();
         $data['foods'] = Food::all();
+        $data['packages'] = Package::limit(3)->get();
         return view('index', $data);
     }
 
@@ -36,7 +38,8 @@ class FrontendController extends Controller
     }
 
     public function priceplan(){
-        return view('price_plan');
+        $data['all_packages'] = Package::latest()->get();
+        return view('price_plan', $data);
     }
 
     public function searchresult(){

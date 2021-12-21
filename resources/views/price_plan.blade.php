@@ -25,221 +25,28 @@
     <section class="price-plan my-sm-3 my-lg-5">
         <div class="container text-center py-4">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/package1.jpg') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 01</h4>
-                                    <h3 class="section-header">$ 49.50/<span>Day</span> </h3>
+                @foreach ($all_packages as $package)
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="package">
+                            <div class="card text-center my-4">
+                                <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/package/') }}/{{ $package->image }});">
+                                    <div class="package-pricing">
+                                        <h4 class="">{{ $package->name }}</h4>
+                                        <h3 class="section-header">$ {{ $package->price }}/<span>{{ $package->time }}</span> </h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> 02 Meals </p>
-                                <p class="paragraph"> 01 Soup </p>
-                                <p class="paragraph"> 01 Sneak </p>
-                                <p class="paragraph"> 02 Cold Drick </p>
-                                <p class="paragraph"> Free Delivery </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
+                                <div class="card-body">
+                                    @foreach (App\Models\PackageItems::where('package_id', $package->id)->get() as $package_items)
+                                        <p class="paragraph mt-3"> {{ $package_items->items }} </p>
+                                    @endforeach
+                                </div>
+                                <div class="card-footer py-3">
+                                    <a href="#">Add to Cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/package2.jpg') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 02</h4>
-                                    <h3 class="section-header">$ 200/<span>Week</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> 03 Meals </p>
-                                <p class="paragraph"> 02 Soup </p>
-                                <p class="paragraph"> 02 Sneak </p>
-                                <p class="paragraph"> 03 Cold Drick </p>
-                                <p class="paragraph"> 01 Fruits Juice </p>
-                                <p class="paragraph"> 01 Hot Meal </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/package3.jpg') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Package 03</h4>
-                                    <h3 class="section-header">$ 700/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/double-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Double Package</h4>
-                                    <h3 class="section-header">$ 99/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/corporate-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Corporate Package</h4>
-                                    <h3 class="section-header">$ 200/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/keto-diet-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Keto Diet Package</h4>
-                                    <h3 class="section-header">$ 700/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/Healthy-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Healthy Package</h4>
-                                    <h3 class="section-header">$ 99/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/ramadan-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">Ramadan Package</h4>
-                                    <h3 class="section-header">$ 200/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="package">
-                        <div class="card text-center my-4">
-                            <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/body-build-package.png') }});">
-                                <div class="package-pricing">
-                                    <h4 class="">BodyBuild Package</h4>
-                                    <h3 class="section-header">$ 700/<span>Month</span> </h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="paragraph mt-3"> Full Meals </p>
-                                <p class="paragraph"> Luxuary Soup </p>
-                                <p class="paragraph"> Luxury Sneak </p>
-                                <p class="paragraph"> Unlimited Cold Drick </p>
-                                <p class="paragraph"> Multiple-choose </p>
-                                <p class="paragraph"> 24/7 Services </p>
-                            </div>
-                            <div class="card-footer py-3">
-                                <a href="#">Select Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

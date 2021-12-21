@@ -28,51 +28,53 @@
                             <tr>
                                 <th>SI NO.</th>
                                 <th>Image </th>
-                                <th>Restaurant Name </th>
+                                <th>Package Name </th>
                                 <th>Created By</th>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Discount</th>
+                                <th>Restaurant </th>
+                                <th>Package Time</th>
+                                <th>Price</th>
                                 <th>Action </th>
                             </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($restaurants as $restaurant)
+                                @foreach ($packages as $package)
                                     <tr>
                                         <td>
                                             <h5>{{ $loop->index + 1 }}</h5>
                                         </td>
                                         <td>
-                                            <img width="80px" src="{{ asset('assets/img/restaurant') }}/{{ $restaurant->res_image }}" alt="img" title="food-img"/>
+                                            <img width="80px" src="{{ asset('assets/img/package') }}/{{ $package->image }}" alt="img" title="food-img"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('restaurant.show', $restaurant->id) }}">{{ $restaurant->res_name }}</a>
+                                            <h5>
+                                                <a href="{{ route('package.show', $package->id) }}">{{ $package->name }}</a>
+                                            </h5>
                                         </td>
                                         <td>
-                                            {{ $restaurant->user->name }}
+                                            <h5>{{ $package->user->name }}</h5>
                                         </td>
                                         <td>
-                                            {{ $restaurant->country }}
+                                            <h5>{{ $package->restaurant->res_name }}</h5>
                                         </td>
                                         <td>
-                                            {{ $restaurant->city }}
+                                            <h5>{{ $package->time }}</h5>
                                         </td>
                                         <td>
-                                            <h5>{{ $restaurant->res_discount ?? "0" }} (%)</h5>
+                                            <h5>{{ $package->price }} </h5>
                                         </td>
-                                        <form method="POST" action="{{ route('restaurant.destroy', $restaurant->id) }}">
+                                        <form method="POST" action="{{ route('package.destroy', $package->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('restaurant.edit', $restaurant->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
+                                                <a href="{{ route('package.edit', $package->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="productDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>
                                     </tr>
-                                @endforeach --}}
-                                {{-- @empty($restaurant)
-                                    <span class="text-danger">Nothing to show Restaurant...</span>
-                                @endempty --}}
+                                @endforeach
+                                @empty($package)
+                                    <span class="text-danger">Nothing to show Packages...</span>
+                                @endempty
                             </tbody>
                         </table>
                     </div>
@@ -87,7 +89,7 @@
 @section('footer_script')
     <script>
         function productDelete(){
-            alert('Are you shure ? You want to delete this Restaurant')
+            alert('Are you shure ? You want to delete this Package')
         }
     </script>
 @endsection
