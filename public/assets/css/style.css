@@ -62,7 +62,7 @@ header {
     background: rgb(103, 48, 145);
     color: rgb(255, 255, 255);
     border-radius: 50px;
-    padding: 3px;
+    padding: 3px 6px;
     margin-left: -8px;
 }
 /*HEADER*/
@@ -1108,7 +1108,260 @@ hr.cart{
     background: var(--pc);
 }
 
+
+
+.cart-section table .btn-group-sm>.btn,
+.btn-sm {
+    padding: 0 0.25rem;
+}
+
+.cart-section .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cart-section .value-button:hover {
+    cursor: pointer;
+}
+
+.cart-section #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.cart-section #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+.cart-section input#quantity {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+}
+
+.cart-section input[type=number]::-webkit-inner-spin-button,
+.cart-section input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-section .breab a,
+.cart-section .breab span {
+    font-size: 18px;
+}
+
+
 /* CART PAGE CSS END */
+
+/* CHECKOUT PAGE CSS START */
+.checkout h6 {
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--xgc);
+}
+.checkout .form-control {
+    border: 1px solid var(--gc);
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 45px;
+    box-shadow: none;
+}
+/* CHECKOUT PAGE CSS END */
+
+
+
+
+
+/* ==============================
+user Dashboard CSS Here
+================================ */
+.dashboard{
+    background: #f7f8fa;
+}
+.dashboard .user-dashboard{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.dashboard .user-dashboard .left-side {
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: -3px 3px 20px -6px #00000033;
+    border-radius: 2px;
+}
+.dashboard .user-dashboard .left-side .profile{
+    text-align: center;
+}
+.dashboard .user-dashboard .left-side .profile img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #0c629c;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.dashboard .user-dashboard .left-side .profile h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #74408f;
+    line-height: 32px;
+}
+.dashboard .user-dashboard .left-side .profile p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #975563;
+    line-height: 32px;
+}
+.dashboard .user-dashboard .left-side .left-menu{
+    margin-top: 10px;
+    padding-bottom: 40px;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #74408f;
+    line-height: 32px;
+    text-decoration: none;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #74408f;
+    line-height: 32px;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+.dashboard .user-dashboard .left-side .left-menu .active {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-decoration: none;
+    background: #364a7b;
+}
+.dashboard .user-dashboard .left-side .left-menu .active a{
+    color: #ffffff;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li:hover{
+    background: #364a7b;
+    transition: 0.3s;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li:hover a{
+    color: #ffffff;
+    transition: 0.3s;
+}
+.dashboard .user-dashboard .left-side .left-menu ul li:hover button{
+    color: #ffffff;
+    transition: 0.3s;
+}
+.dashboard .information {
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 13px -6px #00000033;
+    border-radius: 2px;
+}
+.dashboard .information h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #74408f;
+    line-height: 29px;
+    padding: 15px;
+}
+.dashboard .information .basic-information h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #74408f;
+    line-height: 0px;
+    padding: 15px;
+}
+.dashboard .information .basic-information .title ul li {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+}
+.dashboard .information .basic-information .title ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+    line-height: 12px;
+}
+.dashboard .information .basic-information .answer ul li {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+}
+.dashboard .information .basic-information .answer ul li p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #374151;
+    line-height: 12px;
+}
+.dashboard .information .personal-information h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #74408f;
+    line-height: 0px;
+    margin-top: 20px;
+    padding: 15px;
+}
+.dashboard .information .personal-information h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #74408f;
+}
+.dashboard .information .personal-information h5 {
+    font-size: 22px;
+    font-weight: 500;
+}
+.dashboard .information .personal-information .title ul li {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+}
+.dashboard .information .personal-information .title ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+    line-height: 12px;
+}
+.dashboard .information .personal-information .answer ul li {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+}
+.dashboard .information .personal-information .answer ul li p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #374151;
+    line-height: 12px;
+}
+
 
 
 

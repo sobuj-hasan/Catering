@@ -5,6 +5,7 @@
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title-->
     <title> @yield('title') | Catering incubator</title>
@@ -61,8 +62,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('cart') }}">
-                                    <img src="{{ asset('assets/img/icon/shoping-cart.png') }}" alt="icon">
-                                    <sup>02</sup>
+                                    <div class="shoppingcartshow">
+                                        
+                                    </div>
                                 </a>
                             </li>
                             @if (Auth::guest())
@@ -278,10 +280,88 @@
     <!-- Toastr Scripts render -->
     {!! Notify::message() !!}
 
+    <!-----for Ajax handeling----->
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
     @yield('footer_script')
 
+    <script>
+        $(document).ready(function(){
+            showcartcount();
+             showcartsummary();
+              showcartcontent();
+        });
+
+        function showcartcount(){
+            $.ajax({
+                url: "{{ route('cart.count') }}",
+                success: function(data) {
+                    $('.shoppingcartshow').html(data);
+                }
+            });
+        }
 
 
+        function showcartcontent(){
+            $.ajax({
+                url: "{{ route('cart.content') }}",
+                success: function(data) {
+                    $('#cartcontentshow').html(data);
+                }
+            });
+        }
+
+
+        function showcartsummary(){
+            $.ajax({
+                url: "{{ route('cart.summary') }}",
+                success: function(data) {
+                    $('#cartsummaryshow').html(data);
+                }
+            });
+        }
+
+
+        // Product add to cart uses ajax request
+        $('.product_id').on('click',function(e){
+            e.preventDefault();
+            var product_id = $(this).data('id');
+
+              var url = "{{ route('add.to.cart') }}";
+
+            $.ajax({
+                type: "post",
+                url: url,
+                data: {
+                    product_id: product_id
+                },
+                success: function(data){
+                    console.log(data);
+                    showcartcount();
+                    showcartcontent();
+                    showcartsummary();
+                    if ($.isEmptyObject(data.error)) {
+                        toastr.success(data.success, 'Product successfully add to Cart', {
+                            timeOut: 3000
+                        });
+                    } else {
+                        toastr.error(data.error, {
+                            timeOut: 3000
+                        });
+                    }
+                },
+                error: function(data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
+    </script>
 
 </body>
 

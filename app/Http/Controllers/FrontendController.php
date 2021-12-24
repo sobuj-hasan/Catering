@@ -64,6 +64,11 @@ class FrontendController extends Controller
         return view('cart');
     }
 
+    public function checkout()
+    {
+        return view('checkout');
+    }
+
     public function subscribe(Request $request)
     {
         $request->validate([

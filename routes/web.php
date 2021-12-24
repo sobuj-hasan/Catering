@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 namespace App\Http\Controllers\User;
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,13 +28,22 @@ Route::get('/', function () {
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     Route::get('aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('blog/details/{slug}', [FrontendController::class, 'blogdetails'])->name('blog.details');
-    Route::get('cart', [FrontendController::class, 'cart'])->name('cart');
     Route::get('contactus', [FrontendController::class, 'contactus'])->name('contactus');
     Route::get('planing/event', [FrontendController::class, 'planingevent'])->name('planing.event');
     Route::get('price/plan', [FrontendController::class, 'priceplan'])->name('price.plan');
     Route::get('search/result', [FrontendController::class, 'searchresult'])->name('search.result');
     Route::get('subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
     Route::get('contact/message', [FrontendController::class, 'contactmessage'])->name('contact.message');
+    Route::get('cart', [FrontendController::class, 'cart'])->name('cart');
+    Route::get('checkout', [FrontendController::class, 'checkout'])->name('checkout');
+
+    Route::post('addtocart', [CartController::class, 'addtocart'])->name('add.to.cart');
+    Route::post('details_add_to_cart', [CartController::class, 'details_add_to_cart'])->name('details_add_to_cart');
+
+    Route::get('cart/product/count', [CartController::class, 'cartproductcount'])->name('cart.count');
+    Route::get('cart/content', [CartController::class, 'cartcontent'])->name('cart.content');
+    Route::get('cart/summary', [CartController::class, 'cartsummary'])->name('cart.summary');
+    Route::post('order/store', [OrderController::class, 'store'])->name('order.store');
 
 
     // Vendor register route
