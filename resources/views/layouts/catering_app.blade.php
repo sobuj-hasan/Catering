@@ -307,7 +307,6 @@
             });
         }
 
-
         function showcartcontent(){
             $.ajax({
                 url: "{{ route('cart.content') }}",
@@ -317,7 +316,6 @@
             });
         }
 
-
         function showcartsummary(){
             $.ajax({
                 url: "{{ route('cart.summary') }}",
@@ -326,7 +324,6 @@
                 }
             });
         }
-
 
         // Product add to cart uses ajax request
         $('.product_id').on('click',function(e){
@@ -342,12 +339,44 @@
                     product_id: product_id
                 },
                 success: function(data){
-                    console.log(data);
                     showcartcount();
                     showcartcontent();
                     showcartsummary();
                     if ($.isEmptyObject(data.error)) {
-                        toastr.success(data.success, 'Product successfully add to Cart', {
+                        toastr.success(data.success, 'Food successfully add to Cart', {
+                            timeOut: 3000
+                        });
+                    } else {
+                        toastr.error(data.error, {
+                            timeOut: 3000
+                        });
+                    }
+                },
+                error: function(data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
+
+        // --- Package --- add to cart uses ajax request
+        $('.package_id').on('click',function(e){
+            e.preventDefault();
+            var package_id = $(this).data('id');
+
+              var url = "{{ route('package.add.to.cart') }}";
+
+            $.ajax({
+                type: "post",
+                url: url,
+                data: {
+                    package_id: package_id
+                },
+                success: function(data){
+                    showcartcount();
+                    showcartcontent();
+                    showcartsummary();
+                    if ($.isEmptyObject(data.error)) {
+                        toastr.success(data.success, 'Package successfully add to Cart', {
                             timeOut: 3000
                         });
                     } else {

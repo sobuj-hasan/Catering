@@ -41,7 +41,7 @@
                                     @endforeach
                                 </div>
                                 <div class="card-footer py-3">
-                                    <a href="#">Add to Cart</a>
+                                    <a class="package_id" data-id="{{ $package->id }}" href="#">Add to Cart</a>
                                 </div>
                             </div>
                         </div>

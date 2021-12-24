@@ -43,7 +43,7 @@
                     </div>
                     <div class="process-btn d-flex justify-content-end mt-4 mb-4">
                         <a class="readmore-btn m-2" href="{{ route('index') }}">Back To Home</a>
-                        <button class="custom-btn m-2"> Process To Check Out </button>
+                        <a class="readmore-btn m-2" href="{{ route('checkout') }}">Process To Check Out</a>
                     </div>
                 </div>
             </div>

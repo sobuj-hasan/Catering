@@ -24,8 +24,9 @@
                         <div class="col-sm-6 mt-5">
                             <div class="mb-4">
                                 <label for="name" class="form-label">Full Name </label>
-                                <input type="text" class="form-control" value="" name="name">
-                                @error('')
+                                <input type="hidden" name="billing_id" value="@if($countb) {{ $billing->id }} @endif">
+                                <input type="text" class="form-control" value="@if($countb) {{ $billing->name }} @endif" name="name">
+                                @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>

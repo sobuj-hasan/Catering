@@ -1085,16 +1085,11 @@ hr.blog-details{
 }
 .total-price-card .card-body h6{
     font-weight: 400;
+    line-height: 18px;
     color: var(--xgc);
 }
-.total-price-card .card-body span{
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--xgc);
-}
-.total-price-card .card-body h4{
-    font-weight: 500;
-    color: var(--xgc);
+.total-price-card .summary .left{
+    width: 70%;
 }
 hr.cart{
     background: var(--gc);
@@ -1107,14 +1102,11 @@ hr.cart{
     font-size: 16px;
     background: var(--pc);
 }
-
-
-
+/* quantity button */
 .cart-section table .btn-group-sm>.btn,
 .btn-sm {
     padding: 0 0.25rem;
 }
-
 .cart-section .value-button {
     display: inline-block;
     border: 1px solid #ddd;
@@ -1132,21 +1124,17 @@ hr.cart{
     -ms-user-select: none;
     user-select: none;
 }
-
 .cart-section .value-button:hover {
     cursor: pointer;
 }
-
 .cart-section #decrease {
     margin-right: -4px;
     border-radius: 8px 0 0 8px;
 }
-
 .cart-section #increase {
     margin-left: -4px;
     border-radius: 0 8px 8px 0;
 }
-
 .cart-section input#quantity {
     text-align: center;
     border: none;
@@ -1156,19 +1144,18 @@ hr.cart{
     width: 40px;
     height: 30px;
 }
-
 .cart-section input[type=number]::-webkit-inner-spin-button,
 .cart-section input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 .cart-section .breab a,
 .cart-section .breab span {
     font-size: 18px;
 }
-
-
+.cart-section .cancel-btn{
+    color: red;
+}
 /* CART PAGE CSS END */
 
 /* CHECKOUT PAGE CSS START */

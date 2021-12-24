@@ -137,7 +137,7 @@
                                         <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
                                         <h4 class="price">SAR {{ $food->price }}</h4>
                                         <div class="add-cart mt-3 mb-5">
-                                            <button class="custom-btn product_id" data-id={{  $food->id }} href="#">Add to Cart</button>
+                                            <button class="custom-btn product_id" data-id="{{ $food->id }}">Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                                     @endforeach
                                 </div>
                                 <div class="card-footer py-3">
-                                    <a href="">Add to Cart</a>
+                                    <a class="package_id" data-id="{{ $package->id }}" href="#">Add to Cart</a>
                                 </div>
                             </div>
                         </div>

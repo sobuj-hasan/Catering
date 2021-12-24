@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Food;
+use App\Models\Billing;
 use App\Models\Package;
 use App\Models\Category;
 use App\Models\Subscribe;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use App\Models\ContactFormSubmit;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Idemonbd\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Auth;
 
@@ -64,11 +66,6 @@ class FrontendController extends Controller
         return view('cart');
     }
 
-    public function checkout()
-    {
-        return view('checkout');
-    }
-
     public function subscribe(Request $request)
     {
         $request->validate([
@@ -105,6 +102,27 @@ class FrontendController extends Controller
         ContactFormSubmit::create($request->all());
         Notify::success('Message successfully Submited', 'Success');
         return back();
+    }
+
+
+    public function checkout()
+    {
+        $cart = Cart::count();
+        if ($cart < 1) {
+            Notify::error('Your cart is empty, add Food first', 'error');
+            return back();
+        }
+
+        if (!Auth::user()) {
+            Notify::error('Login first !', 'error');
+            return redirect()->route('login');
+        }
+
+        $data['countb']  = Billing::where('user_id', Auth::user()->id)->count();
+        $data['billing'] = Billing::where('user_id', Auth::user()->id)->first();
+
+
+        return view('checkout', $data);
     }
 
 

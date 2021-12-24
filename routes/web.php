@@ -38,7 +38,8 @@ Route::get('/', function () {
     Route::get('checkout', [FrontendController::class, 'checkout'])->name('checkout');
 
     Route::post('addtocart', [CartController::class, 'addtocart'])->name('add.to.cart');
-    Route::post('details_add_to_cart', [CartController::class, 'details_add_to_cart'])->name('details_add_to_cart');
+    Route::get('cartdestry/{rowId}', [CartController::class, 'cartdestry'])->name('cart.destry');
+    Route::post('package/add/to/cart', [CartController::class, 'packageaddtocart'])->name('package.add.to.cart');
 
     Route::get('cart/product/count', [CartController::class, 'cartproductcount'])->name('cart.count');
     Route::get('cart/content', [CartController::class, 'cartcontent'])->name('cart.content');
