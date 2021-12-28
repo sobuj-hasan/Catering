@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title','Restaurants')
 @section('content')
 
@@ -8,7 +8,7 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Restaurant List</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
                         <li class="breadcrumb-item"><a href="">Restaurant List</a></li>
                     </ol>
                     <div class="clearfix"></div>
@@ -29,10 +29,10 @@
                                 <th>SI NO.</th>
                                 <th>Image </th>
                                 <th>Restaurant Name </th>
-                                <th>Created By</th>
                                 <th>Country</th>
-                                <th>Status</th>
+                                <th>City</th>
                                 <th>Discount</th>
+                                <th>Status</th>
                                 <th>Action </th>
                             </tr>
                             </thead>
@@ -46,13 +46,16 @@
                                             <img width="80px" src="{{ asset('assets/img/restaurant') }}/{{ $restaurant->res_image }}" alt="img" title="food-img"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('restaurant.show', $restaurant->id) }}">{{ $restaurant->res_name }}</a>
-                                        </td>
-                                        <td>
-                                            {{ $restaurant->user->name }}
+                                            <a href="{{ route('vendorrestaurant.show', $restaurant->id) }}">{{ $restaurant->res_name }}</a>
                                         </td>
                                         <td>
                                             {{ $restaurant->country }}
+                                        </td>
+                                        <td>
+                                            {{ $restaurant->city }}
+                                        </td>
+                                        <td>
+                                            <h5>{{ $restaurant->res_discount ?? "0" }} (%)</h5>
                                         </td>
                                         <td>
                                             <h5 class="badge 
@@ -71,16 +74,11 @@
                                                 @endphp
                                             </h5>
                                         </td>
-                                        <td>
-                                            <h5>{{ $restaurant->res_discount ?? "0" }} (%)</h5>
-                                        </td>
-                                        <form method="POST" action="{{ route('restaurant.destroy', $restaurant->id) }}">
+                                        <form method="POST" action="{{ route('vendorrestaurant.destroy', $restaurant->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                @if ($restaurant->status == 1)
-                                                    <a href="{{ route('restaurant.edit', $restaurant->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
-                                                @endif
+                                                <a href="{{ route('vendorrestaurant.edit', $restaurant->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="productDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

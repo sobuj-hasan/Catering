@@ -22,8 +22,8 @@ class CreateOrdersTable extends Migration
             $table->string('shipping')->nulllable();
             $table->string('vat')->nulllable();
             $table->string('total')->nulllable();
-            $table->integer('payment_method');  // 1 for unpaid 2 for paid
-            $table->integer('payment_status');  // 1 for unpaid 2 for paid
+            $table->integer('payment_method')->nullable();  // 1 for unpaid 2 for paid
+            $table->integer('payment_status')->nullable();  // 1 for unpaid 2 for paid
             $table->integer('status'); // 1 for pending 2 for processing 3 for onthe way 4 for delivery 5 fore cancel
             $table->timestamps();
         });

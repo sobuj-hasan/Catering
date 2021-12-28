@@ -192,7 +192,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                         <div class="package">
                             <div class="card text-center my-4">
-                                <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/package/') }}/{{ $package->image }});">
+                                <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/') }}/{{ $package->image }});">
                                     <div class="package-pricing">
                                         <h4 class="">{{ $package->name }}</h4>
                                         <h3 class="section-header">$ {{ $package->price }}/<span>{{ $package->time }}</span> </h3>

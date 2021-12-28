@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Vendor;
 
 use App\Models\Restaurant;
 use Illuminate\Support\Str;
@@ -19,8 +19,8 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $data['restaurants'] = Restaurant::latest()->get();
-        return view('admin.restaurant.index', $data);
+        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
+        return view('vendor.restaurant.index', $data);
     }
 
     /**
@@ -30,7 +30,7 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        return view('admin.restaurant.add');
+        return view('vendor.restaurant.add');
     }
 
     /**
@@ -56,7 +56,7 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::create($request->all() + [
             'user_id' => Auth::user()->id,
             'slug' => $slug,
-            'status' => 1,
+            'status' => 2,
         ]);
         if ($request->hasFile('res_image')) {
             $photo = $request->file('res_image');
@@ -67,8 +67,8 @@ class RestaurantController extends Controller
                 'res_image' => $photo_name,
             ]);
         }
-        Notify::success('Created New Restaurant !', 'Success');
-        return redirect()->route('restaurant.index');
+        Notify::success('Created New Restaurant, Pending Approval !', 'Success');
+        return redirect()->route('vendorrestaurant.index');
     }
 
     /**
@@ -80,7 +80,7 @@ class RestaurantController extends Controller
     public function show($id)
     {
         $data['single_restaurant'] = Restaurant::where('id', $id)->firstOrFail();
-        return view('admin.restaurant.show', $data);
+        return view('vendor.restaurant.show', $data);
     }
 
     /**
@@ -92,7 +92,7 @@ class RestaurantController extends Controller
     public function edit($id)
     {
         $data['single_restaurant'] = Restaurant::where('id', $id)->firstOrFail();
-        return view('admin.restaurant.edit', $data);
+        return view('vendor.restaurant.edit', $data);
     }
 
     /**
@@ -135,7 +135,7 @@ class RestaurantController extends Controller
             ]);
         }
         Notify::success('Restaurant infomation Updated', 'Success');
-        return redirect()->route('restaurant.index');
+        return redirect()->route('vendorrestaurant.index');
     }
 
     /**
@@ -144,33 +144,10 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Restaurant $restaurant)
+    public function destroy($id)
     {
-        $restaurant->delete();
+        Restaurant::where('id', $id)->first()->delete();
         Notify::info('This Restaurant successfully Deleted', 'Deleted');
         return back();
     }
-
-    // pending restaurant
-    public function pendingrestaurant(){
-        $data['restaurants'] = Restaurant::where('status', 2)->latest()->get();
-        return view('admin.restaurant.pending', $data);
-    }
-
-    // Pending Restaurant Published
-    public function restaurantpublished(Request $request, $id)
-    {
-        Restaurant::where('id', $id)->update([
-            'status' => $request->status,
-        ]);
-        Notify::success('Restaurant Published', 'Successfully');
-        return redirect(route('restaurant.index'));
-    }
-
-
-
-
-
-
-
 }

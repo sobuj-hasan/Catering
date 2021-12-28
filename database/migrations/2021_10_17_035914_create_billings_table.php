@@ -21,6 +21,7 @@ class CreateBillingsTable extends Migration
             $table->string('country')->nullable();
             $table->string('phone')->nullable();
             $table->string('city')->nullable();
+            $table->string('town')->nullable();
             $table->integer('zip_code')->nullable();
             $table->string('address')->nullable();
             $table->string('email')->nullable();

@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title', $single_restaurant->res_name)
 @section('content')
 
@@ -8,7 +8,7 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Restaurant Details</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
                         <li class="breadcrumb-item"><a href="">{{ $single_restaurant->res_name }}</a></li>
                     </ol>
                     <div class="clearfix"></div>
@@ -28,20 +28,24 @@
                                 <td>{{ $single_restaurant->res_name }}</td>
                             </tr>
                             <tr>
-                                <h5 class="p-2 mr-3 badge @php if ($single_restaurant->status == 1) { echo "badge-success"; }else { echo "badge-danger"; }  @endphp">
-                                    @php
-                                    if ($single_restaurant->status == 1) { echo "Published"; }else { echo "Pending"; }
-                                    @endphp
-                                </h5>
-
-                                <form method="GET" action="{{ route('restaurant.published', $single_restaurant->id) }}">
-                                    @csrf
-                                    @method('PATCH')
-                                    <input type="hidden" value="1" name="status">
-                                    @php
-                                        if ($single_restaurant->status == 1) { echo ""; }else { echo '<button class="btn btn-outline-success m-2" type="submit">Approved Now</button>'; }
-                                    @endphp
-                                </form>
+                                <th>Status</th>
+                                <td>
+                                    <h5 class="badge 
+                                    @php if ($single_restaurant->status == 1) {
+                                        echo "badge-success p-2";
+                                    }else {
+                                        echo "badge-danger p-2";
+                                    } @endphp
+                                    ">
+                                        @php
+                                            if ($single_restaurant->status == 1) {
+                                                echo "active";
+                                            }else {
+                                                echo "pending";
+                                            }
+                                        @endphp
+                                    </h5>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Trade License</th>

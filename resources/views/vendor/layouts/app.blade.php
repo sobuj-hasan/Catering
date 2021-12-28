@@ -99,19 +99,25 @@
                         <ul class="metismenu" id="side-menu">
                             <li class="menu-title">Navigation</li>
                             <li>
-                                <a href="{{ route('admin.dashboard') }}">
+                                <a href="{{ route('vendor.dashboard') }}">
                                     <i class="fi-air-play"></i>  <span> Dashboard </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript: void(0);"> <i class="icon-basket-loaded"></i> <span>Food Category</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('categories.index') }}">View List</a></li>
-                                    <li><a href="{{ route('categories.create') }}">Add New</a></li>
+                                    <li><a href="{{ route('vendorcategories.index') }}">View Category List</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"> <i class="fas fa-utensils"></i> <span>Catering Foods</span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"> <i class="far fa-hospital"></i> <span>My Restaurants</span> <span class="menu-arrow"></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{ route('vendorrestaurant.index') }}">View Your restaurant</a></li>
+                                    <li><a href="{{ route('vendorrestaurant.create') }}">Add New restaurant</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);"> <i class="fas fa-utensils"></i> <span>My Foods</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('catering.index') }}">View All foods</a></li>
                                     <li><a href="{{ route('catering.create') }}">Add New Foods</a></li>

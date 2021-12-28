@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Vendor;
 
-use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Order;
+use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 use Idemonbd\Notify\Facades\Notify;
+use App\Http\Controllers\Controller;
 
-class CategoryController extends Controller
+class OrdershowController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +17,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('vendor.foods.category.index', compact('categories'));
+        $orders = Order::where('status', '!=', 5)->latest()->get();
+        return view('admin/order/index', compact('orders'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $cancel_orders = Order::where('status', 5)->get();
+        return view('admin.order.create', compact('cancel_orders'));
     }
 
     /**
@@ -47,9 +49,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
-        //
+        return view('admin.order.show', compact('order'));
     }
 
     /**
@@ -81,8 +83,10 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        Notify::warning('Order Deleted', 'Deleted');
+        return back();
     }
 }

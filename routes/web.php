@@ -77,13 +77,16 @@ Route::get('/', function () {
         ['namespace' => 'Vendor', 'middleware' => 'vendor'],
         function () {
             Route::get('vendor/dashboard', 'DashboardController@index')->name('vendor.dashboard');
-            // Route::get('user/logout', 'UserDashboardController@logout')->name('logout');
             Route::resources([
+                'vendorrestaurant' => 'RestaurantController',
+                'special/foods/vendorcatering' => 'SpecialCateringGoodsController',
+                'food/vendorpackage' => 'FoodPackageController',
+                'vendorcategories' => 'CategoryController',
                 // 'myorder' => 'OrderShowController',
                 // 'transection' => 'TransectionController',
                 // 'myorder' => 'UserOrderController',
             ]);
-
+            
             // Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
             // Route::get('user/profile/edit', 'UserProfileController@edit')->name('user.profile.edit');
             // Route::post('user/profile/update', 'UserProfileController@update')->name('user.profile.update');

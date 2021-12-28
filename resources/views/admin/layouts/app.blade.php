@@ -107,6 +107,7 @@
                                 <a href="javascript: void(0);"> <i class="far fa-hospital"></i> <span>Our Restaurants</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="{{ route('restaurant.index') }}">View all restaurant</a></li>
+                                    <li><a class="text-danger" href="{{ route('pending.restaurant') }}">Pending restaurant</a></li>
                                     <li><a href="{{ route('restaurant.create') }}">Add New restaurant</a></li>
                                 </ul>
                             </li>

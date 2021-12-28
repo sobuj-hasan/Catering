@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
         'admin/subscriber' => 'SubscribeController',
         'admin/visitor/querstion' => 'VisitorQueryController',
         ]);
+        Route::get('pending/restaurant', 'RestaurantController@pendingrestaurant')->name('pending.restaurant');
+        Route::get('approved/restaurant/{id}', 'RestaurantController@restaurantpublished')->name('restaurant.published');
 
         Route::get('admin/profile', 'ProfileController@index')->name('admin.user.profile');
         Route::get('admin/profile/edit', 'ProfileController@edit')->name('admin.user.profile.edit');

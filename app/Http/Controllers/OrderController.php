@@ -48,12 +48,13 @@ class OrderController extends Controller
         $request->validate(
             [
                 'name' => 'required',
-                'surname' => '',
+                'company_name' => '',
                 'email' => 'required',
                 'phone' => 'required',
                 'country' => 'required',
                 'city' => 'required',
-                'zip_code' => '',
+                'town' => '',
+                'zip_code' => 'required',
                 'address' => 'required',
                 'opinion' => '',
             ],
@@ -78,11 +79,12 @@ class OrderController extends Controller
 
             $billing->user_id       = Auth::user()->id;
             $billing->name          = $request->name;
-            $billing->surname       = $request->surname;
+            $billing->company_name  = $request->company_name;
             $billing->email         = $request->email;
             $billing->phone         = $request->phone;
             $billing->country       = $request->country;
             $billing->city          = $request->city;
+            $billing->town          = $request->town;
             $billing->zip_code      = $request->zip_code;
             $billing->address       = $request->address;
             $billing->opinion       = $request->opinion;
@@ -98,6 +100,7 @@ class OrderController extends Controller
             $order->shipping         = 0;
             $order->vat              = Cart::tax();
             $order->total            = Cart::total();
+            $order->payment_method   = $request->payment_method;  // 1 = Bank transfer 2 = Cradit card 3 = Cashon Delivery
             $order->payment_status   = 1;
             $order->status           = 1;
             $order->save();
@@ -109,7 +112,7 @@ class OrderController extends Controller
 
                 $orderdetail = new OrderDetail();
                 $orderdetail->order_id         = $order->id;
-                $orderdetail->product_id       = $data->id;
+                $orderdetail->food_id          = $data->id;
                 $orderdetail->qty              = $data->qty;
                 $orderdetail->unit_price       = $data->price;
                 $orderdetail->total_price      = $data->total();
@@ -123,8 +126,7 @@ class OrderController extends Controller
             $payment->user_id          = Auth::user()->id;
             $payment->order_id         = $order->id;
             $payment->amount           = Cart::total();
-            $payment->payment_method   = $request->payment_method;
-            $payment->status           = 1;  // for instrument
+            $payment->status           = 1;  // for payment status
             $payment->save();
 
             cart::destroy();
@@ -132,8 +134,8 @@ class OrderController extends Controller
 
             DB::commit();
             
-            Notify::success('Order successfully Completed','success');
-            return redirect('/');
+            Notify::success('Order successfully Submitted','Success');
+            return redirect(route('dashboard'));
         } catch (\Throwable $e) {
             DB::rollback();
             throw $e;
