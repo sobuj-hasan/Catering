@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title','Special Foods')
 @section('content')
 
@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Special Foods</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Special Catering Foods List</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
+                        <li class="breadcrumb-item"><a href="">Special Catering Foods List</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -45,7 +45,7 @@
                                             <img width="60px" src="{{ asset('assets/img/food') }}/{{ $food->image }}" alt="img" title="food-img"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('catering.show', $food->id) }}">{{ $food->title }}</a>
+                                            <a href="{{ route('vendorcatering.show', $food->id) }}">{{ $food->title }}</a>
                                         </td>
                                         <td>
                                             {{ $food->category->name }}
@@ -56,11 +56,11 @@
                                         <td>
                                             {{ $food->discount }} (%)
                                         </td>
-                                        <form method="POST" action="{{ route('catering.destroy', $food->id) }}">
+                                        <form method="POST" action="{{ route('vendorcatering.destroy', $food->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('catering.edit', $food->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
+                                                <a href="{{ route('vendorcatering.edit', $food->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="productDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

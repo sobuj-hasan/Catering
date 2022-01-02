@@ -119,8 +119,8 @@
                             <li>
                                 <a href="javascript: void(0);"> <i class="fas fa-utensils"></i> <span>My Foods</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('catering.index') }}">View All foods</a></li>
-                                    <li><a href="{{ route('catering.create') }}">Add New Foods</a></li>
+                                    <li><a href="{{ route('vendorcatering.index') }}">View All foods</a></li>
+                                    <li><a href="{{ route('vendorcatering.create') }}">Add New Foods</a></li>
                                 </ul>
                             </li>
                             <li>

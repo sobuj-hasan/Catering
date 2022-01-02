@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title', $single_food->title)
 @section('content')
 
@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Food Details</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">{{ $single_food->title }}</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
+                        <li class="breadcrumb-item"><a href="">{{ $single_food->title }}</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>

@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('admin.foods.category.index', compact('categories'));
+        return view('vendor.foods.category.index', compact('categories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.foods.category.create');
+        //
     }
 
     /**
@@ -38,13 +38,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'min:3', 'max:30', 'unique:categories'],
-            'ar_name' => ['nullable', 'string', 'min:3', 'max:255', 'unique:categories'],
-        ]);
-        Category::create($request->except('_token'));
-        Notify::success(''.$request->name.' Category created', 'Success');
-        return redirect(route('categories.index'));
+        //
     }
 
     /**
@@ -55,7 +49,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        echo "show Here";
+        //
     }
 
     /**
@@ -66,8 +60,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        return view('admin.foods.category.edit', compact('category'));
+        //
     }
 
     /**
@@ -79,17 +72,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $request->validate([
-            'name' => 'required|unique:categories,name,' .$id,
-            'ar_name' => 'nullable|unique:categories,ar_name,' .$id,
-        ]);
-        $category = Category::find($id);
-        $category->name = $request->name;
-        $category->ar_name = $request->ar_name;
-        $category->save();
-        Notify::info('' . $category->name . ' Category updated', 'Updated');
-        return redirect()->route('categories.index');
+        //
     }
 
     /**
@@ -100,8 +83,6 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        $category->delete();
-        Notify::info('This Category successfully Deleted', 'Deleted');
-        return back();
+        //
     }
 }

@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title','Category List')
 @section('content')
 
@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Category</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Category List</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
+                        <li class="breadcrumb-item"><a href="">Category List</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -47,14 +47,9 @@
                                         <td>
                                             {{ $categorie->ar_name ?? "N/A" }}
                                         </td>
-                                        <form method="POST" action="{{ route('categories.destroy', $categorie->id) }}">
-                                            @csrf
-                                            @method('DELETE')
-                                            <td>
-                                                <a href="{{ route('categories.edit', $categorie->id) }}" class="table-action-btn"><i class="mdi mdi-pencil"></i></a>
-                                                <button onclick="categoryDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
-                                            </td>
-                                        </form>
+                                        <td>
+                                            <h5 class="badge badge-danger p-2">Admin Control</h5>
+                                        </td>
                                     </tr>
                                     @empty($categorie)
                                         <div class="alert alert-info">

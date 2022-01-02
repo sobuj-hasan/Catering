@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title','Food Edit')
 @section('content')
     <div class="container-fluid">
@@ -7,7 +7,7 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Edit Food</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
                         <li class="breadcrumb-item"><a href="">Edit Food</a></li>
                     </ol>
                     <div class="clearfix"></div>
@@ -19,7 +19,7 @@
             <div class="col-md-12 m-auto">
                 <div class="card-box">
                     <h4 class="m-t-0 m-b-30 header-title">Edit Food</h4>
-                    <form method="POST" action="{{ route('catering.update', $food->id) }}" class="form-horizontal" role="form" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('vendorcatering.update', $food->id) }}" class="form-horizontal" role="form" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
                         <div class="form-group row">
@@ -31,7 +31,7 @@
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('category')
+                                @error('category_id')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>

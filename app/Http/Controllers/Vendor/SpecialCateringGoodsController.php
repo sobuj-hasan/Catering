@@ -19,8 +19,8 @@ class SpecialCateringGoodsController extends Controller
      */
     public function index()
     {
-        $data['foods'] = Food::all();
-        return view('admin.foods.index', $data);
+        $data['foods'] = Food::where('user_id', Auth::user()->id)->get();
+        return view('vendor.foods.index', $data);
     }
 
     /**
@@ -31,8 +31,8 @@ class SpecialCateringGoodsController extends Controller
     public function create()
     {
         $data['categories'] = Category::all();
-        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
-        return view('admin.foods.add', $data);
+        $data['restaurants'] = Restaurant::where('status', 1)->where('user_id', Auth::user()->id)->get();
+        return view('vendor.foods.add', $data);
     }
 
     /**
@@ -68,7 +68,7 @@ class SpecialCateringGoodsController extends Controller
             ]);
         }
         Notify::success('Created a new food !', 'Success');
-        return redirect()->route('catering.index');
+        return redirect()->route('vendorcatering.index');
     }
 
     /**
@@ -80,7 +80,7 @@ class SpecialCateringGoodsController extends Controller
     public function show($id)
     {
         $data['single_food'] = Food::where('id', $id)->firstOrFail();
-        return view('admin.foods.show', $data);
+        return view('vendor.foods.show', $data);
     }
 
     /**
@@ -93,8 +93,8 @@ class SpecialCateringGoodsController extends Controller
     {
         $data['food'] = Food::where('id', $id)->firstOrFail();
         $data['categories'] = Category::all();
-        $data['restaurants'] = Restaurant::where('user_id', Auth::user()->id)->get();
-        return view('admin.foods.edit', $data);
+        $data['restaurants'] = Restaurant::where('status', 1)->where('user_id', Auth::user()->id)->get();
+        return view('vendor.foods.edit', $data);
     }
 
     /**
@@ -133,7 +133,7 @@ class SpecialCateringGoodsController extends Controller
             $food->image = $photo_name;
         }
         Notify::success('Food have been updated!', 'Success');
-        return redirect()->route('catering.index');
+        return redirect()->route('vendorcatering.index');
     }
 
     /**

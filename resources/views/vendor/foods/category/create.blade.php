@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+{{-- @extends('vendor.layouts.app')
 @section('title','Create Category')
 @section('content')
     <div class="container-fluid">
@@ -7,8 +7,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Create New</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Create Category</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
+                        <li class="breadcrumb-item"><a href="">Create Category</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -21,7 +21,7 @@
                     <div class="modal-header">
                         <h4 class="modal-title">Create Category</h4>
                     </div>
-                    <form method="POST" action="{{ route('categories.store') }}">
+                    <form method="POST" action="{{ route('vendorcategories.store') }}">
                         @csrf
                         <div class="modal-body">
                             <div class="row">
@@ -58,4 +58,4 @@
     </div>
 @endsection
 
-
+ --}}

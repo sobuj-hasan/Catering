@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+{{-- @extends('vendor.layouts.app')
 @section('title','Edit Category')
 @section('content')
 
@@ -8,8 +8,8 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Category Edit</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Edit Category</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
+                        <li class="breadcrumb-item"><a href="">Edit Category</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -24,7 +24,7 @@
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Category</h4>
                     </div>
-                    <form method="POST" action="{{ route('categories.update', $category->id) }}">
+                    <form method="POST" action="{{ route('vendorcategories.update', $category->id) }}">
                         @csrf
                         @method('PATCH')
                         <div class="modal-body">
@@ -62,4 +62,4 @@
     </div>
 @endsection
 
-
+ --}}

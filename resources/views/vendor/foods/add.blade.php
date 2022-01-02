@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('vendor.layouts.app')
 @section('title','Special Catering List')
 @section('content')
     <div class="container-fluid">
@@ -7,7 +7,7 @@
                 <div class="page-title-box">
                     <h4 class="page-title float-left">Add New Catering Foods</h4>
                     <ol class="breadcrumb float-right">
-                        <li class="breadcrumb-item"><a href="">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="">Vendor</a></li>
                         <li class="breadcrumb-item"><a href="">Special Catering Foods</a></li>
                     </ol>
                     <div class="clearfix"></div>
@@ -18,19 +18,33 @@
         <div class="row mt-4">
             <div class="col-md-12 m-auto">
                 <div class="card-box">
-                    <h4 class="m-t-0 m-b-30 header-title">Add Catering Food</h4>
-                    <form method="POST" action="{{ route('catering.store') }}" class="form-horizontal" role="form" enctype="multipart/form-data">
+                    <h4 class="m-t-0 m-b-30 header-title">Add New Food</h4>
+                    <form method="POST" action="{{ route('vendorcatering.store') }}" class="form-horizontal" role="form" enctype="multipart/form-data">
                         @csrf
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-3 col-form-label">Select One Restaurant : </label>
+                            <div class="col-9">
+                                <select class="form-control" name="restaurant_id">
+                                    <option value="">--- Select one Restaurant ---</option>
+                                    @foreach ($restaurants as $restaurant)
+                                        <option value="{{ $restaurant->id }}">{{ $restaurant->res_name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('restaurant_id')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-3 col-form-label">Select Food Category : </label>
                             <div class="col-9">
                                 <select class="form-control" name="category_id">
-                                    <option value="">--- Select one category ---</option>
+                                    <option value="">--- Select category ---</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('category')
+                                @error('category_id')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>

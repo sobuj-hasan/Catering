@@ -72,7 +72,7 @@ Route::get('/', function () {
         }
     );
 
-    // User Dashboard Routes
+    // Vendor Panel all Routes
     Route::group(
         ['namespace' => 'Vendor', 'middleware' => 'vendor'],
         function () {
