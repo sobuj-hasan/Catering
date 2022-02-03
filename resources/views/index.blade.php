@@ -1,3 +1,6 @@
+@php
+    $locale = app()->getLocale();
+@endphp
 @extends('layouts.catering_app')
 @section('title')
     Home
@@ -9,12 +12,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="banner-content">
-                        <h4>Catering </h4>
-                        <h1 class="banner-title">for Special Corporate Events</h1>
-                        <p class="paragraph pe-lg-5 my-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
-                        layout. The point of using Lorem Ipsum</p>
+                        <h4>@lang('home.caterincu') </h4>
+                        <h1 class="banner-title">@lang('home.banner_title')</h1>
+                        <p class="paragraph pe-lg-5 my-3">@lang('home.banner_text')</p>
                         <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                            <a class="readmore-btn" href="{{ route('planing.event') }}">Read More</a>
+                            <a class="readmore-btn" href="{{ route('planing.event') }}">@lang('home.read_more')</a>
                         </div>
                     </div>
                 </div>
@@ -36,20 +38,19 @@
                             <img class="img-fluid" src="assets/img/icon/phone.png" alt="phone">
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4>Choose and Order</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                            <h4>@lang('home.choose_order')</h4>
+                            <p>@lang('home.choose_order_text')</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 my-sm-3 my-lg-5">
                     <div class="d-flex align-items-center service-item">
                         <div class="flex-shrink-0 car-img">
                             <img class="img-fluid" src="assets/img/icon/car.png" alt="phone">
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4>Fasted Delivery</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                            <h4>@lang('home.fasted_delivery')</h4>
+                            <p>@lang('home.fasted_delivery_text')</p>
                         </div>
                     </div>
                 </div>
@@ -60,8 +61,8 @@
                             <img class="img-fluid" src="assets/img/icon/barger.png" alt="phone">
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            <h4>Fresh & Delicious</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                            <h4>@lang('home.fresh_delicious')</h4>
+                            <p>@lang('home.fresh_delicious_text')</p>
                         </div>
                     </div>
                 </div>
@@ -75,8 +76,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-sm-3 mb-lg-5 foods">
-                    <h4>Choose Your</h4>
-                    <h2 class="section-header">Special catering Goods</h2>
+                    <h4>@lang('home.choose_your')</h4>
+                    <h2 class="section-header">@lang('home.special_catering_goods')</h2>
                     <ul class="d-flex justify-content-center nav nav-tabs" id="myTab" role="tablist">
                         <li role="presentation">
                             <button class="active" id="allfoods-tab" data-bs-toggle="tab" data-bs-target="#allfoods" type="button" role="tab" aria-controls="allfoods" aria-selected="true">All Foods</button>
@@ -101,15 +102,15 @@
                                         <img class="mx-auto d-block" src="{{ asset('assets/img/food/') }}/{{ $food->image }}" alt="catering-img">
                                         @if ($food->discount)
                                             <div class="discount">
-                                                <h4>{{ $food->discount }}% Off</h4>
+                                                <h4>{{ $food->discount }}% @lang('home.off')</h4>
                                             </div>
                                         @endif
                                     </div>
                                     <h4>{{ $food->title }}</h4>
                                     <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
-                                    <h4 class="price">SAR {{ $food->price }}</h4>
+                                    <h4 class="price">@lang('home.currency') {{ $food->price }}</h4>
                                     <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn product_id" data-id={{  $food->id }} href="#">Add to Cart</button>
+                                        <button class="custom-btn product_id" data-id={{  $food->id }} href="#">@lang('home.add_to_cart')</button>
                                     </div>
                                 </div>
                             </div>
@@ -129,15 +130,15 @@
                                             <img class="mx-auto d-block" src="{{ asset('assets/img/food/') }}/{{ $food->image }}" alt="catering-img">
                                             @if ($food->discount)
                                                 <div class="discount">
-                                                    <h4>{{ $food->discount }}% Off</h4>
+                                                    <h4>{{ $food->discount }}% @lang('home.off')</h4>
                                                 </div>
                                             @endif
                                         </div>
                                         <h4>{{ $food->title }}</h4>
                                         <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
-                                        <h4 class="price">SAR {{ $food->price }}</h4>
+                                        <h4 class="price">@lang('home.currency') {{ $food->price }}</h4>
                                         <div class="add-cart mt-3 mb-5">
-                                            <button class="custom-btn product_id" data-id="{{ $food->id }}">Add to Cart</button>
+                                            <button class="custom-btn product_id" data-id="{{ $food->id }}">@lang('home.add_to_cart')</button>
                                         </div>
                                     </div>
                                 </div>
@@ -160,12 +161,12 @@
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-sm-3 mt-lg-5">
-                            <h4 class="mb-3 mt-5">Take a Chance</h4>
-                            <h3>40% Discount for First Order</h3>
-                            <h3>Or</h3>
-                            <h3>Discuss your project</h3>
+                            <h4 class="mb-3 mt-5">@lang('home.take_a_chance')</h4>
+                            <h3>@lang('home.discount_for_first_order')</h3>
+                            <h3>@lang('home.or')</h3>
+                            <h3>@lang('home.discuss_your_project')</h3>
                             <div class="add-cart mt-5 mb-5">
-                                <button class="custom-btn" href="">Send us request</button>
+                                <button class="custom-btn" href="">@lang('home.send_us_request')</button>
                             </div>
                         </div>
                     </div>
@@ -180,8 +181,8 @@
         <div class="container text-center my-5">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <h4>Choose Your</h4>
-                    <h2 class="section-header after-before">Catering Price plan</h2>
+                    <h4>@lang('home.choose_your')</h4>
+                    <h2 class="section-header after-before">@lang('home.catering_price_plan')</h2>
                     <div class="after-design">
                         <i class="fas fa-circle"></i>
                     </div>
@@ -195,7 +196,7 @@
                                 <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/') }}/{{ $package->image }});">
                                     <div class="package-pricing">
                                         <h4 class="">{{ $package->name }}</h4>
-                                        <h3 class="section-header">$ {{ $package->price }}/<span>{{ $package->time }}</span> </h3>
+                                        <h3 class="section-header">@lang('home.currency') {{ $package->price }}/<span>{{ $package->time }}</span> </h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -204,14 +205,14 @@
                                     @endforeach
                                 </div>
                                 <div class="card-footer py-3">
-                                    <a class="package_id" data-id="{{ $package->id }}" href="#">Add to Cart</a>
+                                    <a class="package_id" data-id="{{ $package->id }}" href="#">@lang('home.add_to_cart')</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
                 <div class="add-cart mt-4">
-                    <a class="custom-btn" href="{{ route('price.plan') }}">Show More Plans</a>
+                    <a class="custom-btn" href="{{ route('price.plan') }}">@lang('home.show_more_plan')</a>
                 </div>
             </div>
         </div>
@@ -390,6 +391,53 @@
     <!-- LATEST BLOG END -->
 @endsection
 @section('footer_script')
+    <script>
+        $('.foodplay').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            @if ($locale == 'ar')
+                rtl: true,
+            @else
+                rtl: false,
+            @endif
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: false,
+            arrows: false,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+
+
+        });
+    </script>     
 @endsection
 
 

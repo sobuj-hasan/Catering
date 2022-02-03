@@ -1,7 +1,12 @@
+@php
+    $locale = app()->getLocale();
+@endphp
 <!DOCTYPE html>
-<html lang="en">
-<!-- <html lang="ar" dir="rtl"> -->
-
+@if ($locale == 'ar')
+    <html lang="ar" dir="rtl">
+@else
+    <html lang="en" dir="auto">
+@endif
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -11,8 +16,12 @@
     <title> @yield('title') | Catering incubator</title>
     <!-- Favicon-->
     <link rel="icon" href="assets/img/" type="image/gif">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    @if ($locale == 'ar')
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    @else
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    @endif
     <!--    font awsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <!-- Toaster css -->
@@ -25,7 +34,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <!-- <link rel="stylesheet" href="assets/css/arabic.css"> -->
+    @if ($locale == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/css/arabic.css') }}">
+    @endif
 </head>
 
 <body>
@@ -44,11 +55,16 @@
                 <div class="col-md-6 d-none d-md-block">
                     <div class="menubar d-flex justify-content-center">
                         <ul>
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('planing.event') }}">Menu</a></li>
-                            <li><a href="{{ route('price.plan') }}">Pricing</a></li>
-                            <li><a href="{{ route('planing.event') }}">Lunch</a></li>
-                            <li><a href="{{ route('contactus') }}">Help</a></li>
+                            <li><a href="{{ route('index') }}">@lang('home.home')</a></li>
+                            <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
+                            <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
+                            <li><a href="{{ route('aboutus') }}">@lang('home.aboutus')</a></li>
+                            <li><a href="{{ route('contactus') }}">@lang('home.contactus')</a></li>
+                            @if ($locale == 'ar')
+                                <li><a href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}">@lang('home.english')</a></li>
+                            @else
+                                <li><a href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">@lang('home.arabic')</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>

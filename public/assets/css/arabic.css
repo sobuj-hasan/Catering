@@ -1,6 +1,16 @@
+/* Arabic Css Here */
+@import url("./fonts.css");
+
+body {
+    font-family: 'Gothic', 'Molarabic';
+    font-weight: ;
+}
+
+
 .menubar {
     text-align: left;
 }
+
 
 /* .management-page .content img {
     position: absolute;

@@ -14,7 +14,7 @@ img {
 
 /* Header part start */
 header {
-    height: 100px;
+    height: 80px;
     background: var(--cc);
     transition: .4s;
 }
@@ -48,7 +48,7 @@ header {
     text-transform: capitalize;
     display: inline-block;
     height: 35px;
-    padding: 7px 20px;
+    padding: 7px 15px;
     color: var(--pc);
 }
 .menubar ul li a {
@@ -316,8 +316,9 @@ header {
     right: 25px;
     padding: 10px;
 }
-.special-catering .catering-item .discount h4{
-    line-height: 29px;
+.special-catering .catering-item .discount h4 {
+    line-height: 26px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 /* SPECIAL CATERING END */
@@ -367,7 +368,7 @@ header {
 }
 .package .package-pricing .section-header{
     color: var(--wc);
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
 }
 .package .package-pricing span{

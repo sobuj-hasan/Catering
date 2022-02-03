@@ -1,3 +1,4 @@
+@import url("./fonts.css");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Pathway+Gothic+One&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
@@ -17,7 +18,7 @@
     --blogbg: #F6F6F6;
     --fbg: #260044;
     --border: 1px solid var(--gc);
-    --firasans: 'Fira Sans', sans-serif;
+    --firasans: 'Fira Sans', 'Molarabic';
 }
 
 html {
@@ -136,10 +137,10 @@ p {
     border-radius: 50px;
 }
 
-.banner-title{
+.banner-title {
     font-weight: 700;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 50px;
+    line-height: 58px;
     color: var(--bc);
     text-transform: uppercase;
 }
