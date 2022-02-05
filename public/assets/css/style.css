@@ -411,7 +411,9 @@ header {
 }
 .planing-events .events h4 {
     color: var(--xgc);
+    font-size: 16px;
     font-weight: 600;
+    line-height: 22px;
     position: relative;
 }
 .planing-events .events h4::after {
@@ -743,8 +745,8 @@ hr.best-item{
     font-weight: 500;
     line-height: 45px;
 }
-.planing-events p{
-    line-height: 28px;
+.planing-events p {
+    line-height: 20px;
 }
 .planing-events .readmore-btn {
     border-radius: 0px;

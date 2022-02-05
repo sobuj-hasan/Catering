@@ -96,11 +96,11 @@
                                             <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
                                         </a>
                                     @endif
-                                    @if(Auth::user()->role == 2)
-                                        <a href="{{ route('vendor.dashboard') }}">
-                                            <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
-                                        </a>
-                                    @endif
+                                        @if(Auth::user()->role == 2)
+                                            <a href="{{ route('vendor.dashboard') }}">
+                                                <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
+                                            </a>
+                                        @endif
                                     @if(Auth::user()->role == 3)
                                         <a href="{{ route('dashboard') }}">
                                             <img class="rounded-circle" width="30" src="{{ asset('assets/img/users') }}/{{ auth::user()->profile_photo }}" alt="profile" style="border: 1px solid #fae3e3;">
@@ -207,7 +207,8 @@
                     <div class="footer-logo">
                         <img src="{{ asset('assets/img/logo/footer-logo.png') }}" alt="footer logo">
                     </div>
-                    <p class="paragraph">Connect with social media</p>
+                    {{-- <p class="paragraph">@lang('home.footer_article')</p> --}}
+                    <p class="paragraph">@lang('home.connect_with_social_media')</p>
                     <div class="social-media">
                         <ul class="d-flex justify-content-center">
                             <li class="ms-1 me-2">
@@ -229,45 +230,44 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-5">
-                    <h4 class="pb-2">Usefull link</h4>
+                    <h4 class="pb-2">@lang('home.usefull_link')</h4>
                     <hr class="footer-menu">
                     <div class="footer-menu">
                         <ul class="">
                             <li>
-                                <a href="{{ route('aboutus') }}">About us</a>
+                                <a href="{{ route('aboutus') }}">@lang('home.aboutus')</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactus') }}">Contact info</a>
+                                <a href="{{ route('contactus') }}">@lang('home.contact_info')</a>
                             </li>
                             <li>
-                                <a href="{{ route('index') }}#latest-blog">Our Blog</a>
+                                <a href="{{ route('index') }}#latest-blog">@lang('home.our_blog')</a>
                             </li>
                             <li>
-                                <a href="{{ route('planing.event') }}">Business Management</a>
+                                <a href="{{ route('planing.event') }}">@lang('home.business_management')</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactus') }}">Help & Support</a>
+                                <a href="{{ route('contactus') }}">@lang('home.help_support')</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-5">
-                    <h4 class="pb-2">Official Address</h4>
+                    <h4 class="pb-2">@lang('home.officials_address')</h4>
                     <hr class="footer-menu">
                     <div class="footer-menu">
                         <ul class="">
                             <li class="d-flex">
                                 <i class="fas fa-map-marker-alt me-3"></i>
-                                <p class="paragraph" href="#">Riadah Incubators Startup Studio And corporate factory - Khaldiya Towers - 4th Tower - Faisal Bin Turki Road - Office
-                                No. 6 - Floor 13 – Riyadh</i></p>
+                                <p class="paragraph" href="#">@lang('home.office_address_value')</p>
                             </li>
                             <li class="d-flex">
                                 <i class="fas fa-phone-alt me-3"></i>
-                                <p class="paragraph" href="#">+966 012 012 001</p>
+                                <p class="paragraph" href="#">@lang('home.phone_value')</p>
                             </li>
                             <li class="d-flex">
                                 <i class="far fa-envelope me-3"></i>
-                                <p class="paragraph" href="#">info@caterincu.com</p>
+                                <p class="paragraph" href="#">@lang('home.email_value')</p>
                             </li>
                         </ul>
                     </div>
@@ -276,7 +276,7 @@
             <hr class="footer-menu">
             <div class="row text-center">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 py-3">
-                    <p class="paragraph">@copyright 2021 | All right reserved at cater incubator.</p>
+                    <p class="paragraph">@lang('home.copyright')</p>
                 </div>
             </div>
         </div>

@@ -155,25 +155,7 @@
     <!-- SPECIAL CATERING END  -->
 
     <!-- DESCOUNT BANNER STAR -->
-    <section class="discount-banner mb-sm-3 mb-lg-5">
-        <div class="container-fluid">
-            <div class="banner-img">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-sm-3 mt-lg-5">
-                            <h4 class="mb-3 mt-5">@lang('home.take_a_chance')</h4>
-                            <h3>@lang('home.discount_for_first_order')</h3>
-                            <h3>@lang('home.or')</h3>
-                            <h3>@lang('home.discuss_your_project')</h3>
-                            <div class="add-cart mt-5 mb-5">
-                                <button class="custom-btn" href="">@lang('home.send_us_request')</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('catering_components.discount_banner');
     <!-- DESCOUNT BANNER END -->
 
     <!-- PRICE PLAN START -->
@@ -224,9 +206,9 @@
         <div class="container py-lg-5">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center heading">
-                    <h4>Our Services</h4>
-                    <h2 class="section-header">Planing & Event</h2>
-                    <h3 class="after-before">Management</h3>
+                    <h4>@lang('home.our_services')</h4>
+                    <h2 class="section-header">@lang('home.catering_hospitality_services')</h2>
+                    <h3 class="after-before fs-6 text-capitalize">@lang('home.heading_text')</h3>
                     <div class="after-design">
                         <i class="fas fa-circle"></i>
                     </div>
@@ -244,8 +226,8 @@
                                     <h2 class="section-header"> 01 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Wedding Events</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                    <h4 class="mb-4">@lang('home.event_heading1')</h4>
+                                    <p>@lang('home.event_text1')</p>
                                 </div>
                             </div>
                         </div>
@@ -256,8 +238,8 @@
                                     <h2 class="section-header"> 02 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Picnic Events</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                    <h4 class="mb-4">@lang('home.event_heading2')</h4>
+                                    <p>@lang('home.event_text2')</p>
                                 </div>
                             </div>
                         </div>
@@ -268,8 +250,8 @@
                                     <h2 class="section-header"> 03 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Corporate Programs</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                   <h4 class="mb-4">@lang('home.event_heading3')</h4>
+                                    <p>@lang('home.event_text3')</p>
                                 </div>
                             </div>
                         </div>
@@ -280,8 +262,8 @@
                                     <h2 class="section-header"> 04 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Festival Programs</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                    <h4 class="mb-4">@lang('home.event_heading4')</h4>
+                                    <p>@lang('home.event_text4')</p>
                                 </div>
                             </div>
                         </div>
@@ -292,8 +274,8 @@
                                     <h2 class="section-header"> 05 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Private Programs</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                    <h4 class="mb-4">@lang('home.event_heading5')</h4>
+                                    <p>@lang('home.event_text5')</p>
                                 </div>
                             </div>
                         </div>
@@ -304,8 +286,30 @@
                                     <h2 class="section-header"> 06 </h2>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">Social Events</h4>
-                                    <p>It is a long established fact that a reader will be distracted.</p>
+                                    <h4 class="mb-4">@lang('home.event_heading6')</h4>
+                                    <p>@lang('home.event_text6')</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <h2 class="section-header"> 07 </h2>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="mb-4">@lang('home.event_heading7')</h4>
+                                    <p>@lang('home.event_text7')</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <h2 class="section-header"> 08 </h2>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="mb-4">@lang('home.event_heading8')</h4>
+                                    <p>@lang('home.event_text8')</p>
                                 </div>
                             </div>
                         </div>
@@ -321,8 +325,8 @@
         <div class="container pb-sm-2 pb-lg-4">
             <div class="row text-center">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-lg-5">
-                    <h4>about us</h4>
-                    <h2 class="section-header after-before">how is our service?</h2>
+                    <h4>@lang('home.aboutus')</h4>
+                    <h2 class="section-header after-before">@lang('home.how_is_our_service')</h2>
                     <div class="after-design">
                         <i class="fas fa-circle"></i>
                     </div>
@@ -330,13 +334,12 @@
             </div>
             <div class="row my-5">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <h6>Make easy life</h6>
-                    <h3 class="pe-4">Use Cater Incubator, Be Relax</h3>
-                    <p class="paragraph mt-3 mb-lg-5 pe-lg-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
-                    by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of
-                    Lorem Ipsum.</p>
+                    <h6>@lang('home.make_eassy_life')</h6>
+                    <h3 class="pe-4">@lang('home.user_caterincubator_be_relux')</h3>
+                    <p class="paragraph mt-3 pe-lg-5">@lang('home.how_is_our_service_text')</p>
+                    <p class="paragraph mt-3 mb-lg-5 pe-lg-5">@lang('home.how_is_our_service_text2')</p>
                     <div class="readmore">
-                        <a class="readmore-btn" href="login.html">Now Join Us</a>
+                        <a class="readmore-btn" href="{{ route('login') }}">@lang('home.now_join_us')</a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 align-self-center">
@@ -356,8 +359,8 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-5">
-                    <h4>Testimonial</h4>
-                    <h2 class="section-header after-before">Clients Satisfaction</h2>
+                    <h4>@lang('home.testimonial')</h4>
+                    <h2 class="section-header after-before">@lang('home.cliend_setisfaction')</h2>
                     <div class="after-design">
                         <i class="fas fa-circle"></i>
                     </div>

@@ -9,8 +9,8 @@
             <div class="container py-5">
                 <div class="row py-sm-3 py-md-4 py-lg-5">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
-                        <h4>Our SErvices</h4>
-                        <h2 class="section-header after-before">Planing & Event</h2>
+                        <h4>@lang('home.our_services')</h4>
+                        <h2 class="section-header after-before">@lang('home.planing_event')</h2>
                         <div class="after-design">
                             <i style="color: #FFC672;" class="fas fa-circle fs-4"></i>
                         </div>
@@ -27,20 +27,20 @@
             <div class="row pt-4">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/wedding-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Our Wedding Event catering and Management </h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_one_title') </h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                         release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/picnic-tour-and-event-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Picnic Tour & Event catering with Management</h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_two_title')</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                         with the
@@ -49,13 +49,13 @@
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/corporate-program-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Corporate programs catering and Media Management </h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_three_title')</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                         with the
@@ -64,13 +64,13 @@
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/festival-event-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Festival Event catering and Program Management</h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_four_title')</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                         with the
@@ -79,13 +79,13 @@
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/private-program-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Private programs catering and Media Management</h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_five_title')</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                         with the
@@ -94,13 +94,13 @@
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/social-event-catering.png') }}" alt="event-img">
-                    <h5 class="py-4 pe-5">Social Event catering and Program Management</h5>
+                    <h5 class="py-4 pe-5">@lang('home.event_six_title')</h5>
                     <p class="paragraph pe-5">
                         But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                         with the
@@ -109,7 +109,7 @@
                         Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">Read More</a>
+                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
                     </div>
                 </div>
             </div>
@@ -118,25 +118,7 @@
     <!-- PLANING EVENTS END -->
 
     <!-- DESCOUNT BANNER STAR -->
-    <section class="discount-banner mb-sm-3 mb-lg-5">
-        <div class="container-fluid">
-            <div class="banner-img">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-sm-3 mt-lg-5">
-                            <h4 class="mb-3 mt-5">Take a Chance</h4>
-                            <h3>40% Discount for First Order</h3>
-                            <h3>Or</h3>
-                            <h3>Discuss your project</h3>
-                            <div class="add-cart mt-5 mb-5">
-                                <button class="custom-btn" href="">Send us request</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('catering_components.discount_banner');
     <!-- DESCOUNT BANNER END -->
     
     <!-- LATEST BLOG START -->
