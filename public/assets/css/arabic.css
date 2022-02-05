@@ -3,13 +3,66 @@
 
 body {
     font-family: 'Gothic', 'Molarabic';
-    font-weight: ;
+    font-weight: 600;
 }
 
 
 .menubar {
     text-align: left;
 }
+
+.login-section .login img {
+    right: 7px;
+}
+
+.login-section .form-control {
+    padding-right: 10%;
+}
+
+.sign-up-btn {
+    margin-right: 8%;
+}
+
+.menubar ul li sup {
+    margin-left: -5px;
+}
+
+.register-section {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+/* Arabic text width  */
+.menubar ul li a {
+    font-weight: 600;
+}
+h4 {
+    font-weight: 700;
+}
+.paragraph {
+    font-weight: 600;
+}
+.readmore-btn {
+    font-weight: 600;
+}
+.package .card-footer {
+    font-weight: 600;
+}
+
+.planing-events .heading h3 {
+    font-weight: 600;
+}
+h6 {
+    font-weight: 600;
+}
+.cart-section .process-btn .readmore-btn {
+    font-weight: 600;
+}
+.cart-section .custom-btn {
+    font-weight: 600;
+}
+
+
 
 
 /* .management-page .content img {

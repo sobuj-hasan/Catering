@@ -144,7 +144,49 @@ return [
     "what_do_you_need" => "What do  you need",
     "send_message" => "Send Massage",
     "google_map" => "Google map",
-
+    // ===============================
+    // Cart page content 
+    // ===============================
+    "billing_information" => "Billing Information ",
+    "serial_number" => "Serial Number",
+    "product_name" => "Product name",
+    "size" => "Size",
+    "price" => "Price",
+    "quantity" => "Quanity",
+    "subtotal" => "Subtotal",
+    "hot_meal_stock_restaurant" => "Hot meal Steack Mulla Restaurant",
+    "apply_coupon" => "Apply Coupon",
+    "update_cart" => "Update Cart",
+    "total_price" => "Total Price",
+    "customer_name" => "Customer Name ",
+    "vat_tex" => "Vat & Tex",
+    "total" => "Total",
+    "payable_amount" => "Payable Amount :",
+    "back_to_home" => "Back To Home",
+    "process_to_checkout" => "Process To Check Out",
+    // ================================
+    // Sign IN page content 
+    // ================================
+    "welcome_to" => "Welcome to",
+    "signin" => "Sign In",
+    "signup" => "Sign Up",
+    "user_name" => "User Name",
+    "password" => "password",
+    "show_password" => "Show Password",
+    "havent_any_account" => "Haven’t any Account Sign Up",
+    "signup_with" => "Sign Up with",
+    "become_business_pernaer" => "Become a Business Partner ?",
+    "vendor_here" => "Vendor Here",
+    "submit" => "Submit",
+    "your_name" => "Your Name",
+    "phone" => "Phone",
+    "reenter_password" => "Re-enter Password",
+    "welcome_to_our_business_partner" => "Welcome to Our Business Partner",
+    "already_have_account" => "Already Have a Account",
+    "cart_page" => "Cart Page",
+    "image" => "Image",
+    "action" => "Action",
+    "price_summary" => "Price Summary",
 
 
 

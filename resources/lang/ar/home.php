@@ -145,9 +145,48 @@ return [
     "what_do_you_need" => "ماذا تحتاج",
     "send_message" => "	أرسل رسالة",
     "google_map" => "خرائط جوجل",
-
-
-
+    "billing_information" => "معلومات الفواتير",
+    "serial_number" => "رقم سري",
+    "product_name" => "اسم المنتج",
+    "size" => "الحجم",
+    "price" => "السعر",
+    "quantity" => "الكمية",
+    "subtotal" => "الاجمالي",
+    "hot_meal_stock_restaurant" => "ستيك وجبة ساخنة
+مطعم الملا",
+    "apply_coupon" => "تطبيق القسيمة",
+    "update_cart" => "تحديث عربة التسوق",
+    "total_price" => "السعر الكلي",
+    "customer_name" => "إسم العميل",
+    "vat_tex" => "ضريبة القيمة المضافة وتكس",
+    "total" => "مجموع",
+    "payable_amount" => "المبلغ المستحق",
+    "back_to_home" => "العودة إلى الصفحة الرئيسية",
+    "process_to_checkout" => "عملية السحب",
+    // ===============================
+    // SIgnin page content 
+    // ===============================
+    "welcome_to" => "مرحبا",
+    "signin" => "تسجيل الدخول",
+    "signup" => "انشاء حساب ",
+    "user_name" => "اسم المستخدم",
+    "password" => "كلمة المرور",
+    "show_password" => "عرض كلمة المرور",
+    "havent_any_account" => "ليس لديك أي حساب تسجيل",
+    "signup_with" => "سجل عن طريق",
+    "become_business_pernaer" => "أن تصبح شريكًا تجاريًا",
+    "vendor_here" => "بائع هنا",
+    "submit" => "إرسال",
+    "your_name" => "اسمك",
+    "phone" => "هاتف",
+    "reenter_password" => "إعادة إدخال كلمة المرور",
+    "welcome_to_our_business_partner" => "مرحبًا بكم في شريك أعمالنا",
+    "already_have_account" => "لديك حساب بالفعل",
+    "cart_page" => "صفحة عربة التسوق",
+    "image" => "صورة",
+    "discount" => "خصم",
+    "action" => "عمل",
+    "price_summary" => "ملخص السعر",
 
 
 

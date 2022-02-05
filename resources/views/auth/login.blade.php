@@ -12,19 +12,19 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-xm-12">
                                 <div class="login-section">
-                                    <h4 class="text-center">Welcome to</h4>
-                                    <p class="text-center mb-5">Sign In</p>
+                                    <h4 class="text-center">@lang('home.welcome_to')</h4>
+                                    <p class="text-center mb-5">@lang('home.signin')</p>
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                         <div class="mt-4 login">
-                                            <input type="email" class="form-control" placeholder="User Name" value="{{ old('email') }}" name="email">
+                                            <input type="text" class="form-control" placeholder="@lang('home.email_address')" value="{{ old('email') }}" name="email">
                                             <img src="assets/img/icon/login-user.png" alt="user">
                                         </div>
                                         @error('email')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                         <div class="mt-4 login">
-                                            <input type="password" class="form-control" placeholder="Password" value="{{ old('password') }}" name="password">
+                                            <input type="password" class="form-control" placeholder="@lang('home.password')" value="{{ old('password') }}" name="password">
                                             <img src="assets/img/icon/lock.png" alt="lock">
                                         </div>
                                         @error('password')
@@ -32,16 +32,16 @@
                                         @enderror
                                         <div class="mb-4 mt-4 form-check">
                                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Show Password</label>
+                                            <label class="form-check-label" for="exampleCheck1">@lang('home.show_password')</label>
                                         </div>
-                                        <button class="w-100 mb-2" type="submit" class="btn btn-primary">Log In</button>
-                                        <span class="form-text">Haven’t any Account <a class="text-bolder" href="{{ route('register') }}">Sign Up</a></span>
+                                        <button class="w-100 mb-2" type="submit" class="btn btn-primary">@lang('home.signin')</button>
+                                        <span class="form-text">@lang('home.havent_any_account') <a class="text-bolder" href="{{ route('register') }}">@lang('home.signup')</a></span>
                                     </form>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-xm-12">
                                 <div class="register-section">
-                                    <h4 class="text-center mb-3">Sign Up with</h4>
+                                    <h4 class="text-center mb-3">@lang('home.signup_with')</h4>
                                     <div class="sign-up-btn mb-4 d-flex justify-content-center">
                                         <li class="">
                                             <a href="#"> <i class="fab fa-facebook-f"></i> </a>

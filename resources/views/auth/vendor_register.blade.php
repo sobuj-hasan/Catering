@@ -10,8 +10,8 @@
                 <div class="col-xl-7 col-lg-7 col-md-9 col-sm-12">
                     <div class="login">
                         <div class="login-section">
-                            <h4 class="text-center">Welcome to Our Business Partner</h4>
-                            <p class="text-center mb-5">Sign Up</p>
+                            <h4 class="text-center">@lang('home.welcome_to_our_business_partner')</h4>
+                            <p class="text-center mb-5">@lang('home.signup')</p>
                             <form method="POST" action="{{ route('vendor.register') }}">
                                 @csrf
                                 <div class="mt-4 login">
@@ -27,7 +27,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                                 <div class="mt-4 login">
-                                    <input type="email" class="form-control" placeholder="Contact E-mail" value="{{ old('email') }}" name="email">
+                                    <input type="text" class="form-control" placeholder="Contact E-mail" value="{{ old('email') }}" name="email">
                                 </div>
                                 @error('email')
                                     <span class="text-danger">{{ $message }}</span>
@@ -76,10 +76,10 @@
                                 @enderror
                                 <div class="mb-4 mt-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Show Password</label>
+                                    <label class="form-check-label" for="exampleCheck1">@lang('home.show_password')</label>
                                 </div>
-                                <button class="w-100 mb-2" type="submit" class="btn btn-primary">Submit</button>
-                                <span class="form-text">Already Have a Account? <a class="text-bolder" href="{{ route('login') }}">Log In</a></span>
+                                <button class="w-100 mb-2" type="submit" class="btn btn-primary">@lang('home.submit')</button>
+                                <span class="form-text">@lang('home.already_have_account') <a class="text-bolder" href="{{ route('login') }}">@lang('home.signin')</a></span>
                             </form>
                         </div>
                     </div>

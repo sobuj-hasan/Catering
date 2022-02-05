@@ -1,15 +1,15 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">SI NO.</th>
-            <th scope="col">Image</th>
-            <th scope="col">Name </th>
-            <th scope="col">Size</th>
-            <th scope="col">Price</th>
-            <th scope="col">Discount</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Subtotal</th>
-            <th scope="col">Action</th>
+            <th scope="col">@lang('home.serial_number')</th>
+            <th scope="col">@lang('home.image')</th>
+            <th scope="col">@lang('home.product_name') </th>
+            <th scope="col">@lang('home.size')</th>
+            <th scope="col">@lang('home.price')</th>
+            <th scope="col">@lang('home.discount')</th>
+            <th scope="col">@lang('home.quantity')</th>
+            <th scope="col">@lang('home.subtotal')</th>
+            <th scope="col">@lang('home.action')</th>
         </tr>
     </thead>
     <tbody>
