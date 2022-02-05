@@ -295,6 +295,14 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <!-- Toastr Scripts render -->
     {!! Notify::message() !!}
+    {{-- notify any errors --}}
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <script>
+            toastr.error(`{!! $error !!}`, 'Error')
+        </script>
+        @endforeach
+    @endif
 
     <!-----for Ajax handeling----->
     <script type="text/javascript">
