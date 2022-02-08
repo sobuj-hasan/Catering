@@ -28,88 +28,53 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/wedding-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_one_title') </h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_one_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
-
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/picnic-tour-and-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_two_title')</h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                        like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_two_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/corporate-program-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_three_title')</h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                        like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_three_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/festival-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_four_title')</h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                        like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_four_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/private-program-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_five_title')</h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                        like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_five_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pb-5">
                     <img width="90%" src="{{ asset('assets/img/food/social-event-catering.png') }}" alt="event-img">
                     <h5 class="py-4 pe-5">@lang('home.event_six_title')</h5>
-                    <p class="paragraph pe-5">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                        like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p class="paragraph pe-5">@lang('home.event_six_text')</p>
                     <div class="readmore mt-lg-4 mt-md-4 mt-sm-2">
-                        <a class="readmore-btn" href="#">@lang('home.read_more')</a>
+                        <a class="readmore-btn" href="">@lang('home.read_more')</a>
                     </div>
                 </div>
             </div>

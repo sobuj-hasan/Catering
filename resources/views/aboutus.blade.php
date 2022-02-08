@@ -9,8 +9,8 @@
             <div class="container py-5">
                 <div class="row py-sm-3 py-md-4 py-lg-5">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
-                        <h4>let’s know</h4>
-                        <h2 class="section-header after-before">About us</h2>
+                        <h4>@lang('home.lets_know')</h4>
+                        <h2 class="section-header after-before">@lang('home.aboutus')</h2>
                         <div class="after-design">
                             <i style="color: #FFC672;" class="fas fa-circle fs-6"></i>
                         </div>
@@ -27,35 +27,17 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <img class="pt-4" width="92%" src="assets/img/photos/about-us-page.png" alt="about-us">
-                    <p class="paragraph py-5 pe-5"> But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <p class="paragraph py-5 pe-5">@lang('home.what_we_do_text6')</p>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 py-4">
-                    <h4>Know About Us</h4>
-                    <h2 class="section-header">What we do?</h2>
-                    <p class="paragraph">But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <p class="paragraph">
-                        But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                        But also the leap into electronic typesetting, remaining essentially unchanged.
-                    </p>
-                    <p class="paragraph">But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised</p>
-                    <p class="paragraph">in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages</p>
-                    <p class="paragraph">and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    But also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h4>@lang('home.know_aboutus')</h4>
+                    <h2 class="section-header">@lang('home.what_we_do')</h2>
+                    <p class="paragraph">@lang('home.what_we_do_text')</p>
+                    <p class="paragraph">@lang('home.what_we_do_text2')</p>
+                    <p class="paragraph">@lang('home.what_we_do_text3')</p>
+                    <p class="paragraph">@lang('home.what_we_do_text4')</p>
+                    <p class="paragraph">@lang('home.what_we_do_text5')</p>
+                    <p class="paragraph">@lang('home.what_we_do_text6')</p>
                 </div>
             </div>
         </div>
@@ -67,15 +49,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <h4>Know About Us</h4>
-                    <h2 class="section-header">Why we are different from other’s?</h2>
-                    <p class="paragraph">But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <h4>@lang('home.know_aboutus')</h4>
+                    <h2 class="section-header">@lang('home.what_we_are_defferents')</h2>
+                    <p class="paragraph">@lang('home.what_we_are_defferents_text')</p>
                 </div>
             </div>
         </div>

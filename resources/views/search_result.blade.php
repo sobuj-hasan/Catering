@@ -10,9 +10,9 @@
                 <div class="row py-sm-3 py-md-4 py-lg-5">
                     <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12 m-auto text-center py-lg-5">
                         <div class="input-group mb-3 py-lg-4">
-                            <input type="text" class="custom-search form-control" placeholder="Find Diner" aria-label="Find Diner"
+                            <input type="text" class="custom-search form-control" placeholder="@lang('home.find_dinner')" aria-label="Find Diner"
                                 aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary ps-sm-2 ps-lg-4 pe-sm-2 pe-lg-4" type="button" id="button-addon2"> Search </button>
+                            <button class="btn btn-outline-secondary ps-sm-2 ps-lg-4 pe-sm-2 pe-lg-4" type="button" id="button-addon2"> @lang('home.search') </button>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             @endif
                         </div>
                         <div class="review d-flex pt-4">
-                            <a href="#">
+                            <a href="">
                                 <p>{{ $restaurant->res_name }}</p>
                             </a>
                             <span class="ps-4"><i class="fas fa-star"></i> 0.0/5 (00) </span>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-start mb-sm-3 mb-lg-5 best-items">
-                    <h4>Our Best Items </h4><hr class="best-item">
+                    <h4>@lang('home.our_best_items') </h4><hr class="best-item">
                 </div>
             </div>
             <div class="row">
@@ -78,12 +78,11 @@
                                     <h4>25% Off</h4>
                                 </div>
                             </div>
-                            <h4>Royel Cheeseburger</h4>
-                            <p class="paragraph pt-2 ps-2 pe-2">It is a long established fact that a reader will be distracted
-                                by the readable content.</p>
-                            <h4 class="price">$09.99</h4>
+                            <h4>{{ $bestfood->title }}</h4>
+                            <p class="paragraph pt-2 ps-2 pe-2">{{ $bestfood->short_description }}</p>
+                            <h4 class="price">{{ $bestfood->price }} @lang('home.currency')</h4>
                             <div class="add-cart mt-3 mb-5">
-                                <button class="custom-btn" href="">Add to Cart</button>
+                                <button class="custom-btn product_id" data-id={{ $bestfood->id }} href="#">@lang('home.add_to_cart')</button>
                             </div>
                         </div>
                     </div>

@@ -110,7 +110,7 @@
                                     <p class="paragraph pt-2 ps-2 pe-2">{{ $food->short_description }}</p>
                                     <h4 class="price">@lang('home.currency') {{ $food->price }}</h4>
                                     <div class="add-cart mt-3 mb-5">
-                                        <button class="custom-btn product_id" data-id={{  $food->id }} href="#">@lang('home.add_to_cart')</button>
+                                        <button class="custom-btn product_id" data-id={{ $food->id }} href="#">@lang('home.add_to_cart')</button>
                                     </div>
                                 </div>
                             </div>

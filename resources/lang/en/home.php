@@ -9,6 +9,7 @@ return [
     "aboutus" => "About Us",
     "lunch" => "Lunch",
     "services" => "Services",
+    "foods" => "Foods",
     "signin" => "Sign In",
     "signup" => "Sign Up",
     "contactus" => "Contact Us",
@@ -114,12 +115,21 @@ return [
     "planing_event" => "PLANING & EVENT",
     "our_services" => "OUR SERVICES",
     "event_one_title" => "Our Wedding Event Catering and Management",
+    "event_one_text" => "Organizing weddings and catering Organizing hospitality services and making full buffets Organizing dining tables according to the occasion and delivering food to the place",
     "event_two_title" => "Catering services for parties and events",
+    "event_two_text" => "We provide hospitality services for events and occasions and make different menus for all types of food with easy selection of appropriate menus at the lowest cost and easiest delivery",
     "event_three_title" => "Breakfast, lunch and corporate party services",
+    "event_three_text" => "We organize business interviews for companies, organize food for each occasion and provide full meals",
     "event_four_title" => "Services for organizing graduation events",
+    "event_four_text" => "We organize graduation ceremonies, prepare halls, and hold special events for the occasion, while providing qualified labor to provide services and provide the necessary foods",
     "event_five_title" => "Product launch event services",
+    "event_five_text" => "Managing events for providing products and providing qualified and trained human resources Supervising events and providing different menus to suit all tastes",
     "event_six_title" => "Social Event Catering and Program Management",
+    "event_six_text" => "We offer different menus to satisfy all tastes Managing events and providing the right places for the occasion and the right foods",
     "read_more" => "Read More",
+    "search" => "Search",
+    "find_dinner" => "Find diner",
+    "our_best_time" => "Our best items",
     // ======================================
     // Pricing page content 
     // ======================================
@@ -187,6 +197,41 @@ return [
     "image" => "Image",
     "action" => "Action",
     "price_summary" => "Price Summary",
+    // ====================================
+    // About Us page content 
+    // ====================================
+    "know_aboutus" => "Know About Us",
+    "what_we_do" => "What We Do?",
+    "what_we_do_text" => "Catrinco  is a unique destination as an online food ordering site",
+    "what_we_do_text2" => "It gives customers the opportunity to browse the menus and search for restaurants near their areas ",
+    "what_we_do_text3" => "It is a website and application that aims to search for the best options for hospitality providers",
+    "what_we_do_text4" => "You can download the Katerenko application on your mobile phone or tablet You can create a personal account easily and easily",
+    "what_we_do_text5" => "Free delivery service suggested meals with lowest prices",
+    "what_we_do_text6" => "With the best possible quality, your order will arrive as soon as possible All you need from the list of the best providers of hospitality, dinner and restaurants services GPS tracking of your order from the moment you receive your order until you receive it",
+    "what_we_are_defferents" => "Why are we different from others?",
+    "what_we_are_defferents_text" => "Multiple payment options in cash or on credit, on demand
+                                        We provide a diverse menu and help you choose what suits you
+                                        We help in managing hospitality events and organizing events, events and events
+                                        Providing, preparing and organizing events sites for government and private agencies
+                                        Create and implement unique party or event ideas to make your events unforgettable moments
+                                        Giving a certain character and providing all the necessary and appropriate equipment for the character of the party",
+    // =================================
+    // Search Result page content 
+    // =================================
+    "our_best_items" => "Our Best Items",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
 
 
 

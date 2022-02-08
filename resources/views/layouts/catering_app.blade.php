@@ -56,6 +56,7 @@
                     <div class="menubar d-flex justify-content-center">
                         <ul>
                             <li><a href="{{ route('index') }}">@lang('home.home')</a></li>
+                            <li><a href="{{ route('search.result') }}">@lang('home.foods')</a></li>
                             <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
                             <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
                             <li><a href="{{ route('aboutus') }}">@lang('home.aboutus')</a></li>
@@ -72,7 +73,7 @@
                     <div class="menubar d-flex justify-content-center">
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="{{ route('search.result') }}">
                                     <img src="{{ asset('assets/img/icon/search.png') }}" alt="icon">
                                 </a>
                             </li>
