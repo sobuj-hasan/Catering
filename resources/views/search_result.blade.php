@@ -96,25 +96,7 @@
     <!-- SPECIAL CATERING END  -->
 
     <!-- DESCOUNT BANNER STAR -->
-    <section class="discount-banner mb-sm-3 mb-lg-5">
-        <div class="container-fluid">
-            <div class="banner-img">
-                <div class="container">
-                    <div class="row text-center m-auto">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-sm-3 mt-lg-5">
-                            <h4 class="mb-3 mt-5">Take a Chance</h4>
-                            <h3>40% Discount for First Order</h3>
-                            <h3>Or</h3>
-                            <h3>Discuss your project</h3>
-                            <div class="add-cart mt-5 mb-5">
-                                <button class="custom-btn" href="">Send us request</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('catering_components.discount_banner');
     <!-- DESCOUNT BANNER END -->
 
     <!-- LATEST BLOG START -->

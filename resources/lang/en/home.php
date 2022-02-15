@@ -80,7 +80,7 @@ return [
 
     "how_is_our_service" => "HOW IS OUR SERVICE?",
     "make_eassy_life" => "Make Easy Life",
-    "user_caterincubator_be_relux" => "Use Cater Incubator, Be Relax",
+    "user_caterincubator_be_relux" => "Use Caterincu, Be Relax",
     "how_is_our_service_text" => " Iftar services for a fasting person, including preparation, cooking, and delivery to the places of mosques and places licensed to provide the countries of the fasting person. Contact us",
     "how_is_our_service_text2" => "Hajj and Umrah services, including preparation and preparation for cooking, through delivery to the holy sites and places of residence for pilgrims and pilgrims",
     "now_join_us" => "Now Join Us",

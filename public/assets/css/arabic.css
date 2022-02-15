@@ -61,17 +61,20 @@ h6 {
 .cart-section .custom-btn {
     font-weight: 600;
 }
+.newslatter-part .left {
+    border-right: none;
+}
 
-
-
-
-/* .management-page .content img {
+.text {
+    right: 10px;
+}
+.categories ul li p {
     position: absolute;
-    top: 7px;
-    left: auto;
-    right: -7px;
-    width: 17px;
-} */
+    top: 0px;
+    left: 20px;
+}
+
+
 
 #inner-media .full-contents p {
     margin-right: 40px;
