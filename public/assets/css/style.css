@@ -321,6 +321,13 @@ header {
     font-size: 20px;
     text-transform: uppercase;
 }
+.catering-item img {
+    max-width: 300px;
+    min-width: 270px;
+    min-height: 250px;
+    max-height: 280px;
+    border-radius: 50%;
+}
 /* SPECIAL CATERING END */
 
 /* DISCOUNT BANNER START */
@@ -413,10 +420,11 @@ header {
     color: var(--xgc);
     font-size: 16px;
     font-weight: 600;
-    line-height: 22px;
-    position: relative;
+    line-height: 26px;
+    /* position: relative; */
 }
-.planing-events .events h4::after {
+
+/* .planing-events .events h4::after {
     position: absolute;
     width: 100%;
     height: 1px;
@@ -424,7 +432,8 @@ header {
     top: 40px;
     left: 0px;
     content: '';
-}
+} */
+
 .planing-events .events p {
     color: var(--sc);
 }

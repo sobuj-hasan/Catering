@@ -73,7 +73,7 @@ class FrontendController extends Controller
         ]);
         $subscribe = Subscribe::where('email', $request->email)->count();
         if ($subscribe != 0) {
-            Notify::error('This email address already exists', 'Error');
+            Notify::success('This email already subscribed our newsletter', 'Subscriber');
             return back();
         }
         if (Auth::user()) {

@@ -215,19 +215,18 @@
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 align-self-center mb-4">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 align-self-center mb-4 mt-lg-4">
                     <img src="assets/img/photos/planning-and-event.png" alt="event">
                 </div>
-                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 mt-lg-4">
                     <div class="row events">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4">
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 01 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading1')</h4>
-                                    <p>@lang('home.event_text1')</p>
                                 </div>
                             </div>
                         </div>
@@ -237,9 +236,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 02 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading2')</h4>
-                                    <p>@lang('home.event_text2')</p>
                                 </div>
                             </div>
                         </div>
@@ -249,9 +247,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 03 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                    <h4 class="mb-4">@lang('home.event_heading3')</h4>
-                                    <p>@lang('home.event_text3')</p>
                                 </div>
                             </div>
                         </div>
@@ -261,9 +258,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 04 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading4')</h4>
-                                    <p>@lang('home.event_text4')</p>
                                 </div>
                             </div>
                         </div>
@@ -273,9 +269,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 05 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading5')</h4>
-                                    <p>@lang('home.event_text5')</p>
                                 </div>
                             </div>
                         </div>
@@ -285,9 +280,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 06 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading6')</h4>
-                                    <p>@lang('home.event_text6')</p>
                                 </div>
                             </div>
                         </div>
@@ -296,20 +290,8 @@
                                 <div class="flex-shrink-0">
                                     <h2 class="section-header"> 07 </h2>
                                 </div>
-                                <div class="flex-grow-1 ms-3">
+                                <div class="flex-grow-1 ms-4">
                                     <h4 class="mb-4">@lang('home.event_heading7')</h4>
-                                    <p>@lang('home.event_text7')</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <h2 class="section-header"> 08 </h2>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h4 class="mb-4">@lang('home.event_heading8')</h4>
-                                    <p>@lang('home.event_text8')</p>
                                 </div>
                             </div>
                         </div>
