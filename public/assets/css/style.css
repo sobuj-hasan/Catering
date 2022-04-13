@@ -698,6 +698,10 @@ hr.footer-menu{
 .search-result .image{
     position: relative;
 }
+.search-result .image img{
+    max-height: 190px;
+    min-height: 190px;
+}
 .search-result .image p{
     position: absolute;
     font-weight: 600;
