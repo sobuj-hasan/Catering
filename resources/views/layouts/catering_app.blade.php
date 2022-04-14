@@ -153,7 +153,10 @@
                     </a>
                     <a href="{{ route('cart') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            <i class="fas fa-shopping-cart fs-4"></i><sup>02</sup>
+                            <i class="fas fa-shopping-cart fs-4"></i>
+                            <div class="shoppingcartshow">
+                                
+                            </div>
                         </button>
                     </a>
                     <a href="#">
