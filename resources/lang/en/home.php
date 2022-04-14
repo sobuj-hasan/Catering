@@ -100,6 +100,8 @@ return [
     "help_support" => "Help & Support",
     "connect_with_social_media" => "Connect with social media", 
     "copyright" => "@copyright 2021 | All right reserved at cater incubator.",
+    "register_as_user" => "Register as User",
+    "register_as_merchant" => "Register as Merchant",
     // =========================================
     // Planing Event page content
     // =========================================

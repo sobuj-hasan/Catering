@@ -56,15 +56,25 @@
                     <div class="menubar d-flex justify-content-center">
                         <ul>
                             <li><a href="{{ route('index') }}">@lang('home.home')</a></li>
-                            <li><a href="{{ route('search.result') }}">@lang('home.foods')</a></li>
-                            <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
-                            <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
                             <li><a href="{{ route('aboutus') }}">@lang('home.aboutus')</a></li>
+                            <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
+                            <li><a href="{{ route('search.result') }}">@lang('home.foods')</a></li>
+                            <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
                             <li><a href="{{ route('contactus') }}">@lang('home.contactus')</a></li>
                             @if ($locale == 'ar')
-                                <li><a href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}">@lang('home.english')</a></li>
+                                <li>
+                                    <a href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}">
+                                        @lang('home.english')
+                                        <img width="35" height="18" src="{{ asset('assets/img/photos/usa-flag.png') }}" alt="">
+                                    </a>
+                                </li>
                             @else
-                                <li><a href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">@lang('home.arabic')</a></li>
+                                <li>
+                                    <a class="fw-bolder" href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">
+                                        @lang('home.arabic')
+                                        <img width="35" height="18" src="{{ asset('assets/img/photos/ksa-flag.png') }}" alt="">
+                                    </a>
+                                </li>
                             @endif
                         </ul>
                     </div>
@@ -85,10 +95,15 @@
                                 </a>
                             </li>
                             @if (Auth::guest())
-                                <li>
-                                    <a href="{{ route('login') }}">
-                                        <img src="{{ asset('assets/img/icon/user.png') }}" alt="icon">
+                                <li class="nav-item dropdown login-dropdown">
+                                    <a class="nav-link login-btn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="{{ asset('assets/img/icon/user.png') }}" alt="icon"> &nbsp;<span class="mt-2"> @lang('home.signin') &nbsp;<i class="fas fa-chevron-down"></i> </span>
                                     </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
+                                        <a class="dropdown-item" href="{{ route('login') }}">@lang('home.signin')</a>
+                                        <a class="dropdown-item" href="{{ route('register') }}">@lang('home.register_as_user')</a>
+                                        <a class="dropdown-item" href="{{ route('vendor') }}">@lang('home.register_as_merchant')</a>
+                                    </div>
                                 </li>
                             @else
                                 <li>
@@ -123,15 +138,42 @@
         <div class="accordion accordion-flush" id="accordionFlushExample">
     
             <div class="mobile-logo mb-5">
-                <a href="#">
+                <a href="{{ route('index') }}">
                     <img src="{{ asset('assets/img/logo/logo.png') }}" alt="mobile-logo">
                 </a>
                 <i id="mobile-cross" class="fa fa-times" onClick="mobileClick()"></i>
             </div>
+
+            <div class="accordion-item custom">
+                <h2 class="accordion-header d-flex" id="flush-headingThree">
+                    <a href="{{ route('search.result') }}">
+                        <button class="accordion-button custom collapsed none" type="button">
+                            <i class="fas fa-search fs-4"></i>
+                        </button>
+                    </a>
+                    <a href="{{ route('cart') }}">
+                        <button class="accordion-button custom collapsed none" type="button">
+                            <i class="fas fa-shopping-cart fs-4"></i><sup>02</sup>
+                        </button>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item dropdown login-dropdown mobile-login">
+                            <a class="nav-link login-btn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-user fs-4" style="color: #673091;"></i>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
+                                    <a class="dropdown-item" href="{{ route('login') }}">@lang('home.signin')</a>
+                                    <a class="dropdown-item" href="{{ route('register') }}">@lang('home.register_as_user')</a>
+                                    <a class="dropdown-item" href="{{ route('vendor') }}">@lang('home.register_as_merchant')</a>
+                                </div>
+                            </a>
+                        </li>
+                    </a>
+                </h2>
+            </div>
     
             <div class="accordion-item custom ">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="index.html">
+                    <a href="{{ route('index') }}">
                         <button class="accordion-button custom collapsed none" type="button">
                             Home
                         </button>
@@ -140,16 +182,16 @@
             </div>
             <div class="accordion-item custom">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="search_result.html">
+                    <a href="{{ route('aboutus') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Menu
+                            About Us 
                         </button>
                     </a>
                 </h2>
             </div>
             <div class="accordion-item custom">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="price_plan.html">
+                    <a href="{{ route('price.plan') }}">
                         <button class="accordion-button custom collapsed none" type="button">
                             Pricing
                         </button>
@@ -158,37 +200,27 @@
             </div>
             <div class="accordion-item custom">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="planing_event.html">
+                    <a href="{{ route('search.result') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Lunch
+                            Foods
                         </button>
                     </a>
                 </h2>
             </div>
             <div class="accordion-item custom">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="contact_us.html">
+                    <a href="{{ route('planing.event') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Help
+                            Services 
                         </button>
                     </a>
                 </h2>
             </div>
             <div class="accordion-item custom">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <a href="index.html">
+                    <a href="{{ route('contactus') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            <i class="fas fa-search fs-4"></i>
-                        </button>
-                    </a>
-                    <a href="cart.html">
-                        <button class="accordion-button custom collapsed none" type="button">
-                            <i class="fas fa-shopping-cart fs-4"></i><sup>02</sup>
-                        </button>
-                    </a>
-                    <a href="login.html">
-                        <button class="accordion-button custom collapsed none" type="button">
-                            <i class="far fa-user fs-4"></i>
+                            Contact Us
                         </button>
                     </a>
                 </h2>
@@ -286,8 +318,11 @@
 
     <!--    jquery google host-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--    boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- for onclick submenu create --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Toastr script CDN -->
     <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <!-- slick slider -->

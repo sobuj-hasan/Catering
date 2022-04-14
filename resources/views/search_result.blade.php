@@ -7,9 +7,9 @@
     <section class="banner-three">
         <div class="overlay">
             <div class="container py-5">
-                <div class="row py-sm-3 py-md-4 py-lg-5">
+                <div class="row">
                     <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12 m-auto text-center py-lg-5">
-                        <div class="input-group mb-3 py-lg-4">
+                        <div class="input-group search-bar">
                             <input type="text" class="custom-search form-control" placeholder="@lang('home.find_dinner')" aria-label="Find Diner"
                                 aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary ps-sm-2 ps-lg-4 pe-sm-2 pe-lg-4" type="button" id="button-addon2"> @lang('home.search') </button>

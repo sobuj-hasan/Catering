@@ -48,7 +48,7 @@ header {
     text-transform: capitalize;
     display: inline-block;
     height: 35px;
-    padding: 7px 13px;
+    padding: 7px 10px;
     color: var(--pc);
 }
 .menubar ul li a {
@@ -65,6 +65,11 @@ header {
     padding: 3px 6px;
     margin-left: -8px;
 }
+
+.menubar .account{
+    position: relative;
+}
+
 /*HEADER*/
 
 /*MOBILE MENU*/
@@ -232,6 +237,14 @@ header {
     color: #673091;
     z-index: 999;
 }
+.mobile-login{
+    color: red;
+    position: relative;
+}
+.mobile-login i{
+    position: absolute;
+    bottom: 26px;
+}
 /*MOBILE MENU END*/
 
 
@@ -241,13 +254,13 @@ header {
     background: var(--cc);
     /* clip-path: polygon(0 0, 96% 0, 75% 100%, 0% 100%); */
 }
-.banner-content{
-    margin-top: 70px;
-    margin-bottom: 90px;
+.banner-content {
+    margin-top: 45px;
+    margin-bottom: 45px;
     position: relative;
 }
 .banner-img img{
-    height: 490px;
+    height: 450px;
 }
 
 /* Banner part End */
@@ -322,10 +335,10 @@ header {
     text-transform: uppercase;
 }
 .catering-item img {
-    max-width: 300px;
-    min-width: 270px;
+    max-width: 250px;
+    min-width: 260px;
     min-height: 250px;
-    max-height: 280px;
+    max-height: 260px;
     border-radius: 50%;
 }
 /* SPECIAL CATERING END */
@@ -682,6 +695,9 @@ hr.footer-menu{
     font-size: 24px;
     line-height: 25px;
     transition: 0.3s;
+}
+.search-bar{
+    z-index: 1;
 }
 .banner-three button:hover{
     border: 2px solid var(--cc);
