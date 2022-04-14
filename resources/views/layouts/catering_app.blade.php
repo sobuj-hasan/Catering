@@ -173,9 +173,28 @@
     
             <div class="accordion-item custom ">
                 <h2 class="accordion-header" id="flush-headingThree">
+                    @if ($locale == 'ar')
+                        <a class="text-info" href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}">
+                            <button class="accordion-button custom collapsed none" type="button">
+                                @lang('home.english') &nbsp;&nbsp;
+                                <img width="35" height="18" src="{{ asset('assets/img/photos/usa-flag.png') }}" alt="">
+                            </button>
+                        </a>
+                    @else
+                        <a class="fw-bolder text-info" href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">
+                            <button class="accordion-button custom collapsed none" type="button">
+                                @lang('home.arabic') &nbsp;&nbsp;
+                                <img width="35" height="18" src="{{ asset('assets/img/photos/ksa-flag.png') }}" alt="">
+                            </button>
+                        </a>
+                    @endif
+                </h2>
+            </div>
+            <div class="accordion-item custom ">
+                <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('index') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Home
+                            @lang('home.home')
                         </button>
                     </a>
                 </h2>
@@ -184,7 +203,7 @@
                 <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('aboutus') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            About Us 
+                            @lang('home.aboutus')
                         </button>
                     </a>
                 </h2>
@@ -193,7 +212,7 @@
                 <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('price.plan') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Pricing
+                            @lang('home.pricing')
                         </button>
                     </a>
                 </h2>
@@ -202,7 +221,7 @@
                 <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('search.result') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Foods
+                            @lang('home.foods')
                         </button>
                     </a>
                 </h2>
@@ -211,7 +230,7 @@
                 <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('planing.event') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Services 
+                            @lang('home.services')
                         </button>
                     </a>
                 </h2>
@@ -220,7 +239,7 @@
                 <h2 class="accordion-header" id="flush-headingThree">
                     <a href="{{ route('contactus') }}">
                         <button class="accordion-button custom collapsed none" type="button">
-                            Contact Us
+                            @lang('home.contactus')
                         </button>
                     </a>
                 </h2>
