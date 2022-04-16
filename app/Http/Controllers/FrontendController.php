@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 class FrontendController extends Controller
 {
     public function index(){
-        $data['categories'] = Category::all();
+        $data['categories'] = Category::inRandomOrder()->limit(16)->get();
         $data['foods'] = Food::all();
         $data['packages'] = Package::limit(3)->get();
         $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
