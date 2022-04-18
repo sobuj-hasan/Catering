@@ -43,7 +43,7 @@
                                             <h5>{{ $loop->index + 1 }}</h5>
                                         </td>
                                         <td>
-                                            <img width="80px" src="{{ asset('assets/img/package') }}/{{ $package->image }}" alt="img" title="food-img"/>
+                                            <img width="80px" src="{{ asset('assets/img/food') }}/{{ $package->image }}" alt="img" title="food-img"/>
                                         </td>
                                         <td>
                                             <h5>
@@ -54,7 +54,7 @@
                                             <h5>{{ $package->user->name }}</h5>
                                         </td>
                                         <td>
-                                            <h5>{{ $package->restaurant->res_name }}</h5>
+                                            <h5>{{ $package->resturant?$package->resturant->res_name:'' }}</h5>
                                         </td>
                                         <td>
                                             <h5>{{ $package->time }}</h5>

@@ -50,7 +50,7 @@
                             <tr>
                                 <th>Image </th>
                                 <td>
-                                    <img width="120" src="{{ asset('assets/img/package/'. $single_package->image) }}" alt="img">
+                                    <img width="120" src="{{ asset('assets/img/food/'. $single_package->image) }}" alt="img">
                                 </td>
                             </tr>
                             <tr>

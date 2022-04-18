@@ -58,7 +58,7 @@ class FoodPackageController extends Controller
         if ($request->hasFile('image')) {
             $photo = $request->file('image');
             $photo_name = time() . "." . $photo->getClientOriginalExtension($photo);
-            $location = 'assets/img/package/' . $photo_name;
+            $location = 'assets/img/food/' . $photo_name;
 
             Image::make($photo)->save($location);
             Package::find($package->id)->update([
