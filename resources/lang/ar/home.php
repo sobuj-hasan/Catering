@@ -5,7 +5,7 @@ return [
     "english" => "English",
     "home" => "الصفحة الرئيسية",
     "menu" => "القائمة",
-    "pricing" => "الأسعار",
+    "pricing" => "الحزم",
     "aboutus" => "من نحن",
     "lunch" => "الغذاء",
     "services" => "خدماتنا",
@@ -224,6 +224,10 @@ return [
     // Search result page
     // =======================================
     "our_best_items" => "أفضل العناصر لدينا",
+    "our_foods" => "أغذيتنا",
+    "best_food_packages" => "حزم الطعام لدينا",
+    "restaurant" => "مطعم",
+    "service_request" => "طلب خدمة",
 
 
 ];

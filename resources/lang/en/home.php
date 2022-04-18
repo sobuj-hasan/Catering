@@ -5,7 +5,7 @@ return [
     "english" => "اللغة الإنجليزية ",
     "home" => "Home",
     "menu" => "Menu",
-    "pricing" => "Pricing",
+    "pricing" => "Package",
     "aboutus" => "About Us",
     "lunch" => "Lunch",
     "services" => "Services",
@@ -212,7 +212,10 @@ return [
     // Search Result page content 
     // =================================
     "our_best_items" => "Our Best Items",
-    "" => "",
+    "our_foods" => "Our Foods",
+    "best_food_packages" => "Our Food Packages",
+    "restaurant" => "Restaurants",
+    "service_request" => "Service Request",
     "" => "",
     "" => "",
     "" => "",

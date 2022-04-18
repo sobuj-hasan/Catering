@@ -6,7 +6,7 @@
     <!-- BANNER TWO PART START -->
     <section class="banner-two">
         <div class="overlay">
-            <div class="container py-5">
+            <div class="container py-2">
                 <div class="row py-sm-3 py-md-4 py-lg-5">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
                         <h4>@lang('home.limited_office')</h4>
@@ -26,7 +26,7 @@
         <div class="container text-center py-4">
             <div class="row justify-content-center">
                 @foreach ($all_packages as $package)
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="package">
                             <div class="card text-center my-4">
                                 <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/') }}/{{ $package->image }});">
@@ -40,8 +40,19 @@
                                         <p class="paragraph mt-3"> {{ $package_items->items }} </p>
                                     @endforeach
                                 </div>
-                                <div class="card-footer py-3">
-                                    <a class="package_id" data-id="{{ $package->id }}" href="#">@lang('home.add_to_cart')</a>
+                                <div class="d-flex justify-content-center">
+                                    <div class="btn-left">
+                                        <a class="package_id" data-id="{{ $package->id }}" href="#">
+                                            <img src="{{ asset('assets/img/icon/shoping-cart.png') }}" alt="">
+                                            @lang('home.add_to_cart')
+                                        </a>
+                                    </div>
+                                    <div class="btn-right text-center">
+                                        <a href="">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            customize package
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

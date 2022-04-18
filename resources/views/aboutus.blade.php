@@ -6,7 +6,7 @@
     <!-- BANNER TWO PART START -->
     <section class="banner-two about-us-banner">
         <div class="overlay">
-            <div class="container py-5">
+            <div class="container py-2">
                 <div class="row py-sm-3 py-md-4 py-lg-5">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
                         <h4>@lang('home.lets_know')</h4>

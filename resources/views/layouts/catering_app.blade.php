@@ -58,21 +58,21 @@
                             <li><a href="{{ route('index') }}">@lang('home.home')</a></li>
                             <li><a href="{{ route('aboutus') }}">@lang('home.aboutus')</a></li>
                             <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
-                            <li><a href="{{ route('search.result') }}">@lang('home.foods')</a></li>
+                            <li><a href="{{ route('search.result') }}">@lang('home.restaurant')</a></li>
                             <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
                             <li><a href="{{ route('contactus') }}">@lang('home.contactus')</a></li>
                             @if ($locale == 'ar')
                                 <li>
                                     <a href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}">
                                         @lang('home.english')
-                                        <img width="35" height="18" src="{{ asset('assets/img/photos/usa-flag.png') }}" alt="">
+                                        <img width="28" height="18" src="{{ asset('assets/img/photos/usa-flag.png') }}" alt="">
                                     </a>
                                 </li>
                             @else
                                 <li>
                                     <a class="fw-bolder" href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">
                                         @lang('home.arabic')
-                                        <img width="35" height="18" src="{{ asset('assets/img/photos/ksa-flag.png') }}" alt="">
+                                        <img width="28" height="18" src="{{ asset('assets/img/photos/ksa-flag.png') }}" alt="">
                                     </a>
                                 </li>
                             @endif
@@ -258,7 +258,7 @@
     <section class="footer-part">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 text-center pt-0 pb-lg-5 mt-lg-5">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 text-center pt-0 pb-lg-5 mt-lg-3">
                     <div class="footer-logo">
                         <img src="{{ asset('assets/img/logo/footer-logo.png') }}" alt="footer logo">
                     </div>
@@ -284,7 +284,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-5">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-3">
                     <h4 class="pb-2">@lang('home.usefull_link')</h4>
                     <hr class="footer-menu">
                     <div class="footer-menu">
@@ -307,7 +307,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-5">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-lg-5 pb-lg-3 mt-3">
                     <h4 class="pb-2">@lang('home.officials_address')</h4>
                     <hr class="footer-menu">
                     <div class="footer-menu">

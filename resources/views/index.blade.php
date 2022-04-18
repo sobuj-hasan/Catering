@@ -172,7 +172,7 @@
             </div>
             <div class="row my-5">
                 @foreach ($packages as $package)
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="package">
                             <div class="card text-center my-4">
                                 <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/') }}/{{ $package->image }});">
@@ -186,8 +186,19 @@
                                         <p class="paragraph mt-3"> {{ $package_items->items }} </p>
                                     @endforeach
                                 </div>
-                                <div class="card-footer py-3">
-                                    <a class="package_id" data-id="{{ $package->id }}" href="#">@lang('home.add_to_cart')</a>
+                                <div class="d-flex justify-content-center">
+                                    <div class="btn-left">
+                                        <a class="package_id" data-id="{{ $package->id }}" href="#">
+                                            <img src="{{ asset('assets/img/icon/shoping-cart.png') }}" alt="">
+                                            @lang('home.add_to_cart')
+                                        </a>
+                                    </div>
+                                    <div class="btn-right text-center">
+                                        <a href="">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            customize package
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

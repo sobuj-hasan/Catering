@@ -1,4 +1,4 @@
-<section class="discount-banner mb-sm-3 mb-lg-5">
+<section class="discount-banner">
     <div class="container-fluid">
         <div class="banner-img">
             <div class="container">

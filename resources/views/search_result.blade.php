@@ -41,13 +41,15 @@
                 @foreach ($restaurants as $restaurant)
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                         <div class="image">
-                            <img width="100%" src="{{ asset('assets/img/restaurant/') }}/{{ $restaurant->res_image }}" alt="restorent-img">
-                            @if ($restaurant->res_discount)
-                                <p>{{ $restaurant->res_discount }}% OFF</p>
-                            @endif
+                            <a href="{{ route('restaurant.foods', $restaurant->id) }}">
+                                <img width="100%" src="{{ asset('assets/img/restaurant/') }}/{{ $restaurant->res_image }}" alt="restorent-img">
+                                @if ($restaurant->res_discount)
+                                    <p>{{ $restaurant->res_discount }}% OFF</p>
+                                @endif
+                            </a>
                         </div>
                         <div class="review d-flex pt-4">
-                            <a href="">
+                            <a href="{{ route('restaurant.foods', $restaurant->id) }}">
                                 <p>{{ $restaurant->res_name }}</p>
                             </a>
                             <span class="ps-4"><i class="fas fa-star"></i> 0.0/5 (00) </span>
