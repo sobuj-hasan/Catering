@@ -1285,9 +1285,54 @@ hr.cart{
     border-radius: 8px;
 }
 
+/* Service booking form page END */
 
-/* =================================
-    Service booking form page END
+/* ===================================
+    RESTAURANT FOODS PAGE STAR 
+=================================== */
+.restaurant-img img{
+    border-radius: 10px;
+}
+.profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid var(--pc);
+    margin-top: -40px;
+}
+.review .review-icon i{
+    color: var(--cc);
+}
+.review .review-icon{
+    color: var(--pc);
+}
+.review span{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--xgc);
+}
+.description .paragraph{
+    font-weight: 400;
+    font-size: 16px;
+}
+.small-text{
+    font-size: 14px;
+}
+.small-text i{
+    font-size: 20px;
+}
+.delivery-time span{
+    background: #f1f1f1;
+    color: var(--bc);
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 100px;
+}
+
+/* ===================================
+    RESTAURANT FOODS PAGE END 
 =================================== */
 
 

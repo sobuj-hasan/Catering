@@ -6,106 +6,49 @@
     Restaurant Foods
 @endsection
 @section('body')
-    <!-- BANNER TWO PART START -->
-    <section class="banner-two">
-        <div class="overlay">
-            <div class="container">
-                <div class="row py-sm-3 py-md-4 py-lg-5">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
-                        <h4>{{ $restaurants->address }}, {{ $restaurants->city }}, {{ $restaurants->country }}</h4>
-                        <h2 class="section-header after-before">{{ $restaurants->res_name }}</h2>
-                        <div class="after-design">
-                            <i style="color: #FFC672;" class="fas fa-circle fs-6"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- BANNER TWO PART END -->
-
-    <!-- PRICE PLAN START -->
-    <section class="price-plan my-sm-3 my-lg-5">
-        <div class="container text-center py-4">
-            <div class="row">
-                <div class="col-lg-12 text-start mb-sm-3 mb-lg-5 best-items">
-                    <h4>@lang('home.best_food_packages') </h4><hr class="best-item">
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                @forelse ($restaurant_package as $package)
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="package">
-                            <div class="card text-center my-2">
-                                <div class="card-header price-plan-img p-0" style="background-image: url({{ asset('assets/img/food/') }}/{{ $package->image }});">
-                                    <div class="package-pricing">
-                                        <h4 class="">{{ $package->name }}</h4>
-                                        <h3 class="section-header">@lang('home.currency') {{ $package->price }}/<span>{{ $package->time }}</span> </h3>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    @foreach (App\Models\PackageItems::where('package_id', $package->id)->get() as $package_items)
-                                        <p class="paragraph mt-3"> {{ $package_items->items }} </p>
-                                    @endforeach
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <div class="btn-left">
-                                        <a class="package_id" data-id="{{ $package->id }}" href="#">
-                                            <img src="{{ asset('assets/img/icon/shoping-cart.png') }}" alt="">
-                                            @lang('home.add_to_cart')
-                                        </a>
-                                    </div>
-                                    <div class="btn-right text-center">
-                                        <a href="">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                            customize package
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @empty
-                    <span class="text-danger">Nothin to show any food packages for this restaurant...</span>
-                @endforelse
-            </div>
-        </div>
-    </section>
-    <!-- PRICE PLAN END -->
-
-    <!-- SPECIAL CATERING START  -->
-    <section class="special-catering pt-3">
+    
+    <section class="restaurant-view py-2 py-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-start mb-sm-3 mb-lg-5 best-items">
-                    <h4>@lang('home.our_foods') </h4><hr class="best-item">
-                </div>
-            </div>
-            <div class="row restaurant_foods">
-                @forelse ($restaurant_foods as $restaurant_food)
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 restaurant_food_item">
-                        <div class="catering-item">
-                            <div class="offer">
-                                <img class="mx-auto d-block" src="{{ asset("assets/img/food") }}/{{ $restaurant_food->image }}" alt="food-img">
-                                <div class="discount">
-                                    <h4>25% Off</h4>
+                <div class="col-lg-10">
+                    <div class="restaurant-img">
+                        <img class="w-100" height="350" src="{{ asset('assets/img/restaurant/1639924561.png') }}" alt="restaurant-img">
+                    </div>
+                    <div class="restaurant-owner">
+                        <div class="profile-part">
+                            <div class="profile d-flex">
+                                <img src="{{ asset('assets/img/users/default.png') }}" alt="user-img">
+                                <div class="review d-flex pt-4 ms-4">
+                                    <a href="">
+                                        <h4>AL-Kafi Restaurant</h4>
+                                        <span>Super Admin</span>
+                                    </a>
+                                    <span class="review-icon ps-4 mt-1"><i class="fas fa-star"></i> 0.0/5 (00) </span>
                                 </div>
                             </div>
-                            <h4>{{ $restaurant_food->title }}</h4>
-                            <p class="paragraph pt-2 ps-2 pe-2">{{ $restaurant_food->short_description }}</p>
-                            <h4 class="price">{{ $restaurant_food->price }} @lang('home.currency')</h4>
-                            <div class="add-cart mt-3 mb-5">
-                                <button class="custom-btn product_id" data-id={{ $restaurant_food->id }} href="#">@lang('home.add_to_cart')</button>
+                            <div class="description">
+                                <p class="paragraph mt-4">Since the age of 6, Maria Bido acquired a taste for cooking traditional Puerto Rican dishes from her Grandmother. By watching and helping her Grandmother prepare dinners for the family Maria received a non-traditional hands-on Culinary learning experience. As a Mother of four sons in the Lower East Side, Maria continued to cook these traditional dishes for her family and friends. As a result, Maria has become a Local Chef and Caterer in the Lower East Side. The authentic cuisine includes a combination of the flavors of Sofrito and Adobo coupled with an extremely intricate variety of plates which makes for a perfect cuisine. Delicious home cooked meals that will give you a nostalgic taste and remind you of your Grandmother’s Cooking!</p>
                             </div>
                         </div>
+                        <hr>
+                        <div class="delivery-day">
+                            <h4>Delivery Day</h4>
+                            <span class="small-text">
+                                <i class="fa-solid fa-person-biking"></i>
+                                Choose an exact delivery time at checkout
+                            </span>
+                        </div>
+                        <div class="delivery-time mt-4">
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                Morning (8:00 pm - 12:00 am)
+                            </span>
+                        </div>
                     </div>
-                    @empty
-                    <span class="text-danger text-center">Nothin to show any foods for this restaurant...</span>
-                @endforelse
+                </div>
             </div>
         </div>
     </section>
-    <!-- SPECIAL CATERING END  -->
 
     <!-- DESCOUNT BANNER STAR -->
     @include('catering_components.discount_banner');
@@ -117,7 +60,7 @@
 
     <!-- LATEST BLOG END -->
 @endsection
-@section('footer_script')
+{{-- @section('footer_script')
     <script>
         $('.restaurant_foods').slick({
             slidesToShow: 4,
@@ -163,6 +106,6 @@
             }]
         });
     </script>
-@endsection
+@endsection --}}
 
 
