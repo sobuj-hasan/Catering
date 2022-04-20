@@ -9,6 +9,10 @@ $(window).scroll(function () {
     $('header').toggleClass('scrolled', $(this).fadeIn().scrollTop() > 65);
 });
 
+$(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).fadeIn().scrollTop() > 65);
+});
+
 
 
 
