@@ -41,7 +41,7 @@
                             </tr>
                             <tr>
                                 <th>Restaurant Name </th>
-                                <td>{{ $single_package->restaurant->res_name }}</td>
+                                <td>{{ $single_package->resturant?$single_package->resturant->res_name:'' }}</td>
                             </tr>
                             <tr>
                                 <th>Created By</th>
