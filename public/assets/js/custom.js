@@ -10,7 +10,7 @@ $(window).scroll(function () {
 });
 
 $(window).scroll(function () {
-    $('nav').toggleClass('scrolled', $(this).fadeIn().scrollTop() > 65);
+    $('nav').toggleClass('scrolledTwo', $(this).fadeIn().scrollTop() > 65);
 });
 
 

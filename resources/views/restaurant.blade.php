@@ -3,7 +3,7 @@
 @endphp
 @extends('layouts.catering_app')
 @section('title')
-    Search result
+    Our Restaurants
 @endsection
 @section('body')
     <!-- BANNER TWO PART START -->
@@ -15,7 +15,7 @@
                         <form method="GET" action="{{ route('search.result') }}">
                             @csrf
                             <div class="input-group search-bar">
-                                <input type="text" class="custom-search form-control" placeholder="Restaurant name or address here..." aria-label="Find restaurants for foods" aria-describedby="button-addon2" value="{{ request('address') }}" name="address">
+                                <input type="text" class="custom-search form-control" placeholder="Restaurant name or address here..." aria-label="Find restaurants for foods" aria-describedby="button-addon2" name="address">
                                 <button class="btn btn-outline-secondary ps-sm-2 ps-lg-4 pe-sm-2 pe-lg-4" type="submit" id="button-addon2"> @lang('home.search') </button>
                             </div>
                         </form>
@@ -43,8 +43,7 @@
     <section class="search-result my-5">
         <div class="container">
             <div class="row">
-                <h4 class="mb-5">Search Results For '{{ $search_query }}'</h4>
-                @forelse ($search_results as $restaurant)
+                @foreach ($restaurants as $restaurant)
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-5">
                         <div class="image">
                             <a href="{{ route('restaurant.foods', $restaurant->id) }}">
@@ -62,9 +61,7 @@
                         </div>
                         <i class="fas fa-map-marker-alt"></i><span class="away ps-2">{{ $restaurant->country }}, {{ $restaurant->city }}, {{ Str::limit($restaurant->address, 8, $end='..') }}</span>
                     </div>
-                    @empty
-                    <p class="text-danger">Nothig to show any restaurants for this query...</p>
-                @endforelse
+                @endforeach
             </div>
         </div>
     </section>
@@ -82,7 +79,7 @@
                 @foreach ($bestfoods as $bestfood)
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 text-center mb-sm-3 mb-lg-5 best-foods-item">
                         <div class="catering-item">
-                            <div class="offer text-center">
+                            <div class="offer">
                                 <img class="mx-auto d-block" src="{{ asset("assets/img/food") }}/{{ $bestfood->image }}" alt="food-img">
                                 <div class="discount">
                                     <h4>25% Off</h4>

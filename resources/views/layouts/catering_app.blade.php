@@ -39,7 +39,7 @@
     @endif
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <!--    HEADER SECTION-->
     <header class="d-flex align-items-center">
         <div class="container">
@@ -58,7 +58,7 @@
                             <li><a href="{{ route('index') }}">@lang('home.home')</a></li>
                             <li><a href="{{ route('aboutus') }}">@lang('home.aboutus')</a></li>
                             <li><a href="{{ route('price.plan') }}">@lang('home.pricing')</a></li>
-                            <li><a href="{{ route('search.result') }}">@lang('home.restaurant')</a></li>
+                            <li><a href="{{ route('restaurant') }}">@lang('home.restaurant')</a></li>
                             <li><a href="{{ route('planing.event') }}">@lang('home.services')</a></li>
                             <li><a href="{{ route('contactus') }}">@lang('home.contactus')</a></li>
                             @if ($locale == 'ar')
@@ -83,7 +83,7 @@
                     <div class="menubar d-flex justify-content-center">
                         <ul>
                             <li>
-                                <a href="{{ route('search.result') }}">
+                                <a href="{{ route('restaurant') }}">
                                     <img src="{{ asset('assets/img/icon/search.png') }}" alt="icon">
                                 </a>
                             </li>
@@ -342,14 +342,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--    boostrap-->
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     {{-- for onclick submenu create --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <!-- Toastr script CDN -->
     <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <!-- slick slider -->

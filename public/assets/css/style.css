@@ -1291,6 +1291,7 @@ hr.cart{
     RESTAURANT FOODS PAGE STAR 
 =================================== */
 .restaurant-img img{
+    height: 350px;
     border-radius: 10px;
 }
 .profile img{
@@ -1330,6 +1331,92 @@ hr.cart{
     padding-left: 10px;
     padding-right: 50px;
 }
+
+.scrolledTwo{
+    border-bottom: 2px solid var(--gc);
+    /* height: 60px; */
+}
+.scrolledTwo ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.scrolledTwo ul li:first-child{
+    padding-left: 0px;
+}
+.scrolledTwo ul li a{
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--bc);
+}
+.scrolledTwo ul li a:hover{
+    font-weight: 500;
+    color: var(--blackc);
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    font-weight: 500;
+    color: var(--rc);
+    background-color: #ffffff;
+    /* border-bottom: 2px solid var(--blackc); */
+}
+.scrollspy-example h3{
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--bc);
+}
+
+.food{
+    border: 1px solid var(--gc);
+    border-radius: 10px;
+}
+.food:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
+}
+.food img{
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    padding: 3px;
+    border-radius: 4px;
+}
+.food h6{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--bc);
+    line-height: 22px;
+}
+.food p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.food-badge .box p{
+    font-weight: 400;
+    font-size: 14px;
+    background: #eaf6f7;
+    color: var(--pc);
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+.cart button {
+    width: 33px;
+    height: 33px;
+    font-size: 15px;
+    background: var(--pc);
+    padding: 8px;
+    border-radius: 50px;
+    border: none;
+    color: var(--wc);
+    transition: 0.3s;
+}
+.cart button:hover{
+    background: var(--pc);
+    color: var(--wc);
+}
+
+
+
+
 
 /* ===================================
     RESTAURANT FOODS PAGE END 

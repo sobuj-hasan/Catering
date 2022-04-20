@@ -77,19 +77,40 @@ class FrontendController extends Controller
 
     public function restaurant_foods($id){
         $data['restaurants'] = Restaurant::where('id', $id)->first();
-        $data['restaurant_package'] = Package::where('restaurant_id', $id)->inRandomOrder()->limit(20)->get();
-        $data['restaurant_foods'] = Food::where('restaurant_id', $id)->inRandomOrder()->limit(100)->get();
+        // $data['restaurant_package'] = Package::where('restaurant_id', $id)->inRandomOrder()->limit(20)->get();
+        $data['popular_foods'] = Food::where('restaurant_id', $id)->inRandomOrder()->limit(4)->get();
+        $data['entry_foods'] = Food::where('restaurant_id', $id)->latest()->limit(8)->get();
+        $data['more_foods'] = Food::where('restaurant_id', $id)->inRandomOrder()->limit(60)->get();
         $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
         $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
         return view('restaurant_foods', $data);
     }
 
-    public function searchresult(){
-        $data['restaurants'] = Restaurant::where('status', 1)->inRandomOrder()->limit(20)->get();
-        $data['bestfoods'] = Food::inRandomOrder()->limit(4)->get();
+    public function searchresult(Request $request){
+
+        $query = Restaurant::query();
+        if ($request->address) {
+            $data['address'] = $request->address;
+            $query          = $query->where('res_name', 'like', "%$request->address%")
+                                    ->orWhere('country', 'like', "%$request->address%")
+                                    ->orWhere('city', "$request->address")
+                                    ->orWhere('address', 'like', "%$request->address%");
+        }
+        $data['search_results'] = $query->where('status', 1)->limit(16)->get();
+
+        $data['search_query'] = $request->address;
+        $data['bestfoods'] = Food::inRandomOrder()->limit(60)->get();
         $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
         $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
         return view('search_result', $data);
+    }
+
+    public function restaurant(){
+        $data['restaurants'] = Restaurant::where('status', 1)->inRandomOrder()->limit(20)->get();
+        $data['bestfoods'] = Food::inRandomOrder()->limit(60)->get();
+        $data['default_blogs'] = Blog::orderBy('id', 'asc')->first();
+        $data['blogs'] = Blog::where('status', 1)->inRandomOrder()->limit(3)->get();
+        return view('restaurant', $data);
     }
 
     public function cart()

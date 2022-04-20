@@ -669,7 +669,19 @@
     }
     /* Index page responsive end */
 
-
+    /* Restaurants foods page responsive */
+    .profile img {
+        width: 80px;
+        height: 80px;
+        border: 5px solid var(--pc);
+        margin-top: -30px;
+    }
+    
+    .restaurant-img img {
+        height: 200px;
+    }
+    
+    /* Restaurants foods page responsive End */
 
 
 
@@ -680,7 +692,7 @@
     /* default css responsive */
     h4 {
         font-weight: 400;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 22px;
     }
     h3 {
@@ -872,6 +884,19 @@
     }
     /* Index page responsive end */
 
+    /* Restaurants foods page responsive */
+    .profile img {
+        width: 80px;
+        height: 80px;
+        border: 5px solid var(--pc);
+        margin-top: -30px;
+    }
+    .restaurant-img img {
+        height: 190px;
+    }
+
+    /* Restaurants foods page responsive End */
+    
     
 
 

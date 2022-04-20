@@ -192,14 +192,14 @@ p {
     width: 100%;
     z-index: 2;
     transition: .4s;
-    box-shadow: 3px 3px 10px 0px #33333396;
+    /* box-shadow: 3px 3px 10px 0px #33333396; */
 }
 .scrolledTwo {
     position: sticky;
-    top: 65;
+    top: 80px;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     transition: .4s;
 }
 

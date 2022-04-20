@@ -33,6 +33,7 @@ Route::get('/', function () {
     Route::get('service/request', [FrontendController::class, 'service_request'])->name('service.request');
     Route::post('service/request/post', [FrontendController::class, 'service_request_post'])->name('service.request.post');
     Route::get('price/plan', [FrontendController::class, 'priceplan'])->name('price.plan');
+    Route::get('our/restaurants', [FrontendController::class, 'restaurant'])->name('restaurant');
     Route::get('search/result', [FrontendController::class, 'searchresult'])->name('search.result');
     Route::get('restaurant/foods/{id}', [FrontendController::class, 'restaurant_foods'])->name('restaurant.foods');
     Route::get('subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
