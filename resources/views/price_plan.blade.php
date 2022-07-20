@@ -50,7 +50,7 @@
                                     <div class="btn-right text-center">
                                         <a href="">
                                             <i class="fa-solid fa-pen-to-square"></i>
-                                            customize package
+                                            @lang('home.customize_package')
                                         </a>
                                     </div>
                                 </div>

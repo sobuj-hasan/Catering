@@ -80,14 +80,21 @@
                     <h2 class="section-header">@lang('home.special_catering_goods')</h2>
                     <ul class="d-flex justify-content-center nav nav-tabs" id="myTab" role="tablist">
                         <li role="presentation">
-                            <button class="active" id="allfoods-tab" data-bs-toggle="tab" data-bs-target="#allfoods" type="button" role="tab" aria-controls="allfoods" aria-selected="true">All Foods</button>
+                            <button class="active" id="allfoods-tab" data-bs-toggle="tab" data-bs-target="#allfoods" type="button" role="tab" aria-controls="allfoods" aria-selected="true">@lang('home.all_foods')</button>
                             <img src="assets/img/photos/arrow.png" alt="arrow">
                         </li>
                         @foreach ($categories as $category)
-                            <li role="presentation">
-                                <button id="food{{ $category->id }}-tab" data-bs-toggle="tab" data-bs-target="#food{{ $category->id }}" type="button" role="tab" aria-controls="food{{ $category->id }}" aria-selected="true">{{ $category->name }}</button>
-                                <img src="assets/img/photos/arrow.png" alt="arrow">
-                            </li>
+                            @if ($locale == 'ar')
+                                <li role="presentation">
+                                    <button id="food{{ $category->id }}-tab" data-bs-toggle="tab" data-bs-target="#food{{ $category->id }}" type="button" role="tab" aria-controls="food{{ $category->id }}" aria-selected="true">{{ $category->ar_name }}</button>
+                                    <img src="assets/img/photos/arrow.png" alt="arrow">
+                                </li>
+                            @else
+                                <li role="presentation">
+                                    <button id="food{{ $category->id }}-tab" data-bs-toggle="tab" data-bs-target="#food{{ $category->id }}" type="button" role="tab" aria-controls="food{{ $category->id }}" aria-selected="true">{{ $category->name }}</button>
+                                    <img src="assets/img/photos/arrow.png" alt="arrow">
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </div>
@@ -196,7 +203,7 @@
                                     <div class="btn-right text-center">
                                         <a href="">
                                             <i class="fa-solid fa-pen-to-square"></i>
-                                            customize package
+                                            @lang('home.customize_package')
                                         </a>
                                     </div>
                                 </div>

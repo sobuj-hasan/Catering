@@ -1,4 +1,4 @@
-<section class="discount-banner">
+<section class="discount-banner mb-4">
     <div class="container-fluid">
         <div class="banner-img">
             <div class="container">
@@ -9,7 +9,7 @@
                         <h3>@lang('home.or')</h3>
                         <h3>@lang('home.discuss_your_project')</h3>
                         <div class="add-cart mt-5 mb-5">
-                            <button class="custom-btn" href="">@lang('home.send_us_request')</button>
+                            <a class="custom-btn" href="{{ route('service.request') }}">@lang('home.send_us_request')</a>
                         </div>
                     </div>
                 </div>

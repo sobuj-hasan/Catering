@@ -65,6 +65,8 @@ return [
     "event_heading5" => "- خدمات توصيل الأطباق و وجبات الطعام إلى مقر العمل ومساكن العماله ",
     "event_heading6" => "- خدمات توصيل وغذاء طلاب الجامعات والمدارس",
     "event_heading7" => "- خدمات افطار صائم وخدمات الحج والعمرة",
+    "customize_package" => "تخصيص الحزمة",
+    "all_foods" => "جميع الأطعمة",
 
     "how_is_our_service" => "كيف هي خدمتنا",
     "make_eassy_life" => "اجعل الحياة سهلة",
@@ -228,6 +230,21 @@ return [
     "best_food_packages" => "حزم الطعام لدينا",
     "restaurant" => "مطعم",
     "service_request" => "طلب خدمة",
+
+    // Service Request Section
+    'send_service_request' => "إرسال طلب الخدمة",
+    "full_name" => "الاسم الكامل",
+    "contact_number" => "رقم الاتصال",
+    "your_country" => "بلدك",
+    "your_city" => "مدينتك",
+    "select_request_service" => "حدد طلب الخدمة",
+    "write_service_description" => "اكتب وصف الخدمة",
+    "submit_request" => "تقديم الطلب",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
+    "" => "",
 
 
 ];

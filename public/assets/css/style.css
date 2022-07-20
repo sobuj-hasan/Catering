@@ -458,13 +458,13 @@ header {
     color: var(--bc);
 }
 .planing-events .events h2 {
-    color: var(--ec);
+    color: var(--gc);
     font-weight: 400;
     font-size: 50px;
     line-height: 59px;
 }
 .planing-events .events h4 {
-    color: var(--xgc);
+    color: var(--bc);
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;

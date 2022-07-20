@@ -57,6 +57,8 @@ return [
     "unlimited_cold_drink" => "Unlimited Cold Drink",
     "multiple_choose" => "Multiple-choose",
     "show_more_plan" => "Show More Plans",
+    "customize_package" => "Customize Package",
+    "all_foods" => "All Foods",
     // ===========================
     "our_services" => "Our services ",
     "catering_hospitality_services" => "Catering hospitality services",
@@ -216,18 +218,16 @@ return [
     "best_food_packages" => "Our Food Packages",
     "restaurant" => "Restaurants",
     "service_request" => "Service Request",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
+
+    // Service Request Section
+    'send_service_request' => "Send Service Request",
+    "full_name" => "Full Name",
+    "contact_number" => "Contact Number",
+    "your_country" => "Your Country",
+    "your_city" => "Your City",
+    "select_request_service" => "Select Request Service",
+    "write_service_description" => "Write Service Description",
+    "submit_request" => "Submit Request",
 
 
 

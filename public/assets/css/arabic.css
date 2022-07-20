@@ -100,8 +100,19 @@ h6 {
     cursor: pointer;
 }
 
-/* .management-page .content span {
-    display: inline-block;
-    position: absolute;
-    right: 35px;
-} */
+/* Customize package css */
+.btn-right {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+.btn-left {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-left: 1px solid #ffc672;
+}
+
+/* service request css */
+.contact-form .custom-control {
+    padding-right: 15px;
+}
+

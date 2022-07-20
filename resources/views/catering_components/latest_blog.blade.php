@@ -1,4 +1,4 @@
-<!-- LATEST BLOG START -->
+{{-- <!-- LATEST BLOG START -->
 <section id="latest-blog" class="latest-blog my-5">
     <div class="container">
         <div class="row text-center pt-lg-5">
@@ -48,4 +48,4 @@
         </div>
     </div>
 </section>
-<!-- LATEST BLOG END -->
+<!-- LATEST BLOG END --> --}}

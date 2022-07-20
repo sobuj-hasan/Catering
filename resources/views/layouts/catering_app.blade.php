@@ -267,19 +267,19 @@
                     <div class="social-media">
                         <ul class="d-flex justify-content-center">
                             <li class="ms-1 me-2">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             </li>
                             <li class="ms-1 me-2">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
                             </li>
                             <li class="ms-1 me-2">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                             </li>
                             <li class="ms-1 me-2">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                             </li>
                             <li class="ms-1 me-2">
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a target="_blank" href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
                             </li>
                         </ul>
                     </div>
