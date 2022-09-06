@@ -229,8 +229,19 @@ return [
     "write_service_description" => "Write Service Description",
     "submit_request" => "Submit Request",
 
-
-
+    // Service Request Section
+    "terms_condition" => "Terms & Condition",
+    "part_one" => "Katrenko allows its members who agree to the agreement to order from stores via its website.",
+    "part_two" => "Katrenko offers you an easy way to deliver your orders to the stores that are displayed on the website on the network",
+    "part_three" => "The purpose of this site is to provide a simple and convenient service to customers and to connect them with stores in their area that can serve outdoor meals, and interactive menus allow customers to choose orders and favorite dishes in an easy and fast way.",
+    "part_four" => "We have created the site to be a comprehensive electronic complex for restaurants and the site is a commercial website for delivering store orders through the Internet",
+    "part_five" => "Katrenko does not sell or interfere in any way in the production, manufacture or preparation of any food produced in the stores, and what this online market offers to users is only to provide the ability to search and find local shops participating in the site, which provide Deliver food to their address and order through it.",
+    "part_six" => "These stores are solely responsible for complying with the laws, regulations, regulations, standards and standards applied in the country, such as those related to preparing, preparing, selling, marketing and food safety.",
+    "part_seven" => "However, it is important for users to understand that Katrenko does not in any way independently confirm the approval and commitment of the shop's products, ingredients or quality of any products or that the shop complies with applicable laws and regulations for food preparation as this responsibility rests with the shop alone. Buyers should view the information provided by the stores on the website or requested by buyers directly from the stores in terms of the quality of food and the reliability of the store, as well as its compliance with applicable laws and regulations",
+    "cookies" => "Cookies",
+    "cookies_text" => "We employ the use of cookies. By accessing Caterincu.com, you agreed to use cookies in agreement with the Company Name's Privacy Policy. Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.",
+    "" => "",
+    "" => "",
 
     
 ];

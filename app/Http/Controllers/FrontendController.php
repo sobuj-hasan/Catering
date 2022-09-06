@@ -31,6 +31,10 @@ class FrontendController extends Controller
         return view('aboutus');
     }
 
+    public function terms_condition(){
+        return view('terms_condition');
+    }
+
     public function blogdetails($slug){
         $data['blog_details'] = Blog::where('slug', $slug)->firstOrFail();
         $data['latest_blog'] = Blog::latest()->limit(2)->get();

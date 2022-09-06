@@ -302,7 +302,7 @@
                                 <a href="{{ route('planing.event') }}">@lang('home.business_management')</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactus') }}">@lang('home.help_support')</a>
+                                <a href="{{ route('terms.condition') }}">@lang('home.terms_condition')</a>
                             </li>
                         </ul>
                     </div>
